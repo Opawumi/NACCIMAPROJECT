@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/membership.css">
+    <title>Membership Page</title>
+</head>
+<body>
+
+    <section class="d-block membership-banner position-relative">
+        <div class="container-custom">
+            <h3 class="membership-heading py-4 text-light">
+                Membership
+            </h3>
+        </div>
+    </section>
+
+    <section class="pt-3">
+        <div class="d-block d-md-none accordion accordion-flush" id="accordionFlushExample">
+            <div class="accordion-item">
+              <div class="accordion-header border border-1 border-start-0 border-top border-end-0 border-bottom">
+                <div class="d-flex align-items-center justify-content-start accordion-button1 collapsed" id="accordionWrapper" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                    <button class="accordion-button pe-2 collapsed accordionItem" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                    </button>
+                    <div class="d-flex align-items-center justify-content-start accordion-button1 collapsed accordionItem accordionItemContent" id="accordion-button1 accordionItem" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne" style="background-image:none;">
+                      Section Menu
+                    </div>
+                </div>
+              </div>
+              <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body pt">
+                  <div class="pt-0 position-stick sticky-to about-side-link">
+                    <div class="about-link-pages-wrapper py-3">
+                        <a href="#aboutUsLeadershipContent" onclick="document.body.scrollIntoView(tru); return false;" class="leadership about-page-links aboutPageLinks about-active-page-link px-auto container-custom ps-4">
+                            Overview
+                        </a>
+                    </div>
+                    <div class="about-link-pages-wrapper py-3">
+                        <a href="#aboutUsHistoryContent" onclick="document.body.scrollIntoView(tru); return false;" class="history about-page-links aboutPageLinks px-auto container-custom ps-4">
+                            Membership Benefits
+                        </a>
+                    </div>
+                    <div class="about-link-pages-wrapper py-3">
+                        <a href="#aboutUsVisionAndMission" onclick="document.body.scrollIntoView(tru); return false;" class="visionAndMission text-nowrap about-page-links aboutPageLinks px-auto container-custom ps-4">
+                            Membership Categories
+                        </a>
+                    </div>
+                    <div class="about-link-pages-wrapper py-3">
+                        <a href="#aboutUsLocation" onclick="document.body.scrollIntoView(tru); return false;" class="location about-page-links aboutPageLinks px-auto container-custom ps-4">
+                            Member Chambers
+                        </a>
+                    </div>
+                    <div class="about-link-pages-wrapper py-3">
+                        <a href="#aboutUsCoreValues" onclick="document.body.scrollIntoView(tru); return false;" class="coreValues text-nowrap about-page-links aboutPageLinks px-auto container-custom ps-4">
+                            Bilateral Members
+                        </a>
+                    </div>
+                    <div class="about-link-pages-wrapper py-3">
+                        <a href="#aboutUsRanking" onclick="document.body.scrollIntoView(tru); return false;" class="ranking about-page-links aboutPageLinks px-auto container-custom ps-4">
+                           How to Join
+                        </a>
+                    </div>
+                </div>
+                </div>
+              </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container-custom py-5 my-4">
+        <div class="row w-100 justify-content-between position-relative">            
+            <div class="d-none d-md-block pe-3 pt-4 position-sticky sticky-top about-side-links">
+                <div class="about-link-pages-wrapper py-3">
+                    <a href="#aboutUsLeadershipContent" onclick="document.body.scrollIntoView(true); return false;" class="leadership about-page-links aboutPageLinks about-active-page-link px-auto">
+                        Overview
+                    </a>
+                </div>
+                <div class="about-link-pages-wrapper py-3">
+                    <a href="#aboutUsHistoryContent" onclick="document.body.scrollIntoView(true); return false;" class="history about-page-links aboutPageLinks px-auto">
+                        Membership Benefits 
+                    </a>
+                </div>
+                <div class="about-link-pages-wrapper py-3">
+                    <a href="#aboutUsVisionAndMission" onclick="document.body.scrollIntoView(true); return false;" class="visionAndMission text-nowrap about-page-links aboutPageLinks px-auto">
+                        Membership Categories
+                    </a>
+                </div>
+                <div class="about-link-pages-wrapper py-3">
+                    <a href="#aboutUsLocation" onclick="document.body.scrollIntoView(true); return false;" class="location about-page-links aboutPageLinks px-auto">
+                        Member Chambers
+                    </a>
+                </div>
+                <div class="about-link-pages-wrapper py-3">
+                    <a href="#aboutUsCoreValues" onclick="document.body.scrollIntoView(true); return false;" class="coreValues text-nowrap about-page-links aboutPageLinks px-auto">
+                        Bilateral Members
+                    </a>
+                </div>
+                <div class="about-link-pages-wrapper py-3">
+                    <a href="#aboutUsRanking" onclick="document.body.scrollIntoView(true); return false;" class="ranking about-page-links aboutPageLinks px-auto">
+                        How to Join
+                    </a>
+                </div>
+            </div>
+
+            <!--Overview content-->
+            <div class="col-12 col-md-9 aboutUsContent">
+                <div class="d-none aboutUsItem aboutUsContentActive aboutUsLeadershipContent" id="aboutUsLeadershipContent">
+                    <div class="w-100 pb-5">                    
+                        <!-- Hero Section -->
+                        <section class="hero">
+                        <div class="hero-content d-flex align-items-stretch">
+                            <div class="row">
+                            <div class="hero-image col-md-6 col-12 d-none d-md-flex">
+                            <img
+                                src="assets/membership_overview.png"
+                                alt="Business leaders meeting"
+                                class="img-fluid object-fit-contain"
+                            />
+                            </div>
+
+                            <div class=" col-md-6 col-12 d-block d-md-none">
+                                <h1 class="membership_overview_header pb-4">Origin and History</h1>
+                            <img
+                                src="assets/membership_overview_mobile.png"
+                                alt="Business leaders meeting"
+                                class="img-fluid object-fit-contain"
+                            />
+                            </div>
+
+                            <div class="hero-text col-md-6 col-12">
+                            <h5 class="d-none d-md-flex">
+                                NACCIMA unites businesses across Nigeria, providing opportunity,
+                                advocacy, and resources to help you grow and thrive in an
+                                ever-changing economy.
+                            </h5>
+                            <h5 class="d-block d-md-none pt-5 pt-md-0">
+                                NACCIMA unites businesses across Nigeria, providing opportunity,
+                                advocacy, and resources to help you grow and thrive in an
+                                ever-changing economy.
+                            </h5>
+                            <div class="hero-buttons d-md-flex ">
+                                <a href="#" class="d-block d-md-inline mt-3 mt-md-0 btn btn-primary text-center">Join Now</a>
+                                <a href="#" class="d-block d-md-inline mt-3 mt-md-0 btn btn-secondary"
+                                >Explore Membership Benefits</a
+                                >
+                            </div>
+                            </div>
+                            </div>
+                        </div>
+                        </section>
+
+                        <!-- Membership Section -->
+                        <section class="membership">
+                        <div class="container">
+                            <h2 class="section-title fw-bold">Who Can Become a Member?</h2>
+                            <!-- Membership Section -->
+    <section>
+        
+            
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="membership-card">
+                        <div class="card-icon">
+                            <img src="assets/who_can_be_a_member_icon.svg" alt="">
+                        </div>
+                        <p>Businesses of all sizes (micro, small, medium, large).</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="membership-card">
+                        <div class="card-icon">
+                            <img src="assets/who_can_be_a_member_icon.svg" alt="">
+                        </div>
+                        <p>Chambers of commerce, trade groups, and industry associations.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="membership-card">
+                        <div class="card-icon">
+                            <img src="assets/who_can_be_a_member_icon.svg" alt="">
+                        </div>
+                        <p>Entrepreneurs and start-ups seeking market access and networking.</p>
+                    </div>
+                </div>
+            </div>
+        
+    </section>
+
+                            <h2 class="section-title fw-bold">Why Join NACCIMA?</h2>
+
+                           <!-- Benefits Section -->
+    <section>
+            
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="benefit-card blue">
+                        <div class="benefit-number blue">1</div>
+                        <h3>Influence Policy</h3>
+                        <p>Be part of shaping Nigeria's business environment.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="benefit-card purple">
+                        <div class="benefit-number purple">2</div>
+                        <h3>Expand Your Network</h3>
+                        <p>Connect with decision-makers locally and globally.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="benefit-card green">
+                        <div class="benefit-number green">3</div>
+                        <h3>Gain Market Access</h3>
+                        <p>Unlock trade, investment, and export opportunities.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="benefit-card red">
+                        <div class="benefit-number red">4</div>
+                        <h3>Enhance Your Skills</h3>
+                        <p>Access exclusive training and resources.</p>
+                    </div>
+                </div>
+            </div>
+        
+    </section>
+
+                     <!-- Testimonials Section -->
+    <section>
+        
+            <h2 class="section-title fw-bold">Member Spotlight</h2>
+            <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+                <div class="testimonials-wrapper">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+
+                            <div class="row g-4 testimonial-row">
+                                <div class="col-lg-4 col-md-6 testimonial-col">
+                                    <div class="testimonial-card">
+                                        <img src="assets/spotlight_icon.svg" alt="">
+                                        <p class="testimonial-text">Joining NACCIMA opened doors I didn't even know existed—from export opportunities to policy advocacy. This chamber is a game-changer for Nigerian entrepreneurs.</p>
+                                        <div class="author-section collapse">
+                                            <div class="d-flex align-items-center gap-3">
+                                            <div class="author-avatar"><img src="assets/testimonial_author1.png" alt=""></div>
+                                            <div class="author-info">
+                                                <h5>Alina Lawal</h5>
+                                                <p>CEO-Sahel Agro-Tech Ltd, Kano</p>
+                                            </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6 testimonial-col">
+                                    <div class="testimonial-card">
+                                        <img src="assets/spotlight_icon.svg" alt="">
+                                        <p class="testimonial-text">We've grown faster and smarter since aligning with NACCIMA. The forums alone have helped us secure 3 major contracts this year.</p>
+                                        <div class="author-section collapse">
+                                            <div class="d-flex align-items-center gap-3">
+                                            <div class="author-avatar"><img src="assets/testimonial_author1.png" alt=""></div>
+                                            <div class="author-info">
+                                                <h5>Business Owner</h5>
+                                                <p>Manufacturing Sector</p>
+                                            </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6 testimonial-col">
+                                    <div class="testimonial-card">
+                                        <img src="assets/spotlight_icon.svg" alt="">
+                                        <p class="testimonial-text">Being part of a network where business, government, and international bodies connect has multiplied our impact and credibility.</p>
+                                        <div class="author-section collapse">
+                                            <div class="d-flex align-items-center gap-3">
+                                            <div class="author-avatar"><img src="assets/testimonial_author1.png" alt=""></div>
+                                            <div class="author-info">
+                                                <h5>Trade Association</h5>
+                                                <p>Lagos Chamber</p>
+                                            </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row g-4 testimonial-row">
+                                <div class="col-lg-4 col-md-6 testimonial-col">
+                                    <div class="testimonial-card">
+                                        <img src="assets/spotlight_icon.svg" alt="">
+                                        <p class="testimonial-text">NACCIMA has been instrumental in connecting us with international partners and opening new markets for our products.</p>
+                                        <div class="author-section collapse">
+                                            <div class="d-flex align-items-center gap-3">
+                                            <div class="author-avatar"><img src="assets/testimonial_author1.png" alt=""></div>
+                                            <div class="author-info">
+                                                <h5>John Okafor</h5>
+                                                <p>Export Business Owner, Abuja</p>
+                                            </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6 testimonial-col">
+                                    <div class="testimonial-card">
+                                        <img src="assets/spotlight_icon.svg" alt="">
+                                        <p class="testimonial-text">The training programs and networking events have transformed how we do business. Highly recommended for any serious entrepreneur.</p>
+                                        <div class="author-section collapse">
+                                            <div class="d-flex align-items-center gap-3">
+                                            <div class="author-avatar"><img src="assets/testimonial_author1.png" alt=""></div>
+                                            <div class="author-info">
+                                                <h5>Fatima Ahmed</h5>
+                                                <p>Tech Startup Founder, Lagos</p>
+                                            </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6 testimonial-col">
+                                    <div class="testimonial-card">
+                                        <img src="assets/spotlight_icon.svg" alt="">
+                                        <p class="testimonial-text">The advocacy work NACCIMA does at the policy level has directly benefited our operations and reduced regulatory hurdles.</p>
+                                        <div class="author-section collapse">
+                                            <div class="d-flex align-items-center gap-3">
+                                            <div class="author-avatar"><img src="assets/testimonial_author1.png" alt=""></div>
+                                            <div class="author-info">
+                                                <h5>Chidi Mbah</h5>
+                                                <p>Logistics Company Director</p>
+                                            </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row g-4 testimonial-row">
+                                <div class="col-lg-4 col-md-6 testimonial-col">
+                                    <div class="testimonial-card">
+                                        <img src="assets/spotlight_icon.svg" alt="">
+                                        <p class="testimonial-text">Access to trade missions and business delegations has expanded our reach beyond Nigeria into other African markets.</p>
+                                        <div class="author-section collapse">
+                                            <div class="d-flex align-items-center gap-3">
+                                            <div class="author-avatar"><img src="assets/testimonial_author1.png" alt=""></div>
+                                            <div class="author-info">
+                                                <h5>Ngozi Okonkwo</h5>
+                                                <p>Textile Manufacturer, Kano</p>
+                                            </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6 testimonial-col">
+                                    <div class="testimonial-card">
+                                        <img src="assets/spotlight_icon.svg" alt="">
+                                        <p class="testimonial-text">As a small business, having NACCIMA amplify our voice in policy discussions has been invaluable for our growth.</p>
+                                        <div class="author-section collapse">
+                                            <div class="d-flex align-items-center gap-3">
+                                            <div class="author-avatar"><img src="assets/testimonial_author1.png" alt=""></div>
+                                            <div class="author-info">
+                                                <h5>Bola Adeyemi</h5>
+                                                <p>Fashion Retail Owner, Ibadan</p>
+                                            </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6 testimonial-col">
+                                    <div class="testimonial-card">
+                                        <img src="assets/spotlight_icon.svg" alt="">
+                                        <p class="testimonial-text">The networking opportunities alone are worth the membership. I've formed partnerships that have doubled our revenue.</p>
+                                        <div class="author-section collapse">
+                                            <div class="d-flex align-items-center gap-3">
+                                            <div class="author-avatar"><img src="assets/testimonial_author1.png" alt=""></div>
+                                            <div class="author-info">
+                                                <h5>Ibrahim Bello</h5>
+                                                <p>Agricultural Exporter, Kaduna</p>
+                                            </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Custom Indicators -->
+                <ul class="custom-indicators">
+                    <li data-bs-target="#testimonialCarousel" data-bs-slide-to="0" class="active">
+                        <button type="button">Slide 1</button>
+                    </li>
+                    <li data-bs-target="#testimonialCarousel" data-bs-slide-to="1">
+                        <button type="button">Slide 2</button>
+                    </li>
+                    <li data-bs-target="#testimonialCarousel" data-bs-slide-to="2">
+                        <button type="button">Slide 3</button>
+                    </li>
+                </ul>
+            </div>
+    
+    </section>
+                    </div>
+                    </div>
+
+                <div class="d-none aboutUsItem aboutUsHistoryContent" id="aboutUsHistoryContent">
+                    <div class="w-100 pb-5">
+                        <h3 class="aboutUs-heading pb-4">
+                            History
+                        </h3>
+                        <div class="youtube-wrapper px-auto mx-auto position-relative pb-4 text-center">                            
+                            <iframe class="px-auto mx-auto img-fluid" id="player" title="YouTube Video Player" allowfullscreen src="https://youtube.com/embed/hN-A-sdZTRY?si=KeCNH3wTct9xA1NU?enablejsapi=1&version=3&playerapiid=ytplayer" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" frameborder="0"></iframe>
+                            <!-- <iframe width="560" height="315" id="player" src="https://www.youtube.com/embed/hN-A-sdZTRY?si=ZVJIzAiQP5XAXaKk?enablejsapi=1&version=3&playerapiid=ytplayer" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
+                        </div>
+
+                        <article class="py-4 history-content">
+                            <p class="text-start">
+                                The University of Ilorin is located in the ancient city of Ilorin, about 500 kilometres from Abuja, the Federal capital. Ilorin, the Capital of <a href="https://www.kwarastate.gov.ng" target="_blank" class="kwara-gov-link"><strong class="about-text-color">Kwara State</strong></a>, is strategically located at the geographical and cultural confluence of the North and South.
+                                <span class="d-block">
+                                    University of Ilorin was one of the seven institutions of higher learning established by a decree of the Federal Military Government in August, 1975. This step, taken to implement one of the educational directives of the country's Third National Development Plan, was aimed at providing more opportunities for Nigerians aspiring to acquire university education and to generate high level man-power, so vital for the rapidly expanding economy.
+                                </span>
+                                <span class="d-block">
+                                    The then University College of Ilorin was initially affiliated to the University of Ibadan. Dr. T.N. Tamuno, Professor and Head of History Department at the University of Ibadan, was appointed the first Principal of the College in September, 1975. Shortly after Professor Tamuno's appointment as Principal of the College, he was appointed the Vice-Chancellor of the University of Ibadan. It therefore, became necessary to appoint another Principal in the person of Professor O.O. Akinkugbe, former Dean of the then Faculty of Medicine, University of Ibadan, in December 1975.
+                                </span>
+                                <span class="d-block">
+                                    The then new Principal, Professor O.O. Akinkugbe, made several visits to the second Military Governor of Kwara State, the late Colonel Ibrahim Taiwo in connection with the new institution, such that by March 1976, he had established residence at Ilorin. The support given to the fledgling Institution by Governor Taiwo continued even more vigorously under the third Military Governor of the State, Brigadier George A. Innih, who ceded a portion of the temporary site of the Kwara State College of Technology to the University. The site, up till now, serves as the mini campus of the University.
+                                </span>
+                            </p>
+
+                            <p class="text-start pt-2">
+                                <h3 class="history-subHeading">
+                                    Academic/Physical Development
+                                </h3>
+                                    Following an entrance examination, 200 foundation students were admitted into residence on Saturday, October 23rd, 1976, and academic activities commenced on Monday, October 25th , 1976, after the Principal's maiden address at about 10.00am in the Africa Hall. The University College had three foundation Faculties namely: Arts, Science and Education. The Institution began to develop its programmes in a way that not lees than 60% of its effort was directed towards science-oriented programmes.
+                                <span class="d-block">
+                                    In October 1977, the Institution attained full autonomous status and has since then developed by leaps and bounds. The student population of 200 in 1976 has increased to 20,084 by the 2005/2006 session, while the total staff strength of the University stood at approximately 3,040 as at March 1, 2007. Up till January 1982, the University carried out its academic programmes, involving the Faculties of Arts, Science, Education, Engineering & Technology, Business and Social Sciences, and the Pre-Clinical aspect of the Health Sciences on the Mini-Campus. The completion of the Faculty blocks for Natural Sciences and Engineering as well as 8 blocks of student hotels by December 1981, made it possible, on the 2nd of January 1982, for the actual movement of over 1,000 science-oriented students to the Main-Campus to pursue their various academic programmes.
+                                </span>
+                                <span class="d-block">                                    
+                                    The law degree programme was initially established in 1983/84 session as a department in the Faculty of Business and Social Sciences. Though cancelled in 1986/87, it was resuscitated in 1993/94 as a full fledged Faculty.
+                                </span>
+                                <br class="py-3"/>
+                                
+                                <span class="d-block">  
+                                    The Main Campus currently houses the Faculties of Science, Engineering & Technology, Agriculture, Education, Law, Arts, Business and Social Sciences, (following the completion of the new seven-storey Senate Complex), the Unilorin Sugar Research Institute, Postgraduate School, the Main University Library, Computer Services and Information Technology (COMSIT), Works Yard, Conference Centre, Unilorin Resources Development and Management Board (URDMB), Student Canteens, the newly completed 2,000 seat multipurpose Auditorium and the Alumni/ Endowment Office. The Mini-Campus presently houses the College of Health Sciences, a mini Library, Canteens and Shopping Complex, the Institute of Education, some of the Revenue-yielding projects which are under the URDMB such as the Unilorin Computer Centre (Training Wing), Unilorin Bookshop, the Bakery, the Printing Press, and the Guest Houses. Each Campus has a Health Centre, a Post Office and Banking facilities.                                  
+                                </span>
+                                <br class="py-3"/>
+                                
+                                <span class="d-block">   
+                                    Aside from two lecture theatres commissioned in 1997, there is an upsurge, from 2002 to date, in the physical development of the Main Campus. Five new Hostels were completed in 2002. Other projects were the Faculty of Education blocks and Lecture theatre; Lecture rooms, Offices and Lecture Theatre for the Faculty of Business and Social Sciences; Faculty of Science Chemistry block; Department of Agricultural Engineering block; offices for the Department of Human Kinetics and Health Education; COMSIT building (Phase I) among others.                             
+                                </span>
+                                <br class="py-3"/>
+                                
+                                <span class="d-block"> 
+                                    A water Dam and Treatment Plant to provide uninterrupted water supply to the main campus has just been completed. The University will soon construct a rail-line to boost transportation between the University Main Campus and the township.                                   
+                                </span>
+                                <br class="py-3"/>
+                                
+                                <span class="d-block">  
+                                    Apart from the renovation of buildings, a systematic upgrading of teaching and research facilities is being undertaken by the University within its lean resources. This includes provision of computers, laboratory equipment, etc.                                  
+                                </span>
+                            </p>
+
+                            <p class="text-center pt-2">
+                                <h3 class="history-subHeading">
+                                    Growth of faculties
+                                </h3>
+                                    From three faculties in 1976, today there are ten faculties: Arts (1976), Science (1976) Education (1976), Engineering & Technology (1978), Business & Social Sciences (1981), Agriculture (1982), Law (1993, after an initial start-up in 1983), Basic Medical Sciences (2004), Clinical Sciences (2004) and Communication and Information Sciences(2008). Currently we now have 16 Faculties: Arts, Agriculture, Basic Clinical Sciences, Basic Medical Sciences , Clinical Sciences, Communication and Information Sciences , Education, Engineering and Technology, Environmental Sciences, Law, Life Sciences, Management Sciences, Pharmaceutical Sciences, Social Sciences and Veterinary Medicine.
+                                    <span class="d-block">
+                                        Altogether, there are 60 academic departments in the existing ten faculties. Undergraduate degree programmes run for 3,4,5, or 6 years, depending on entry qualifications and discipline. The University started with the traditional British “Three Term System” but later changed into a modified form of the American “Two Semester System” called Harmattan and Rain semesters with effect from 1979/80 session.
+                                    </span>
+                                    <br class="py-3"/>
+
+                                    <span class="d-block">
+                                        Each semester comprises one half of an academic year as determined by Senate. Also instruction in the various Faculties with the exception of the Health Sciences is by the course system. These courses are quantified into credits. The University has teaching support units which include the Computer Centre, Central Workshop and Stores, Biological Garden, Community Based Experience and Services (COBES), Medical Educational Resources Unit, General Studies (Use of English/National Awareness) Division, and Teaching & Research Farm.
+                                    </span>
+                                    <br class="py-3"/>
+                                    
+                                    <span class="d-block">
+                                        There are also the Public Units which are the University School, the University Secondary School, Institute of Education and Educational Technology Centre. Although an academic unit, the Library is actively involved in rendering service to the University and the public. In addition, there is a Sugar Research Institute which is mainly a research unit served by academic mainly from Science and Agriculture Faculties.
+                                    </span>
+                            </p>
+                        </article>
+                    </div>
+                </div>
+                <div class="d-none aboutUsItem aboutUsVisionAndMission" id="aboutUsVisionAndMission">
+                    <div class="w-100 pb-5">
+                        <div class="pb-3">                            
+                            <h3 class="aboutUs-subHeading pb-1">
+                                Vision Statement
+                            </h3>
+                            <span class="d-block aboutUs-spanText">
+                                To be an international centre of excellence in learning, research, probity and service to humanity.
+                            </span>
+                        </div>
+                        <div class="py-4">                            
+                            <h3 class="aboutUs-subHeading pb-1">
+                                Mission Statement
+                            </h3>
+                            <span class="d-block aboutUs-spanText">
+                                To provide world-class environment for learning, research and community service.
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-none aboutUsItem aboutUsLocation" id="aboutUsLocation">
+                    <div class="w-100 pb-5">
+                        <div class="pb-3">                            
+                            <h3 class="aboutUs-subHeading pb-1">
+                                About Ilorin location
+                            </h3>
+                            <span class="d-block aboutUs-spanText">
+                                The University of Ilorin is located in the ancient city of Ilorin, about 500 kilometres from Abuja, the Federal capital. Ilorin, the Capital of Kwara State, is strategically located at the geographical and cultural confluence of the North and South.
+                            </span>
+                        </div>
+                        <div class="py-5 location-banner w-100">
+                            <img src="images/locationImage.png" alt="" class="w-100">
+                        </div>
+                        <div class="pt-3 location-banner w-100">
+                            <img src="images/universityMap.png" alt="" class="w-100">
+                        </div>
+                    </div>
+                </div>
+                <div class="d-none aboutUsItem aboutUsCoreValues" id="aboutUsCoreValues">
+                    <div class="w-100 pb-5">
+                        <h3 class="aboutUs-heading pb-4">
+                            Our Core Values
+                        </h3>
+                        <div class="pb-3">                            
+                            <h3 class="aboutUs-subHeading pb-1">
+                                Integrity
+                            </h3>
+                            <span class="d-block aboutUs-spanText">
+                                At the University of Ilorin (Unilorin), integrity is a foundational core value upheld by all members of its community. It signifies a commitment to honesty, fairness, and ethical conduct in all academic, research, and administrative endeavors. Upholding integrity fosters trust, credibility, and accountability within the institution, ensuring that academic standards are maintained and upheld.
+                            </span>
+                        </div>
+                        <div class="pb-3">                            
+                            <h3 class="aboutUs-subHeading pb-1">
+                                Excellence
+                            </h3>
+                            <span class="d-block aboutUs-spanText"> 
+                                Unilorin places a strong emphasis on excellence in all aspects of its operations. This core value entails a dedication to achieving the highest standards of academic performance, research output, and institutional governance. By striving for excellence, Unilorin aims to produce graduates who are not only academically proficient but also equipped with the skills and knowledge to excel in their respective fields and contribute positively to society.
+                            </span>
+                        </div>
+                        <div class="pb-3">                            
+                            <h3 class="aboutUs-subHeading pb-1">
+                                Respect 
+                            </h3>
+                            <span class="d-block aboutUs-spanText">
+                                Respect is a fundamental value at Unilorin, encompassing mutual regard, tolerance, and appreciation for the diverse perspectives, backgrounds, and contributions of all members of the university community. This value promotes a culture of inclusivity, collaboration, and understanding, where individuals are valued for their unique talents and perspectives, regardless of differences in race, ethnicity, religion, or socio-economic status.
+                            </span>
+                        </div>
+                        <div class="pb-3">                            
+                            <h3 class="aboutUs-subHeading pb-1">
+                                Desire & Thirst 
+                            </h3>
+                            <span class="d-block aboutUs-spanText">
+                                Unilorin instills in its community a passion for learning, discovery, and personal growth. This core value encourages students, faculty, and staff to approach their academic and professional pursuits with enthusiasm, curiosity, and a relentless drive for knowledge and excellence. By fostering a thirst for learning and intellectual curiosity, Unilorin aims to inspire lifelong learners who are committed to continuous self-improvement and the pursuit of academic and personal fulfillment.   
+                            </span>
+                        </div>
+                        <div class="pb-3">                            
+                            <h3 class="aboutUs-subHeading pb-1">
+                                Hard Work
+                            </h3>
+                            <span class="d-block aboutUs-spanText">
+                                Hard work is integral to the ethos of Unilorin, reflecting a commitment to diligence, perseverance, and dedication in the pursuit of academic and professional goals. This core value emphasizes the importance of sustained effort, discipline, and resilience in overcoming challenges, achieving success, and making meaningful contributions to society. By instilling a culture of hard work, Unilorin prepares its students to navigate the complexities of the academic and professional world with determination and grit, equipping them for future success and leadership roles.
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-none aboutUsItem aboutUsRanking" id="aboutUsRanking">
+                    <div class="w-100 pb-5">
+                        <h3 class="aboutUs-heading pb-3">
+                            UNILORIN Ranking 
+                        </h3>
+                        <div class="pb-3">
+                            <div class="rank-Btn-wrapper">
+                                <div class="d-flex align-items-center justify-content-between py-1">
+                                    <a href="https://www.4icu.org/reviews/7222.htm" target="_blank" class="button aboutUsRankBtn p-2">Country Rank</a>
+                                    <div class="d-flex align-items-center">
+                                        <a href="https://www.4icu.org/reviews/7222.htm" target="_blank" class="aboutUsRank-link">   
+                                            <span class="rank-numbers">
+                                                3
+                                            </span>
+                                            <i class="fa-solid fa-up-right-from-square rank-verify-icon ps-1"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-between py-1">
+                                    <a href="https://www.4icu.org/reviews/7222.htm" target="_blank" class="button aboutUsRankBtn p-2">World Rank</a>
+                                    <div class="d-flex align-items-center">
+                                        <a href="https://www.4icu.org/reviews/7222.htm" target="_blank" class="aboutUsRank-link">   
+                                            <span class="rank-numbers">
+                                                2879
+                                            </span>
+                                            <i class="fa-solid fa-up-right-from-square rank-verify-icon ps-1"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <img src="images/rankImage.png" alt="" class="py-4">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-none aboutUsItem aboutUsAwards" id="aboutUsAwards">
+                    <div class="w-100 pb-5">
+                        <h3 class="aboutUs-heading pb-4">
+                            UNILORIN Awards
+                        </h3>      
+                        <hr/>
+                        <div class="d-block d-lg-flex justify-content-between align-items-center pt-4 pb-1">
+                            <div class="pb-1 col-12 col-lg-8">
+                                <h3 class="aboutUs-subHeading pb-1">
+                                    American Library Association
+                                </h3>
+                                <span class="d-block aboutUs-spanText">
+                                    Unilorin earns ALA's Library of Excellence, highlighting our commitment to outstanding library services.
+                                </span>
+                            </div>
+                            <div class="col-12 col-lg-3 py-4">                                
+                                <img src="images/AmericanLibraryAward.png" alt="" class="">
+                            </div>
+                        </div>
+                        <hr/>
+                        <div class="d-block d-lg-flex justify-content-between align-items-center pt-4 pb-1">
+                            <div class="pb-1 col-12 col-lg-9">
+                                <h3 class="aboutUs-subHeading pb-1">
+                                    International Federation of Library Association and Institutions
+                                </h3>
+                                <span class="d-block aboutUs-spanText">
+                                    IFLA has acknowledged Unilorin for its exceptional library services, reaffirming its global academic leadership.
+                                </span>
+                            </div>
+                            <div class="col-12 col-lg-3 py-4">                                
+                                <img src="images/InternationalFedLibAward.png" alt="" class="">
+                            </div>
+                        </div>
+                        <hr/>
+                        <div class="d-block d-lg-flex justify-content-between align-items-center pt-4 pb-1">
+                            <div class="pb-1 col-12 col-lg-8">
+                                <h3 class="aboutUs-subHeading pb-1">
+                                    American Library Association
+                                </h3>
+                                <span class="d-block aboutUs-spanText">
+                                    Unilorin earns ALA's Library of Excellence, highlighting our commitment to outstanding library services.
+                                </span>
+                            </div>
+                            <div class="col-12 col-lg-3 py-4">                                
+                                <img src="images/AmericanLibraryAward.png" alt="" class="">
+                            </div>
+                        </div>
+                        <hr/>
+                        <div class="d-block d-lg-flex justify-content-between align-items-center pt-4 pb-1">
+                            <div class="pb-1 col-12 col-lg-9">
+                                <h3 class="aboutUs-subHeading pb-1">
+                                    International Federation of Library Association and Institutions
+                                </h3>
+                                <span class="d-block aboutUs-spanText">
+                                    IFLA has acknowledged Unilorin for its exceptional library services, reaffirming its global academic leadership.
+                                </span>
+                            </div>
+                            <div class="col-12 col-lg-3 py-4">                                
+                                <img src="images/InternationalFedLibAward.png" alt="" class="">
+                            </div>
+                        </div>
+                    </div>
+                </div>                      
+            </div>
+        </div>
+    </section>
+
+
+   <!-- <script>
+        var player;
+        function onYouTubeIframeAPIReady() {
+            player = new YT.Player('player', {
+            events: {
+              'onStateChange': onPlayerStateChange
+            }
+          });
+        }
+        function onPlayerStateChange(event) {
+          if (event.data === 1) { 
+            player.mute(); 
+            player.setPlaybackQuality('small');
+          }
+        }
+    </script>-->
+    <script src="js/membership.js"></script>
+    <!-- <script src="js/scrollFunc.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,5 +1,6 @@
 const links = document.querySelectorAll('.aboutPageLinks');
 const aboutUsItem = document.querySelectorAll('.aboutUsItem');
+const card = document.querySelectorAll('.membershipCard');
 const leadership = document.getElementById('aboutUsLeadershipContent');
 const history = document.getElementById('aboutUsHistoryContent');
 const visionAndMission = document.getElementById('aboutUsVisionAndMission');
@@ -7,6 +8,9 @@ const aboutLocation = document.getElementById('aboutUsLocation');
 const coreValues = document.getElementById('aboutUsCoreValues');
 const ranking = document.getElementById('aboutUsRanking');
 const awards = document.getElementById('aboutUsAwards');
+const firstMembershipCard = document.getElementById('membershipOverviewCards');
+const secondMembershipCard = document.getElementById('membershipBenefitCards');
+
 
 window.onload = function() {
     window.scrollTo(0, 0);
@@ -25,13 +29,21 @@ links.forEach(link => {
             }
             // console.log('working');
         })
+        card.forEach(card => {
+            if (card.classList.contains('membershipCardActive')) {
+                card.classList.remove('membershipCardActive');
+            }
+        })
         if (event.target.classList.contains('leadership')){
             // ranking.classList.add('aboutUsContentActive');
             leadership.classList.toggle('aboutUsContentActive');
+            firstMembershipCard.classList.toggle('membershipCardActive');
             event.target.classList.toggle('about-active-page-link')
         }
         else if (event.target.classList.contains('history')){
             history.classList.add('aboutUsContentActive');
+            firstMembershipCard.classList.toggle('membershipCardActive');
+            secondMembershipCard.classList.toggle('membershipCardActive');
             event.target.classList.toggle('about-active-page-link')
         }
         else if (event.target.classList.contains('visionAndMission')){

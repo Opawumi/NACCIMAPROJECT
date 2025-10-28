@@ -29,27 +29,37 @@ class Slider {
     }
 
     init() {
-        // Create dots
-        this.slides.forEach((_, index) => {
-            const dot = document.createElement('div');
-            dot.classList.add('slider-dot');
-            if (index === 0) dot.classList.add('active');
-            dot.addEventListener('click', () => this.goToSlide(index));
-            this.dotsContainer.appendChild(dot);
-        });
+        // Create dots if container exists
+        if (this.dotsContainer) {
+            this.slides.forEach((_, index) => {
+                const dot = document.createElement('div');
+                dot.classList.add('slider-dot');
+                if (index === 0) dot.classList.add('active');
+                dot.addEventListener('click', () => this.goToSlide(index));
+                this.dotsContainer.appendChild(dot);
+            });
+        }
 
-        // Event listeners
-        this.prevBtn.addEventListener('click', () => this.prevSlide());
-        this.nextBtn.addEventListener('click', () => this.nextSlide());
+        // Add event listeners if buttons exist
+        if (this.prevBtn) {
+            this.prevBtn.addEventListener('click', () => this.prevSlide());
+        }
+        if (this.nextBtn) {
+            this.nextBtn.addEventListener('click', () => this.nextSlide());
+        }
 
-        // Start the slider
-        this.startSlider();
-        this.updateNavbarTheme();
-        
-        // Pause on hover
-        const slider = document.querySelector('.hero-slider');
-        slider.addEventListener('mouseenter', () => this.pauseSlider());
-        slider.addEventListener('mouseleave', () => this.startSlider());
+        // Start the slider if we have slides
+        if (this.slides.length > 0) {
+            this.startSlider();
+            this.updateNavbarTheme();
+            
+            // Pause on hover
+            const slider = document.querySelector('.hero-slider');
+            if (slider) {
+                slider.addEventListener('mouseenter', () => this.pauseSlider());
+                slider.addEventListener('mouseleave', () => this.startSlider());
+            }
+        }
     }
 
     startSlider() {
@@ -337,3 +347,245 @@ class TestimonialSlider {
 document.addEventListener('DOMContentLoaded', () => {
     window.testimonials = new TestimonialSlider();
 });
+
+
+
+
+// Check if element exists before adding event listeners
+        function safeAddEventListener(selector, event, handler) {
+            const element = document.querySelector(selector);
+            if (element) {
+                element.addEventListener(event, handler);
+                return true;
+            }
+            return false;
+        }
+
+        // Safe style setter
+        function safeSetStyle(selector, styles) {
+            const elements = document.querySelectorAll(selector);
+            elements.forEach(el => {
+                if (el && el.style) {
+                    Object.assign(el.style, styles);
+                }
+            });
+        }
+
+        function initFeatureSlider() {
+            console.log('Initializing feature slider...');
+            const $slider = $('.features-slider');
+            
+            // Check if slider exists and has children
+            if (!$slider.length) {
+                console.warn('Features slider not found on this page');
+                return false;
+            }
+
+            if (!$slider.children().length) {
+                console.warn('Features slider has no children');
+                return false;
+            }
+
+            console.log('Slider element and children found');
+            
+            try {
+                // Destroy any existing Slick instances
+                if ($slider.hasClass('slick-initialized')) {
+                    $slider.slick('unslick');
+                }
+                
+                // Remove any existing custom dots
+                $('.custom-dots').remove();
+                
+                try {
+                    // Initialize Slick Slider with centered dots
+                    $slider.slick({
+                        dots: true,
+                        dotsClass: 'slick-dots',
+                        appendDots: $slider,
+                        customPaging: function(slider, i) {
+                            return $('<button type="button" />')
+                                .text('')
+                                .attr('aria-label', 'Go to slide ' + (i + 1));
+                        },
+                        arrows: false,
+                        infinite: true,
+                        speed: 300,
+                        slidesToShow: 1.1,
+                        centerMode: true,
+                        centerPadding: '20px',
+                        autoplay: true,
+                        autoplaySpeed: 3000,
+                        adaptiveHeight: true,
+                        responsive: [
+                            {
+                                breakpoint: 768,
+                                settings: {
+                                    slidesToShow: 1,
+                                    centerMode: true,
+                                    centerPadding: '20px',
+                                    dots: true
+                                }
+                            }
+                        ]
+                    });
+                    
+                    console.log('Slick slider initialized successfully');
+                    return true;
+                } catch (error) {
+                    console.error('Error initializing slider:', error);
+                    return false;
+                }
+                
+                // Force dots to be visible
+                $slider.on('init', function() {
+                    const $dots = $slider.find('.slick-dots');
+                    $dots.css({
+                        'position': 'absolute',
+                        'bottom': '10px',
+                        'left': '50%',
+                        'transform': 'translateX(-50%)',
+                        'display': 'flex !important',
+                        'opacity': '1 !important',
+                        'visibility': 'visible !important'
+                    });
+                    
+                    // Add debug border
+                    $dots.css('border', '1px solid red');
+                });
+                
+                // Ensure dots are properly centered
+                $slider.find('.slick-dots').css({
+                    'position': 'absolute',
+                    'bottom': '10px',
+                    'left': '50%',
+                    'transform': 'translateX(-50%)',
+                    'margin': '0',
+                    'padding': '0',
+                    'list-style': 'none',
+                    'text-align': 'center',
+                    'width': 'auto',
+                    'z-index': '1000'
+                });
+                
+                // Force dots to be visible
+                setTimeout(() => {
+                    $slider.find('.slick-dots')
+                        .css('opacity', '1')
+                        .css('visibility', 'visible')
+                        .css('display', 'block');
+                }, 100);
+                
+                console.log('Slick slider initialized successfully');
+                
+            } catch (error) {
+                console.error('Error initializing slider:', error);
+            }
+        }
+
+        // Initialize when DOM is fully loaded
+        $(window).on('load', function() {
+            // Initialize What We Are slider for mobile
+            $('.what-we-are-slider').slick({
+                dots: false,  // Hide the dots
+                arrows: false,
+                infinite: true,
+                speed: 300,
+                slidesToShow: 1.15,  // Show 1 full slide and 15% of the next
+                slidesToScroll: 1,
+                centerMode: true,     // Enable center mode to handle first/last slides better
+                variableWidth: false, // Use fixed width for consistent sizing
+                centerPadding: '16px', // Add padding on both sides
+                responsive: [
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            slidesToShow: 1.15,
+                            variableWidth: false,
+                            centerMode: true,
+                            centerPadding: '16px'
+                        }
+                    }
+                ]
+            });
+            
+            const $slider = $('.features-slider');
+            
+            // Only initialize if we're on a page with the features slider
+            if ($slider.length) {
+                console.log('Document loaded, checking slider initialization...');
+                
+                // Function to handle slider initialization
+                const initSlider = function() {
+                    if (window.innerWidth <= 991) {
+                        if (!$slider.hasClass('slick-initialized')) {
+                            console.log('Initializing slider for mobile view...');
+                            initFeatureSlider();
+                        }
+                    } else {
+                        if ($slider.hasClass('slick-initialized')) {
+                            console.log('Destroying slider for desktop view...');
+                            $slider.slick('unslick');
+                        }
+                    }
+                };
+                
+                // Initial check
+                initSlider();
+                
+                // Add a small delay to ensure all elements are fully loaded
+                setTimeout(initSlider, 500);
+                
+                // Reinitialize on window resize with debounce
+                let resizeTimer;
+                $(window).on('resize', function() {
+                    clearTimeout(resizeTimer);
+                    resizeTimer = setTimeout(initSlider, 250);
+                });
+            } else {
+                console.warn('No features slider found on this page');
+            }
+        });
+        
+        // Function to force dots visibility
+        function ensureDotsVisible() {
+            const dots = document.querySelectorAll('.features-slider .slick-dots');
+            dots.forEach(dot => {
+                if (dot) {
+                    dot.style.display = 'block';
+                    dot.style.opacity = '1';
+                    dot.style.visibility = 'visible';
+                    
+                    // Add some debug info
+                    console.log('Dots element found, forcing visibility');
+                    console.log('Dots display style:', window.getComputedStyle(dot).display);
+                    
+                    // Force a reflow/repaint
+                    dot.style.display = 'none';
+                    dot.offsetHeight; // Trigger reflow
+                    dot.style.display = 'block';
+                }
+            });
+            
+            // If still not visible, add a border to help with debugging
+            setTimeout(() => {
+                dots.forEach(dot => {
+                    if (dot) {
+                        dot.style.border = '1px solid red'; // Debug border
+                        console.log('Dots element with forced styles:', dot);
+                    }
+                });
+            }, 100);
+        }
+        
+        // Add a manual initialization function that can be called from console
+        window.initFeatureSlider = function() {
+            initFeatureSlider();
+            // Ensure dots are visible after initialization
+            setTimeout(ensureDotsVisible, 200);
+        };
+        
+        // Run ensureDotsVisible after page load
+        window.addEventListener('load', function() {
+            setTimeout(ensureDotsVisible, 500);
+        });

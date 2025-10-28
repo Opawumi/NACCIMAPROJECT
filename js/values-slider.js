@@ -1,6 +1,13 @@
 class ValuesSlider {
     constructor() {
         this.slider = document.querySelector('.values-slider');
+        
+        // Only proceed if slider exists on the page
+        if (!this.slider) {
+            console.log('Values slider not found on this page');
+            return;
+        }
+        
         this.slides = document.querySelectorAll('.value-card');
         this.prevBtn = document.querySelector('.slider-prev');
         this.nextBtn = document.querySelector('.slider-next');
@@ -9,16 +16,23 @@ class ValuesSlider {
         this.slideCount = this.slides.length;
         this.isMobile = window.innerWidth < 768;
 
-        this.init();
+        // Only initialize if we have slides
+        if (this.slideCount > 0) {
+            this.init();
+        } else {
+            console.log('No value cards found for the slider');
+        }
     }
 
     init() {
         // Only initialize slider on mobile
         if (this.isMobile) {
-            this.createDots();
+            if (this.dotsContainer) {
+                this.createDots();
+            }
             this.setupEventListeners();
             this.updateSlider();
-        } else {
+        } else if (this.slider) {
             // On desktop, make sure all slides are visible
             this.slider.style.transform = 'translateX(0)';
         }
@@ -65,17 +79,21 @@ class ValuesSlider {
     }
 
     updateSlider() {
+        if (!this.slider) return;
+        
         if (this.isMobile) {
             // On mobile, slide horizontally
             const slideWidth = 100 / this.slideCount;
             const offset = -this.currentSlide * 100;
             this.slider.style.transform = `translateX(${offset}%)`;
             
-            // Update dots
+            // Update dots if they exist
             const dots = document.querySelectorAll('.slider-dot');
-            dots.forEach((dot, i) => {
-                dot.classList.toggle('active', i === this.currentSlide);
-            });
+            if (dots.length > 0) {
+                dots.forEach((dot, i) => {
+                    dot.classList.toggle('active', i === this.currentSlide);
+                });
+            }
         } else {
             // On desktop, make sure all slides are visible in a grid
             this.slider.style.transform = 'translateX(0)';

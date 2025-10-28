@@ -251,6 +251,109 @@ a {
     }
 }
 
+/* Slider Dots */
+.slider-controls {
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    padding: 0 15px;
+}
+
+.slider-dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 15px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+    backdrop-filter: blur(5px);
+}
+
+.slider-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-indent: -9999px;
+    overflow: hidden;
+}
+
+.slider-dot.active {
+    background-color: #00A758;
+    transform: scale(1.3);
+    box-shadow: 0 0 5px rgba(0, 167, 88, 0.7);
+}
+
+/* Ensure dots are visible on mobile */
+@media (max-width: 767px) {
+    .slider-controls {
+        bottom: 20px;
+    }
+    
+    .slider-dots {
+        padding: 6px 12px;
+    }
+    
+    .slider-dot {
+        width: 8px;
+        height: 8px;
+    }
+    
+    .slider-dot.active {
+        transform: scale(1.2);
+    }
+}
+
+.slider-dots-container {
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    padding: 0 15px;
+}
+
+.slider-dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 0;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    padding: 8px 15px;
+}
+
+.slider-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-indent: -9999px;
+    overflow: hidden;
+}
+
+.slider-dot.active {
+    background-color: #00A758;
+    transform: scale(1.3);
+    box-shadow: 0 0 5px rgba(0, 167, 88, 0.7);
+}
+
 /* Slider Styles */
 .hero-slider {
     position: relative;
@@ -725,10 +828,10 @@ a {
     transform: scale(1.1);
 }
 
-.slider-dots {
+/* .slider-dots {
     display: flex;
     gap: 10px;
-}
+} */
 
 .slider-dot {
     width: 10px;
@@ -743,6 +846,8 @@ a {
     background: #2563eb;
     transform: scale(1.2);
 }
+
+
 
 /* Responsive Styles */
 @media (min-width: 768px) {
@@ -765,7 +870,7 @@ a {
 
 @media (max-width: 767px) {
     .section-title {
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
     
     .section-subtitle {
@@ -924,6 +1029,11 @@ a {
     .who-we-panel .who-title {
         font-size: 20px;
     }
+
+    .btn-black {
+    
+    width: 100%;
+}
 }
 
 /* When .who-we-panel is used with Bootstrap .row, let the row handle layout; ensure vertical centering */
@@ -987,8 +1097,14 @@ a {
     font-size: 20px;
     font-weight: 700;
     margin-bottom: 8px;
+   
 }
-
+@media (max-width: 767.98px) {
+    .who-heading {
+        font-size: 18px;
+        text-align: start;
+    }
+}
 .who-body p {
     color: #444;
     line-height: 1.6;
@@ -996,6 +1112,11 @@ a {
     font-family: normal;
 }
 
+@media (max-width: 767.98px) {
+    .who-body p {
+        text-align: start;
+    }
+}
 .who-body .btn {
     border-radius: 4px !important;
     transition: none !important;
@@ -1105,10 +1226,12 @@ a {
 @media (max-width: 575.98px) {
     .hero-title {
         font-size: 1.75rem;
+        width: 100%;
     }
     
     .hero-subtitle {
         font-size: 1rem;
+        width: 100%;
     }
 }
 
@@ -1404,12 +1527,139 @@ a {
     }
 }
 
+/* Mobile Styles for Our Services Section */
+@media (max-width: 767.98px) {
+    .our-services {
+        padding: 2rem 0 !important;
+    }
+    
+    .our-services .section-title {
+        font-size: 1.25rem;
+        font-weight: 700;
+        margin-bottom: 1.5rem;
+    }
+    
+    /* Reset desktop layout for mobile */
+    .our-services .d-lg-flex {
+        display: block !important;
+    }
+    
+    .our-services .me-3,
+    .our-services .w-lg-25,
+    .our-services .w-lg-75 {
+        width: 100% !important;
+        margin: 0 !important;
+    }
+    
+    .our-services .row {
+        margin: 0 !important;
+    }
+    
+    .our-services .col-lg-8,
+    .our-services .col-lg-4 {
+        width: 100% !important;
+        padding: 0 !important;
+    }
+    
+    /* Service Card Styling */
+    .service-card {
+        padding: 1.25rem !important;
+        margin-bottom: 1rem !important;
+        border-radius: 12px;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    /* Ensure proper stacking */
+    .service-card.Advo {
+        display: flex !important;
+        flex-direction: column !important;
+        height: auto !important;
+        padding: 1.25rem !important;
+        margin-top: 1rem !important;
+    }
+    
+    /* Service Badge */
+    .service-badge {
+        width: 40px;
+        height: 40px;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 1rem !important;
+    }
+    
+    .service-badge i {
+        font-size: 18px;
+    }
+    
+    .service-badge img {
+        width: 20px;
+        height: 20px;
+    }
+    
+    /* Service Card Titles */
+    .service-card h5 {
+        font-size: 1rem;
+        font-weight: 700;
+        margin-bottom: 0.75rem !important;
+        margin-top: 0 !important;
+    }
+    
+    /* Service Card Text */
+    .service-card p {
+        font-size: 0.875rem;
+        line-height: 1.5;
+        color: #6c757d;
+        margin-bottom: 1rem !important;
+    }
+    
+    /* Service Images */
+    .service-media {
+        margin-top: 1rem !important;
+        width: 100%;
+    }
+    
+    .service-media img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+        object-fit: cover;
+    }
+    
+    .service-graphic {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+    }
+    
+    /* Background Colors for Mobile */
+    .service-card.membership {
+        background: #fce8ec !important;
+    }
+    
+    .service-card.research {
+        background: #e8f5f0 !important;
+    }
+    
+    .service-card.capacity {
+        background: #e8f0f7 !important;
+    }
+    
+    .service-card.policy {
+        background: #e8f0f7 !important;
+    }
+}
+
 @media (max-width: 575.98px) {
     .service-card {
         padding: 1rem;
     }
     .service-media img {
-        height: 140px;
+        height: auto;
+        min-height: 180px;
     }
 }
 
@@ -1911,6 +2161,485 @@ font-size: 14.5px; }
     font-size: 25px;
 }
 
+
+/* Statistics Strip */
+.stats-strip {
+    background-color: #E8F5F0;
+    padding: 25px 0;
+}
+
+.stats-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 15px;
+}
+
+.stat-item {
+    flex: 1;
+    text-align: center;
+    padding: 5px;
+}
+
+.stat-number {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #00A758;
+    margin-bottom: 5px;
+    line-height: 1;
+}
+
+.stat-label {
+    font-size: 0.75rem;
+    color: #6c757d;
+    line-height: 1.3;
+}
+
+/* Mobile Styles */
+@media (max-width: 767.98px) {
+    .stats-strip {
+        background-color: #E8F5F0;
+        padding: 30px 0;
+        margin-bottom: 10px;
+        height: 100%;
+    }
+    
+    .stats-strip .container {
+        padding-left: 0;
+        padding-right: 0;
+        max-width: 100%;
+    }
+    
+    .stats-container {
+        flex-direction: column;
+        gap: 25px;
+        padding: 0 15px;
+    }
+    
+    .stat-item {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+        background-color: transparent;
+    }
+    
+    .stat-number {
+        font-size: 2.5rem;
+        margin-bottom: 8px;
+        font-weight: 700;
+    }
+    
+    .stat-label {
+        font-size: 0.875rem;
+        max-width: 250px;
+        color: #6c757d;
+        text-align: center;
+    }
+}
+
+/* What We Are Mobile Slider */
+        .what-we-are-slider {
+            padding: 10px 0 40px;
+        }
+        
+        .what-we-are-slider .slick-dots {
+            bottom: 15px !important;
+        }
+        
+        .what-we-are-slider .slick-dots li button:before {
+            font-size: 12px;
+            color: #00A758;
+            opacity: 0.3;
+        }
+        
+        .what-we-are-slider .slick-dots li.slick-active button:before {
+            color: #00A758;
+            opacity: 1;
+        }
+        
+        .what-we-are-slider .feature-card {
+            margin: 0 5px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        /* Base slider styles */
+        .features-slider {
+            position: relative;
+            padding-bottom: 40px; /* Add space for dots */
+        }
+        
+        /* Dots container */
+        .slick-dots {
+            position: absolute !important;
+            bottom: 15px !important;
+            left: 50% !important;
+            transform: translateX(-50%) !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            list-style: none !important;
+            text-align: center !important;
+            display: flex !important;
+            justify-content: center !important;
+            align-items: center !important;
+            gap: 8px !important;
+            width: auto !important;
+            z-index: 1000 !important;
+        }
+        
+        /* Individual dot */
+        .slick-dots li {
+            display: inline-block !important;
+            margin: 0 4px !important;
+            padding: 0 !important;
+            width: auto !important;
+            height: auto !important;
+        }
+        
+        /* Dot button */
+        .slick-dots button {
+            display: block !important;
+            width: 10px !important;
+            height: 10px !important;
+            padding: 0 !important;
+            border: none !important;
+            border-radius: 50% !important;
+            background: #d1d1d1 !important;
+            text-indent: -9999px !important;
+            overflow: hidden !important;
+            cursor: pointer !important;
+            transition: all 0.3s ease !important;
+        }
+        
+        /* Active dot */
+        .slick-dots .slick-active button {
+            background: #00A758 !important;
+            transform: scale(1.3) !important;
+        }
+        
+        /* Ensure dots are visible and properly positioned */
+        .slick-dots {
+            height: 20px !important;
+            padding: 10px 0 !important;
+            margin: 0 !important;
+            list-style: none !important;
+            text-align: center !important;
+            z-index: 1000 !important;
+        }
+        
+        html body .features-slider.slick-slider .slick-dots li,
+        html body .features-slider .slick-dots li {
+            display: inline-block !important;
+            margin: 0 8px !important;
+            padding: 0 !important;
+            width: auto !important;
+            height: auto !important;
+        }
+        
+        html body .features-slider.slick-slider .slick-dots button,
+        html body .features-slider .slick-dots button {
+            display: block !important;
+            width: 12px !important;
+            height: 12px !important;
+            padding: 0 !important;
+            border: none !important;
+            border-radius: 50% !important;
+            background: #d1d1d1 !important;
+            text-indent: -9999px !important;
+            overflow: hidden !important;
+            cursor: pointer !important;
+            transition: all 0.3s ease !important;
+        }
+        
+        html body .features-slider.slick-slider .slick-dots .slick-active button,
+        html body .features-slider .slick-dots .slick-active button {
+            background: #00A758 !important;
+            transform: scale(1.4) !important;
+        }
+        /* Base slider styles */
+        .features-slider {
+            position: relative;
+            display: block;
+            opacity: 1 !important;
+            visibility: visible !important;
+            z-index: 1;
+            margin: 0 -10px;
+            padding-bottom: 40px; /* Add space for dots */
+        }
+        
+        /* Ensure dots are centered and visible */
+        .slick-dots {
+            position: absolute;
+            bottom: 10px !important;
+            left: 50% !important;
+            transform: translateX(-50%) !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            list-style: none !important;
+            text-align: center !important;
+            width: auto !important;
+            z-index: 1000 !important;
+            display: flex !important;
+            justify-content: center !important;
+            align-items: center !important;
+            gap: 8px !important;
+        }
+        
+        .slick-dots li {
+            display: inline-block !important;
+            margin: 0 4px !important;
+            padding: 0 !important;
+            width: auto !important;
+            height: auto !important;
+        }
+        
+        .slick-dots button {
+            display: block !important;
+            width: 10px !important;
+            height: 10px !important;
+            padding: 0 !important;
+            border: none !important;
+            border-radius: 50% !important;
+            background: #d1d1d1 !important;
+            text-indent: -9999px !important;
+            overflow: hidden !important;
+            cursor: pointer !important;
+            transition: all 0.3s ease !important;
+        }
+        
+        .slick-dots .slick-active button {
+            background: #00A758 !important;
+            transform: scale(1.3) !important;
+        }
+        
+        /* Reset any conflicting styles */
+        .features-slider .slick-slide {
+            padding: 0 5px;
+            padding: 20px 0 60px; /* Increased bottom padding for dots */
+        }
+        
+        /* Custom dots container */
+        .features-slider .slick-dots {
+            position: absolute !important;
+            bottom: 15px !important;
+            left: 0 !important;
+            right: 0 !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            text-align: center !important;
+            list-style: none !important;
+            z-index: 1000 !important;
+            display: block !important;
+            height: 20px !important;
+            line-height: 1 !important;
+        }
+        
+        .features-slider .slick-dots li {
+            display: inline-block !important;
+            margin: 0 5px !important;
+            padding: 0 !important;
+            width: auto !important;
+            height: auto !important;
+        }
+        
+        .features-slider .slick-dots li button {
+            font-size: 0 !important;
+            line-height: 0 !important;
+            display: block !important;
+            width: 12px !important;
+            height: 12px !important;
+            padding: 0 !important;
+            border: none !important;
+            border-radius: 50% !important;
+            background: #d1d1d1 !important;
+            cursor: pointer !important;
+            transition: all 0.3s ease !important;
+            position: relative !important;
+            opacity: 1 !important;
+        }
+        
+        .features-slider .slick-dots li button:before {
+            display: none !important;
+        }
+        
+        .features-slider .slick-dots li.slick-active button {
+            background: #00A758 !important;
+            transform: scale(1.3) !important;
+            opacity: 1 !important;
+        }
+        
+        /* Custom dots container - More visible and positioned correctly */
+        .features-slider + .custom-dots {
+            position: relative !important;
+            bottom: auto !important;
+            left: auto !important;
+            right: auto !important;
+            display: flex !important;
+            justify-content: center !important;
+            align-items: center !important;
+            padding: 15px 0 5px !important;
+            margin: 0 auto !important;
+            width: 100% !important;
+            max-width: 300px !important;
+            height: auto !important;
+            background: transparent !important;
+            z-index: 1000 !important;
+            gap: 12px !important;
+            flex-wrap: wrap !important;
+        }
+        
+        .features-slider + .custom-dots .custom-dot {
+            width: 14px !important;
+            height: 14px !important;
+            border-radius: 50% !important;
+            background: #e0e0e0 !important;
+            border: none !important;
+            padding: 0 !important;
+            margin: 0 3px !important;
+            cursor: pointer !important;
+            transition: all 0.3s ease !important;
+            position: relative !important;
+            display: block !important;
+            opacity: 1 !important;
+            visibility: visible !important;
+            text-indent: -9999px !important;
+            overflow: hidden !important;
+        }
+        
+        .features-slider + .custom-dots .custom-dot.active,
+        .features-slider + .custom-dots .custom-dot:hover {
+            background: #00A758 !important;
+            transform: scale(1.4) !important;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2) !important;
+        }
+        
+        /* Ensure dots are visible on mobile */
+        @media (max-width: 991px) {
+            .features-slider + .custom-dots {
+                display: flex !important;
+                opacity: 1 !important;
+                visibility: visible !important;
+            }
+        }
+        
+        /* Slide styles */
+        .feature-slide {
+            padding: 0 10px;
+            box-sizing: border-box;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+        
+        .feature-card {
+            background: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            height: 100%;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .feature-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+        
+        /* Dots navigation - More specific and visible styles */
+        .features-slider .slick-dots {
+            position: absolute !important;
+            bottom: 0 !important;
+            left: 0 !important;
+            right: 0 !important;
+            margin: 0 !important;
+            padding: 15px 0 !important;
+            text-align: center !important;
+            list-style: none !important;
+            z-index: 1000 !important;
+            display: block !important;
+            height: auto !important;
+            width: 100% !important;
+            background: transparent !important;
+        }
+        
+        .features-slider .slick-dots li {
+            display: inline-block !important;
+            margin: 0 6px !important;
+            padding: 0 !important;
+            width: auto !important;
+            height: auto !important;
+        }
+        
+        .features-slider .slick-dots li button {
+            font-size: 0 !important;
+            line-height: 0 !important;
+            display: block !important;
+            width: 12px !important;
+            height: 12px !important;
+            padding: 0 !important;
+            border: none !important;
+            border-radius: 50% !important;
+            background: #d1d1d1 !important;
+            cursor: pointer !important;
+            transition: all 0.3s ease !important;
+            position: relative !important;
+            opacity: 1 !important;
+        }
+        
+        .features-slider .slick-dots li button:before {
+            display: none !important;
+        }
+        
+        .features-slider .slick-dots li.slick-active button {
+            background: #00A758 !important;
+            transform: scale(1.3) !important;
+            opacity: 1 !important;
+        }
+        
+        /* Fix for slider visibility */
+        .slick-slide {
+            opacity: 1 !important;
+            transform: translateZ(0);
+        }
+        
+        .slick-list {
+            overflow: visible;
+            margin: 0 -10px;
+            padding: 10px 0 !important;
+        }
+        
+        /* Center mode active slide */
+        .slick-center .feature-card {
+            transform: scale(1.03);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 991px) {
+            .features-slider {
+                padding-bottom: 50px;
+            }
+            
+            .slick-dots {
+                bottom: 0;
+            }
+        }
+        
+        /* Ensure proper spacing */
+        .what-we-are {
+            overflow: hidden;
+        }
+
+  @media (max-width: 991px) {
+    .capcityCard {
+      margin-top: 15px;
+    }
+  }
 
 
 

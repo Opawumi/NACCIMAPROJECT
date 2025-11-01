@@ -509,6 +509,30 @@ document.addEventListener('DOMContentLoaded', () => {
                 ]
             });
             
+            // Initialize Upcoming Events slider for mobile
+            $('.upcoming-events-slider').slick({
+                dots: false,
+                arrows: false,
+                infinite: true,
+                speed: 300,
+                slidesToShow: 1.15,
+                slidesToScroll: 1,
+                centerMode: true,
+                variableWidth: false,
+                centerPadding: '16px',
+                responsive: [
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            slidesToShow: 1.15,
+                            variableWidth: false,
+                            centerMode: true,
+                            centerPadding: '16px'
+                        }
+                    }
+                ]
+            });
+            
             const $slider = $('.features-slider');
             
             // Only initialize if we're on a page with the features slider

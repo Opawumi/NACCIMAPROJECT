@@ -83,10 +83,15 @@ class Slider {
         const theme = currentSlide ? currentSlide.getAttribute('data-navbar-theme') || 'light' : 'light';
         
         // Remove all theme classes
-        this.navbar.classList.remove('navbar-light-theme', 'navbar-dark-theme');
+        this.navbar.classList.remove('navbar-light-theme', 'navbar-dark-theme', 'navbar-dark-transparent-theme', 'navbar-light-blue-theme');
         
-        // Add the appropriate theme class
-        this.navbar.classList.add(`navbar-${theme}-theme`);
+        // Add the appropriate theme class based on the data attribute
+        if (theme === 'dark-transparent' || theme === 'light-blue') {
+            this.navbar.classList.add(`navbar-${theme}-theme`);
+        } else {
+            // Fallback for other themes
+            this.navbar.classList.add(`navbar-${theme}-theme`);
+        }
     }
 
     goToSlide(index) {

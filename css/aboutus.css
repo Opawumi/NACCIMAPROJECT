@@ -1,0 +1,4028 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+
+:root {
+  --primary-color: #00a758;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter";
+}
+
+.membership-banner {
+  background: var(--primary-color);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: auto;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Hero Section */
+.hero {
+  /* background: linear-gradient(135deg, #1a5f3f 0%, #2d8659 100%); */
+  color: #000000;
+}
+
+.hero-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hero-image img {
+  width: auto;
+  padding-left: 14px;
+  /* height: 100%; */
+  /* object-fit: cover; */
+}
+
+.hero-text h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  line-height: 1.3;
+}
+
+.hero-buttons {
+  /*display: flex;*/
+  gap: 15px;
+  /* margin-top: 30px; */
+}
+
+.btn {
+  /*padding: 12px 30px;*/
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-primary {
+  background: var(--primary-color);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  padding: var(--Spacing-xs, 10px) var(--Spacing-m, 32px);
+}
+
+.btn-primary:hover {
+  background: #f0f0f0;
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: #000000;
+  border: 2px solid black;
+  font-size: 14px;
+  font-weight: 500;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  padding: var(--Spacing-xs, 10px);
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+/* mobile responsiveness */
+.membership_overview_heading {
+  color: var(--Black, #121212);
+  font-family: Inter;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 30.8px;
+}
+
+.about-side-links {
+  top: 5rem !important;
+  bottom: 0rem !important;
+  height: 67vh !important;
+  z-index: 3;
+  width: 24% !important;
+  /* position: fixed !important; */
+  /* position: sticky !important; */
+  /* margin-top: 5rem !important; */
+}
+
+.about-link-pages-wrapper {
+  border-color: rgba(32, 32, 32, 0.15);
+}
+
+.membership-heading {
+  color: var(--White, #fff);
+  font-family: "Inter" sans-serif;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 33.6px;
+}
+.administration-heading {
+  font-weight: 700;
+  font-size: clamp(30px, 10vw, 36px);
+}
+
+/*Membership benefits page*/
+.membershipbenefit-heading h3 {
+  color: #202020;
+  font-family: "Inter", sans-serif;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 33.6px;
+}
+
+.membershipbenefit-heading h6 {
+  color: #202020;
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+}
+
+.membershipbenefit-heading p {
+  color: var(--Black, #121212);
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 28px;
+}
+
+.benefit-box {
+  border-radius: 10px;
+  padding: 25px;
+  color: #000;
+  transition: all 0.3s ease;
+}
+
+.benefit-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
+}
+
+.benefit-number {
+  font-size: 1.2rem;
+  font-weight: 700;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+/* GRID LAYOUT (Desktop) */
+@media (min-width: 992px) {
+  .benefit-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+      "box1 box1 box2"
+      "box3 box4 box2"
+      "box3 box4 box5";
+    gap: 1.5rem;
+  }
+
+  .box1 {
+    grid-area: box1;
+  }
+  .box2 {
+    grid-area: box2;
+  }
+  .box3 {
+    grid-area: box3;
+  }
+  .box4 {
+    grid-area: box4;
+  }
+  .box5 {
+    grid-area: box5;
+  }
+}
+
+/* MOBILE VIEW (stacked) */
+@media (max-width: 991.98px) {
+  .benefit-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+.section-wrapper {
+  background-color: #f8f9fa;
+ /* padding: 60px 0;*/
+}
+.content-card {
+  background: white;
+  border-radius: 12px;
+  padding: 30px;
+  border: 1px solid #00a758;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.image-container {
+  border-radius: 12px;
+  overflow: hidden;
+  height: 100%;
+  min-height: 300px;
+}
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.section-heading {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: #212529;
+}
+.content-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.content-list li {
+  padding-left: 25px;
+  position: relative;
+  margin-bottom: 15px;
+  color: #495057;
+  font-size: 15px;
+  line-height: 1.6;
+}
+.content-list li:before {
+  content: "●";
+  position: absolute;
+  left: 0;
+  color: var(--primary-color);
+  font-size: 10px;
+  top: 8px;
+}
+
+/* Membership Categories page*/
+.btn-success {
+  background-color: var(--primary-color);
+  border: none;
+  border-radius: 30px;
+  transition: 0.3s;
+}
+
+.btn-success:hover {
+  background-color: var(--primary-color);
+}
+
+.corporate-membership {
+  padding: var(--Spacing-sl, 32px) var(--Spacing-sl, 32px)
+    var(--Spacing-s, 20px) var(--Spacing-sl, 32px);
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--Spacing-s, 24px);
+  flex: 1 0 0;
+  align-self: stretch;
+  border-radius: var(--Corner-Radius-m, 16px);
+  background: var(--Colors-Pimary-pimary-50, #e6f6ee);
+  margin-bottom: 0;
+}
+
+.corporate-membership p {
+  margin-bottom: 0;
+}
+
+.corporate-membership .btn {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+@media (max-width: 991.98px) {
+  .row {
+    text-align: center;
+  }
+
+  .btn {
+    margin-top: 10px;
+  }
+}
+
+/*Member Chambers Page*/
+.card {
+  transition: all 0.3s ease;
+  border-radius: 12px;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+.btn-success {
+  background-color: #28a745;
+  border: none;
+}
+
+.btn-success:hover {
+  background-color: #218838;
+}
+
+.btn-outline-success {
+  border-color: #28a745;
+  color: #28a745;
+}
+
+.btn-outline-success:hover {
+  background-color: #28a745;
+  color: white;
+}
+
+.state h6 {
+  color: var(--Black, #121212);
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 21.6px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.location {
+  vertical-align: middle;
+}
+
+.about-page-links {
+  color: #000;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16.8px;
+  text-decoration: none;
+  opacity: 75%;
+  padding: 12px 16px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  display: block;
+  margin-right: 8px;
+}
+
+.about-page-links:hover {
+  font-weight: 600 !important;
+  color: var(--Colors-Pimary-pimary-500, #00a758) !important;
+  opacity: 100%;
+  background-color: #f0fdf4;
+}
+
+.about-active-page-link {
+  font-weight: 600 !important;
+  color: #00a758 !important;
+  opacity: 100%;
+  background-color: #f0fdf4;
+  border-radius: 4px;
+  padding: 12px 16px;
+  margin-right: 8px;
+}
+
+.aboutUsContentActive {
+  display: block !important;
+}
+
+.aboutUsContent {
+  padding-left: 8px !important;
+}
+
+.membershipCardActive {
+  display: flex !important;
+}
+
+.leadership-about-card-header {
+  font-size: clamp(14px, 6vw, 18px);
+  font-weight: 400;
+  color: #202020;
+  opacity: 75%;
+}
+
+.leadership-about-card-text {
+  font-size: clamp(18px, 7vw, 20px);
+  font-weight: 600;
+  color: #202020;
+  opacity: 75%;
+}
+
+.card-container {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* ABOUT-US-LEADERSHIP-CONTENT */
+.youtube-wrapper {
+  border: none;
+  width: 100%;
+  height: 439px;
+  background-color: #202020;
+  /* opacity: 75%; */
+  /* width: 844px;  */
+}
+
+#player {
+  border: none;
+  width: 100%;
+  height: 439px;
+}
+
+.kwara-gov-link,
+.about-text-color {
+  text-decoration: none;
+  color: #301a6f;
+}
+
+article > p > .kwara-gov-link > strong {
+  font-weight: 600 !important;
+}
+
+/* ABOUT-US-HISTORY-CONTENT */
+.aboutUs-spanText,
+.history-content {
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 36px;
+}
+
+.aboutUs-subHeading,
+.history-subHeading {
+  font-weight: 700;
+  font-size: 24px;
+  color: #301a6f;
+}
+
+/* ABOUT-US-RANKING */
+.rank-Btn-wrapper {
+  width: 32%;
+}
+
+.aboutUsRankBtn {
+  background-color: #301a6f;
+  color: #ffffff;
+  font-weight: 500;
+  border: none;
+  width: 66%;
+  border-radius: 4px;
+  text-decoration: none;
+  text-align: center;
+}
+
+.rank-numbers {
+  font-size: 18px;
+  font-weight: 600;
+  color: #202020;
+  cursor: pointer;
+}
+
+.rank-verify-icon {
+  font-size: 23px;
+  cursor: pointer;
+  color: #202020;
+}
+
+.aboutUsRank-link {
+  text-decoration: none;
+}
+
+.aboutUsContentWrapper {
+  max-height: 100%;
+  max-width: 100%;
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+}
+
+.aboutUsContentWrapper::-webkit-scrollbar {
+  width: 0;
+}
+
+/* ACCORDION-FOR-ABOUT-US*/
+.accordion-button1 {
+  color: #202020;
+  font-weight: 500;
+  font-size: 14px;
+  padding: 12px 16px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.accordion-button1:hover {
+  color: #00a758;
+}
+
+.accordion {
+  --bs-accordion-btn-active-icon: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='12' cy='12' r='12' fill='%23301A6F'/%3E%3Cpath d='M16 14L12 10L8 14' stroke='white' stroke-width='1.33333' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A") !important;
+}
+
+.accordion-body {
+  padding: 0% !important;
+}
+
+.accordion-button {
+  width: fit-content !important;
+}
+
+.accordion-button::after {
+  margin-right: auto !important;
+  margin-left: 0 !important;
+  background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='12' cy='12' r='12' fill='%2300a758'/%3E%3Cpath d='M8 10L12 14L16 10' stroke='%23ffffff' stroke-width='1.33333' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") !important;
+}
+
+.accordion-button:focus {
+  box-shadow: none !important;
+}
+
+.accordion-button:not(.collapsed) {
+  /* background-color: transparent !important; */
+  background-color: rgba(48, 26, 111, 0.01) !important;
+  box-shadow: none;
+}
+
+.accordion-button {
+  background-color: rgba(48, 26, 111, 0.01) !important;
+}
+
+#accordionWrapper {
+  background-color: rgba(48, 26, 111, 0.1) !important;
+}
+
+/* Membership Section */
+
+.section-title {
+  color: #202020;
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  margin-bottom: 40px;
+  padding-top: 24px;
+}
+
+/* Membership Cards */
+.membership-card {
+  background: white;
+  border-radius: 12px;
+  padding: 35px;
+  height: 100%;
+  transition: all 0.3s;
+  border: 1px solid #e9ecef;
+}
+
+.membership-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.card-icon {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(
+    135deg,
+    var(--primary-color),
+    var(--primary-light)
+  );
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+
+.card-icon img {
+  color: var(--Black, #121212);
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16.8px;
+}
+
+.membership-card h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+}
+
+.membership-card p {
+  color: #121212;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16.8px;
+}
+
+/* Benefits Cards */
+.benefit-card {
+  padding: 20px;
+  border-radius: 8px;
+  height: 100%;
+  transition: all 0.3s;
+}
+
+.benefit-card:hover {
+  transform: translateY(-5px);
+}
+
+.benefit-card.blue {
+  border-radius: var(--Corner-Radius-s, 8px);
+  background: rgba(2, 103, 191, 0.1);
+}
+
+.benefit-card.purple {
+  border-radius: var(--Corner-Radius-s, 8px);
+  background: rgba(153, 0, 150, 0.1);
+}
+
+.benefit-card.green {
+  border-radius: var(--Corner-Radius-s, 8px);
+  background: rgba(0, 167, 88, 0.1);
+}
+
+.benefit-card.red {
+  border-radius: var(--Corner-Radius-s, 8px);
+  background: rgba(218, 0, 1, 0.1);
+}
+
+.benefit-number {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 14px;
+  color: white;
+}
+
+.benefit-number.blue {
+  background: #2196f3;
+}
+
+.benefit-number.purple {
+  background: #9c27b0;
+}
+
+.benefit-number.green {
+  background: #4caf50;
+}
+
+.benefit-number.red {
+  background: #f44336;
+}
+
+.benefit-card h3 {
+  font-size: 20px;
+  font-weight: 600;
+  line-break: 24px;
+  margin-bottom: 12px;
+}
+
+.benefit-card p {
+  color: #121212;
+  font-size: 16px;
+  font-weight: 300;
+  margin: 0;
+}
+
+/*Overview page*/
+/* Testimonials */
+.testimonials-wrapper {
+  position: relative;
+  overflow: visible;
+  padding: 0 30px;
+}
+
+.testimonial-card {
+  background: white;
+  border-radius: 12px;
+  padding: 35px;
+  height: 100%;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  position: relative;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+}
+
+.testimonial-card:hover {
+  transform: scale(1.15);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+  z-index: 100;
+}
+
+/* ===== Responsive: One Card Per Slide on Mobile ===== */
+@media (max-width: 768px) {
+  .testimonial-col {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .testimonial-card {
+    text-align: center;
+    padding: 1.5rem;
+  }
+
+  .testimonial-text {
+    font-size: 0.95rem;
+  }
+
+  .testimonial-row {
+    margin: 0;
+  }
+
+  /* Indicators styling (optional for better alignment) */
+  .custom-indicators {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    list-style: none;
+    padding: 0;
+    margin-top: 1rem;
+  }
+
+  .custom-indicators li {
+    display: inline-block;
+  }
+
+  .custom-indicators button {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: none;
+    background: #ccc;
+  }
+
+  .custom-indicators li.active button {
+    background: #333;
+  }
+}
+
+.carousel-item {
+  padding: 20px 0;
+}
+
+.quote-icon {
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  font-size: 50px;
+  color: var(--primary-color);
+  opacity: 0.15;
+}
+
+.testimonial-text {
+  font-style: italic;
+  color: #495057;
+  line-height: 1.8;
+  margin-top: 50px;
+  margin-bottom: 25px;
+}
+
+.author-section {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding-top: 20px;
+}
+
+.author-avatar {
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.author-info h5 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0;
+  color: #212529;
+}
+
+.author-info p {
+  font-size: 0.9rem;
+  color: #6c757d;
+  margin: 0;
+}
+
+/* Custom Carousel Indicators */
+.custom-indicators {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 50px;
+  padding: 0;
+  list-style: none;
+  margin-bottom: 0;
+}
+
+.custom-indicators li {
+  margin: 0;
+}
+
+.custom-indicators button {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #d1d5db;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-indent: -9999px;
+  overflow: hidden;
+}
+
+.custom-indicators li.active button {
+  background-color: var(--primary-color);
+  width: 32px;
+  border-radius: 6px;
+}
+
+.custom-indicators button:hover {
+  background-color: var(--primary-light);
+  opacity: 0.8;
+}
+
+/* Hide default Bootstrap carousel indicators */
+#testimonialCarousel .carousel-indicators {
+  display: none;
+}
+
+/* Carousel controls - hidden but functional */
+#testimonialCarousel .carousel-control-prev,
+#testimonialCarousel .carousel-control-next {
+  display: none;
+}
+
+.card {
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  transition: transform 0.2s;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+.icon-box {
+  width: 50px;
+  height: 50px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+.bg-mint {
+  background-color: #d4f0e8;
+}
+.bg-light-blue {
+  background-color: #dbe9f7;
+}
+.text-mint {
+  color: #0d9b6d;
+}
+.text-blue {
+  color: #0d6efd;
+}
+.btn-mint {
+  background-color: #00a758;
+  color: white;
+  border: none;
+}
+.btn-mint:hover {
+  background-color: #00a758;
+  color: white;
+}
+
+/* Chamber Cards Styling */
+.chamber-card {
+  background-color: #f0fdf4;
+  border-radius: 12px;
+  padding: 28px 24px;
+  height: 100%;
+  box-shadow: 0 2px 12px rgba(0, 167, 88, 0.08);
+  transition: all 0.3s ease;
+  border: 1px solid #dcfce7;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+}
+
+.chamber-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0, 167, 88, 0.15);
+  border-color: #bbf7d0;
+}
+
+.state-label {
+  display: block;
+  background-color: var(--primary-color);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 30px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border: none;
+  display: inline-flex;
+  align-self: flex-start; /* ensures it hugs the left side */
+  margin-right: 0;
+  transition: 0.3s;
+  box-shadow: 0 2px 4px rgba(0, 167, 88, 0.2);
+}
+
+.state-label:hover {
+  background-color: var(--primary-color);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 167, 88, 0.3);
+}
+
+.chamber-logo {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0px 0 24px 0;
+  height: 80px;
+  padding-left: 0;
+}
+
+.chamber-logo img {
+  max-height: 80px;
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+.chamber-name {
+  font-size: 19px;
+  font-weight: 700;
+  color: #1f2937;
+  margin: 24px 0px;
+  /* margin-bottom: 24px; */
+  text-align: left;
+  line-height: 1.4;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.contact-info {
+  margin-bottom: 28px;
+  flex-grow: 1;
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 14px;
+  gap: 14px;
+}
+
+.contact-icon {
+  width: 22px;
+  height: 22px;
+  background-color: #00a758;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 1px;
+  box-shadow: 0 2px 4px rgba(0, 167, 88, 0.2);
+}
+
+.contact-icon svg {
+  color: white;
+  width: 13px;
+  height: 13px;
+  stroke-width: 2;
+}
+
+.contact-item span {
+  font-size: 14px;
+  color: #4b5563;
+  line-height: 1.5;
+  flex: 1;
+  font-weight: 400;
+}
+
+.open-website-btn {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+  padding: 0;
+  margin: 0;
+  background: none;
+  border: none;
+  color: #00a758;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: auto;
+  margin-left: auto;
+  margin-top: auto;
+  align-self: flex-end;
+}
+
+.open-website-btn:hover {
+  color: #008a4a;
+  text-decoration: none;
+}
+
+.open-website-btn svg {
+  width: 16px;
+  height: 16px;
+  color: #00a758;
+  transition: all 0.3s ease;
+  stroke-width: 2.5;
+}
+
+.open-website-btn:hover svg {
+  color: #008a4a;
+  transform: translateX(3px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .chamber-card {
+    padding: 24px 20px;
+    min-height: 380px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .state-label {
+    font-size: 10px;
+    padding: 5px 12px;
+    top: 16px;
+    left: 16px;
+  }
+
+  .chamber-logo {
+    height: 70px;
+    margin: 45px 0 20px 0;
+    justify-content: flex-start;
+  }
+
+  .chamber-logo img {
+    max-height: 70px;
+  }
+
+  .chamber-name {
+    font-size: 17px;
+    margin-bottom: 20px;
+    text-align: left;
+  }
+
+  .contact-item {
+    margin-bottom: 12px;
+    gap: 12px;
+  }
+
+  .contact-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .contact-icon svg {
+    width: 12px;
+    height: 12px;
+  }
+
+  .contact-item span {
+    font-size: 13px;
+  }
+
+  .open-website-btn {
+    font-size: 13px;
+    gap: 6px;
+  }
+
+  .open-website-btn svg {
+    width: 14px;
+    height: 14px;
+  }
+}
+
+/* How to Join Section */
+.how-to-join-section {
+  padding: 40px 0;
+}
+
+.how-to-join-section h2 {
+  font-size: 28px;
+  font-weight: 600;
+  font-family: 'Inter', sans-serif;
+  line-height: 33.6px;
+  color: #202020;
+  margin-bottom: 20px;
+  /*text-align: left;*/
+}
+
+.section-description {
+  font-size: 16px;
+  color: #121212;
+  line-height: 28px;
+  margin-bottom: 40px;
+  max-width: 800px;
+}
+
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.step-card {
+  background: white;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  position: relative;
+  border: 1px solid #f3f4f6;
+}
+
+.step-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.step-badge {
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 20px;
+}
+
+.step-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 15px;
+  line-height: 1.3;
+}
+
+.step-description {
+  font-size: 15px;
+  color: #6b7280;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Responsive Design for How to Join */
+@media (max-width: 768px) {
+  .steps-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .step-card {
+    padding: 25px;
+  }
+
+  .section-title {
+    font-size: 20px;
+  }
+
+  .section-description {
+    font-size: 15px;
+  }
+
+  .step-title {
+    font-size: 18px;
+  }
+
+  .step-description {
+    font-size: 14px;
+  }
+}
+
+/*aboutus page */
+/* Overview Section */
+/* Content Sections */
+.about-section {
+  padding: 60px 0;
+}
+
+.section-header {
+  margin-bottom: 40px;
+}
+
+.section-title {
+  font-size: 28px;
+  font-weight: 600;
+  color: var(--text-medium);
+  line-height: 1.2;
+}
+
+.subsection-title {
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--text-dark);
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+
+.section-text {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 28px;
+  color: var(--text-dark);
+  text-align: justify;
+  margin-bottom: 16px;
+}
+
+/* Vision & Mission Cards */
+.vision-mission-card {
+  background: var(--primary-light);
+  border: 1px solid var(--primary-color);
+  border-radius: 4px;
+  padding: 24px;
+  height: 100%;
+}
+
+.icon-circle {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  flex-shrink: 0;
+}
+
+.vision-mission-card h4 {
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--text-dark);
+  line-height: 1.2;
+}
+
+.vision-mission-card p {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 28px;
+  color: var(--text-dark);
+}
+
+/* Mandate Section */
+.mandate-section {
+  margin-top: 48px;
+}
+
+.mandate-title {
+  font-size: 28px;
+  font-weight: 600;
+  color: var(--text-medium);
+  line-height: 1.2;
+}
+
+.mandate-card {
+  background: white;
+  border-radius: 8px;
+  padding: 24px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.mandate-card-blue {
+  background: rgba(2, 103, 191, 0.1);
+}
+
+.mandate-card-purple {
+  background: rgba(153, 0, 150, 0.1);
+}
+
+.mandate-card-red {
+  background: rgba(218, 0, 1, 0.1);
+}
+
+.mandate-card-green {
+  background: rgba(0, 167, 88, 0.1);
+}
+
+.mandate-card-navy {
+  background: rgba(0, 51, 153, 0.1);
+}
+
+.mandate-card-gray {
+  background: rgba(56, 66, 74, 0.1);
+}
+
+.mandate-card-gold {
+  background: rgba(162, 148, 0, 0.1);
+}
+
+.mandate-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+}
+
+.mandate-card-blue .mandate-icon {
+  background: var(--secondary-blue);
+}
+
+.mandate-card-purple .mandate-icon {
+  background: var(--secondary-purple);
+}
+
+.mandate-card-red .mandate-icon {
+  background: var(--secondary-red);
+}
+
+.mandate-card-green .mandate-icon {
+  background: var(--primary-color);
+}
+
+.mandate-card-navy .mandate-icon {
+  background: var(--secondary-navy);
+}
+
+.mandate-card-gray .mandate-icon {
+  background: var(--secondary-gray);
+}
+
+.mandate-card-gold .mandate-icon {
+  background: var(--secondary-gold);
+}
+
+.mandate-card-title {
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--text-dark);
+  line-height: 1.2;
+  margin: 0;
+}
+
+.mandate-card-text {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 28px;
+  color: var(--text-dark);
+  margin: 0;
+}
+
+/* President Welcome */
+.president-card {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.president-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.president-info {
+  background: var(--primary-color);
+  border-top: 8px solid var(--secondary-red);
+  padding: 16px;
+  color: white;
+}
+
+.president-name {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.25;
+  margin-bottom: 8px;
+}
+
+.president-title-small {
+  font-size: 16px;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.president-title {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1;
+  margin: 0;
+}
+
+/* Executive Leadership Team Section */
+.executive-leadership-section {
+  background: var(--white);
+  padding-top: 0;
+}
+
+.leadership-content-wrapper {
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding-top: 0;
+}
+
+/* Section Header */
+.leadership-section-header {
+  margin-bottom: 0;
+}
+
+.leadership-section-title {
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--text-dark);
+  line-height: 1.2;
+  margin: 0;
+}
+
+/* Leadership Grid */
+.leadership-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+.leadership-row {
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-start;
+  gap: 5px;
+  width: 100%;
+}
+
+/* Leadership Card */
+.leadership-card {
+  display: flex;
+  flex-direction: column;
+  width: 296px;
+  flex-shrink: 0;
+  background: var(--white);
+  overflow: hidden;
+}
+
+.leadership-image-container {
+  width: 100%;
+  height: 280px;
+  overflow: hidden;
+  position: relative;
+}
+
+.leadership-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  display: block;
+}
+
+.leadership-info {
+  padding: 12px 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-height: 59px;
+}
+
+.leadership-name-wrapper {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.leadership-name {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.2;
+  margin: 0;
+  color: var(--text-dark);
+}
+
+.leadership-credentials {
+  font-size: 11px;
+  font-weight: 300;
+  line-height: 1.2;
+  color: var(--text-dark);
+}
+
+.leadership-position {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.2;
+  color: var(--text-dark);
+  margin: 0;
+}
+
+/* Leadership Divider */
+.leadership-divider {
+  width: 1px;
+  align-self: stretch;
+  background: #d9d9d9;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+/* Container adjustments */
+.executive-leadership-section .container {
+  max-width: 1248px;
+}
+
+@media (min-width: 1400px) {
+  .executive-leadership-section .container {
+      padding-left: 96px;
+      padding-right: 96px;
+  }
+}
+
+/* Mobile Responsive Styles for Executive Leadership */
+@media (max-width: 992px) {
+  .executive-leadership-section {
+      padding: 120px 0 48px;
+  }
+
+  .leadership-row {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 24px;
+  }
+
+  .leadership-divider {
+      display: none;
+  }
+
+  .leadership-card {
+      width: calc(50% - 12px);
+      max-width: 296px;
+  }
+
+  .leadership-row:last-child .leadership-card {
+      width: 100%;
+      max-width: 296px;
+  }
+}
+
+@media (max-width: 768px) {
+  .executive-leadership-section {
+      padding: 80px 0 40px;
+  }
+
+  .leadership-content-wrapper {
+      gap: 20px;
+  }
+
+  .leadership-grid {
+      gap: 24px;
+  }
+
+  .leadership-section-title {
+      font-size: 18px;
+  }
+
+  .leadership-card {
+      width: 100%;
+      max-width: 296px;
+      margin: 0 0 24px;
+  }
+
+  .leadership-image-container {
+      height: 250px;
+  }
+
+  .leadership-name {
+      font-size: 13px;
+  }
+
+  .leadership-credentials {
+      font-size: 10px;
+  }
+
+  .leadership-position {
+      font-size: 11px;
+  }
+}
+
+@media (max-width: 576px) {
+  .executive-leadership-section {
+      padding: 60px 0 32px;
+  }
+
+  .leadership-content-wrapper {
+      gap: 16px;
+  }
+
+  .leadership-grid {
+      gap: 20px;
+  }
+
+  .leadership-section-title {
+      font-size: 16px;
+  }
+
+  .leadership-card {
+      margin-bottom: 20px;
+  }
+
+  .leadership-image-container {
+      height: 220px;
+  }
+
+  .leadership-info {
+      padding: 10px 8px;
+  }
+
+  .leadership-name {
+      font-size: 12px;
+  }
+
+  .leadership-credentials {
+      font-size: 9px;
+  }
+
+  .leadership-position {
+      font-size: 10px;
+  }
+}
+
+/* Secretariat & Departments Section */
+.secretariat-departments-section {
+  background: var(--white);
+  padding-top: 0;
+}
+
+.secretariat-content-wrapper {
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding-top: 0;
+}
+
+/* Section Header */
+.secretariat-section-header {
+  margin-bottom: 0;
+}
+
+.secretariat-section-title {
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--text-dark);
+  line-height: 1.2;
+  margin: 0;
+}
+
+/* Departments Grid */
+.departments-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.departments-row {
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-start;
+  gap: 24px;
+  width: 100%;
+}
+
+/* Department Card */
+.department-card {
+  background: #e6f6ee;
+  border-radius: 8px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex: 1 0 0;
+  min-width: 0;
+}
+
+.department-icon {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.department-icon-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.department-title {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.2;
+  color: var(--text-dark);
+  margin: 0;
+}
+
+.department-description {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 28px;
+  color: var(--text-dark);
+  margin: 0;
+}
+
+/* Container adjustments */
+.secretariat-departments-section .container {
+  max-width: 1248px;
+}
+
+@media (min-width: 1400px) {
+  .secretariat-departments-section .container {
+      padding-left: 96px;
+      padding-right: 96px;
+  }
+}
+
+/* Mobile Responsive Styles for Secretariat & Departments */
+@media (max-width: 992px) {
+  .secretariat-departments-section {
+      padding: 120px 0 48px;
+  }
+
+  .departments-row {
+      flex-wrap: wrap;
+      gap: 24px;
+  }
+
+  .department-card {
+      flex: 1 1 calc(50% - 12px);
+      min-width: 280px;
+  }
+}
+
+@media (max-width: 768px) {
+  .secretariat-departments-section {
+      padding: 80px 0 40px;
+  }
+
+  .secretariat-content-wrapper {
+      gap: 20px;
+  }
+
+  .departments-grid {
+      gap: 20px;
+  }
+
+  .secretariat-section-title {
+      font-size: 18px;
+  }
+
+  .department-card {
+      flex: 1 1 100%;
+      min-width: 100%;
+      padding: 20px;
+  }
+
+  .department-icon {
+      width: 40px;
+      height: 40px;
+  }
+
+  .department-title {
+      font-size: 18px;
+  }
+
+  .department-description {
+      font-size: 14px;
+      line-height: 24px;
+  }
+}
+
+@media (max-width: 576px) {
+  .secretariat-departments-section {
+      padding: 60px 0 32px;
+  }
+
+  .secretariat-content-wrapper {
+      gap: 16px;
+  }
+
+  .departments-grid {
+      gap: 16px;
+  }
+
+  .departments-row {
+      gap: 16px;
+  }
+
+  .secretariat-section-title {
+      font-size: 16px;
+  }
+
+  .department-card {
+      padding: 16px;
+      gap: 12px;
+  }
+
+  .department-icon {
+      width: 36px;
+      height: 36px;
+  }
+
+  .department-title {
+      font-size: 16px;
+  }
+
+  .department-description {
+      font-size: 14px;
+      line-height: 22px;
+  }
+}
+
+/* Organizational Structure Chart Section */
+.org-structure-section {
+  background: var(--white);
+  padding-top: 0;
+}
+
+.org-content-wrapper {
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  padding-top: 0;
+}
+
+/* Section Header */
+.org-section-header {
+  margin-bottom: 0;
+}
+
+.org-section-title {
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--text-dark);
+  line-height: 1.2;
+  margin: 0;
+}
+
+/* Organizational Structure Chart Section */
+.org-structure-section {
+  background: var(--white);
+  padding-top: 0;
+}
+
+.org-content-wrapper {
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding-top: 0;
+}
+
+/* Section Header */
+.org-section-header {
+  margin-bottom: 0;
+}
+
+.org-section-title {
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--text-dark);
+  line-height: 1.2;
+  margin: 0;
+}
+
+/* Organizational Chart */
+.org-chart-container {
+  overflow-x: auto;
+  padding: 36px 0;
+}
+
+.org-chart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 42px;
+  min-width: 600px;
+  position: relative;
+  padding: 20px 0;
+}
+
+/* Main vertical connector line */
+.org-chart::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: calc(100% - 120px);
+  background: var(--primary-color);
+  z-index: 1;
+}
+
+/* Organizational Levels */
+.org-level {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  position: relative;
+}
+
+.org-level-assembly,
+.org-level-president,
+.org-level-council,
+.org-level-board,
+.org-level-secretary-general {
+  margin-bottom: 0;
+}
+
+/* Department positioning to match Figma design exactly */
+.org-level-departments {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.org-level-departments .org-box {
+  position: absolute;
+}
+
+.department-policy-research {
+  left: calc(50% - 200px);
+  top: 77px;
+}
+
+.department-trade-investment {
+  left: calc(50% - 400px);
+  top: 0;
+}
+
+.department-membership {
+  left: calc(50% + 100px);
+  top: 0;
+}
+
+.department-events {
+  right: 20px;
+  top: 68px;
+}
+
+.department-communications {
+  right: 70px;
+  top: 0;
+}
+
+/* Organizational Boxes */
+.org-box {
+  background: var(--primary-color);
+  color: white;
+  padding: 16px 24px;
+  border-radius: 4px;
+  min-width: 250px;
+  text-align: center;
+  position: relative;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.org-box h5 {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.2;
+  margin: 0;
+}
+
+/* Curved connecting lines between levels */
+.org-level-assembly::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 21px;
+  border: 2px solid var(--primary-color);
+  border-left: none;
+  border-top: none;
+  border-radius: 0 0 60px 0;
+  z-index: 1;
+}
+
+.org-level-president::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 21px;
+  border: 2px solid var(--primary-color);
+  border-right: none;
+  border-top: none;
+  border-radius: 0 0 0 80px;
+  z-index: 1;
+}
+
+.org-level-council::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 21px;
+  border: 2px solid var(--primary-color);
+  border-left: none;
+  border-top: none;
+  border-radius: 0 0 100px 0;
+  z-index: 1;
+}
+
+.org-level-board::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 21px;
+  border: 2px solid var(--primary-color);
+  border-right: none;
+  border-top: none;
+  border-radius: 0 0 0 120px;
+  z-index: 1;
+}
+
+.org-level-secretary-general::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 45px;
+  border: 2px solid var(--primary-color);
+  border-left: none;
+  border-top: none;
+  border-radius: 200px 0 0 0;
+  z-index: 1;
+}
+
+/* Horizontal line for departments */
+.org-level-departments::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 2px;
+  background: var(--primary-color);
+  z-index: 1;
+}
+
+/* Department vertical connecting lines */
+.department-policy-research::before {
+  content: '';
+  position: absolute;
+  top: -77px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 77px;
+  background: var(--primary-color);
+  z-index: 1;
+}
+
+.department-trade-investment::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 0;
+  background: var(--primary-color);
+  z-index: 1;
+}
+
+.department-membership::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 0;
+  background: var(--primary-color);
+  z-index: 1;
+}
+
+.department-events::before {
+  content: '';
+  position: absolute;
+  top: -68px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 68px;
+  background: var(--primary-color);
+  z-index: 1;
+}
+
+.department-communications::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 0;
+  background: var(--primary-color);
+  z-index: 1;
+}
+
+/* Container adjustments */
+.org-structure-section .container {
+  max-width: 1248px;
+}
+
+@media (min-width: 1400px) {
+  .org-structure-section .container {
+      padding-left: 96px;
+      padding-right: 96px;
+  }
+}
+
+/* Mobile Responsive Styles for Organizational Chart */
+@media (max-width: 1200px) {
+  .department-policy-research {
+      margin-left: 20px;
+  }
+
+  .department-membership {
+      margin-left: 150px;
+  }
+
+  .department-events {
+      margin-left: 350px;
+  }
+
+  .department-communications {
+      margin-left: 300px;
+  }
+}
+
+@media (max-width: 992px) {
+  .org-structure-section {
+      padding: 120px 0 48px;
+  }
+
+  .org-chart {
+      gap: 36px;
+      min-width: auto;
+  }
+
+  .org-chart::before,
+  .org-level-assembly::after,
+  .org-level-president::after,
+  .org-level-council::after,
+  .org-level-board::after,
+  .org-level-secretary-general::after,
+  .org-level-departments::before,
+  .department-policy-research::before,
+  .department-trade-investment::before,
+  .department-membership::before,
+  .department-events::before,
+  .department-communications::before {
+      display: none;
+  }
+
+  .org-level-departments {
+      grid-template-columns: 1fr;
+      gap: 16px;
+  }
+
+  .department-policy-research,
+  .department-trade-investment,
+  .department-membership,
+  .department-events,
+  .department-communications {
+      margin-top: 0;
+      margin-left: 0;
+      grid-column: 1;
+      position: static;
+  }
+
+  .org-box {
+      min-width: 280px;
+      padding: 14px 20px;
+  }
+
+  .org-box h5 {
+      font-size: 13px;
+  }
+}
+
+@media (max-width: 768px) {
+  .org-structure-section {
+      padding: 80px 0 40px;
+  }
+
+  .org-content-wrapper {
+      gap: 20px;
+  }
+
+  .org-chart-container {
+      padding: 24px 0;
+  }
+
+  .org-chart {
+      gap: 32px;
+  }
+
+  .org-box {
+      min-width: 280px;
+      padding: 12px 16px;
+  }
+
+  .org-box h5 {
+      font-size: 13px;
+  }
+}
+
+@media (max-width: 576px) {
+  .org-structure-section {
+      padding: 60px 0 32px;
+  }
+
+  .org-content-wrapper {
+      gap: 16px;
+  }
+
+  .org-chart {
+      gap: 24px;
+  }
+
+  .org-section-title {
+      font-size: 16px;
+  }
+
+  .org-box {
+      min-width: 250px;
+      padding: 10px 14px;
+  }
+
+.org-box h5 {
+  font-size: 12px;
+  }
+}
+
+.org-level {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  width: 100%;
+  position: relative;
+}
+
+.org-level-departments {
+  flex-wrap: wrap;
+  max-width: 856px;
+  margin: 0 auto;
+  justify-content: flex-start;
+}
+
+.org-box {
+  background: var(--primary-color);
+  color: white;
+  padding: 16px 24px;
+  border-radius: 4px;
+  min-width: 200px;
+  text-align: center;
+  position: relative;
+}
+
+.org-box h5 {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.org-box-small {
+  background: var(--primary-color);
+  color: white;
+  min-width: auto;
+  padding: 16px 24px;
+  margin: 0 8px 8px 0;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.org-box-small h6 {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.2;
+  margin: 0;
+}
+
+/* Connector Lines */
+.org-level-second::before {
+  content: '';
+  position: absolute;
+  width: 1px;
+  height: 35px;
+  background: var(--primary-color);
+  top: -18px;
+  z-index: -1;
+}
+
+.org-level-third::before {
+  content: '';
+  position: absolute;
+  width: 1px;
+  height: 35px;
+  background: var(--primary-color);
+  top: -18px;
+  z-index: -1;
+}
+
+.org-level-fourth::before {
+  content: '';
+  position: absolute;
+  width: 1px;
+  height: 35px;
+  background: var(--primary-color);
+  top: -18px;
+  z-index: -1;
+}
+
+.org-level-fifth::before {
+  content: '';
+  position: absolute;
+  width: 1px;
+  height: 35px;
+  background: var(--primary-color);
+  top: -18px;
+  z-index: -1;
+}
+
+/* Container adjustments */
+.org-structure-section .container {
+  max-width: 1248px;
+}
+
+@media (min-width: 1400px) {
+  .org-structure-section .container {
+      padding-left: 96px;
+      padding-right: 96px;
+  }
+}
+
+/* Mobile Responsive Styles for Organizational Chart */
+@media (max-width: 992px) {
+  .org-structure-section {
+      padding: 120px 0 48px;
+  }
+
+  .org-chart-container {
+      padding: 20px 0;
+  }
+
+  .org-chart {
+      gap: 25px;
+      min-width: auto;
+      width: 100%;
+  }
+
+  .org-level {
+      gap: 16px;
+  }
+
+  .org-box {
+      min-width: 160px;
+      padding: 12px 16px;
+  }
+
+  .org-box-small {
+      padding: 12px 16px;
+      margin: 0 4px 8px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .org-structure-section {
+      padding: 80px 0 40px;
+  }
+
+  .org-content-wrapper {
+      gap: 24px;
+  }
+
+  .org-section-title {
+      font-size: 18px;
+  }
+
+  .org-chart {
+      gap: 20px;
+  }
+
+  .org-level {
+      flex-direction: column;
+      gap: 12px;
+      align-items: center;
+  }
+
+  .org-box {
+      min-width: 200px;
+      max-width: 300px;
+      width: 100%;
+  }
+
+  .org-box-small {
+      min-width: 120px;
+      max-width: 150px;
+      margin: 0 4px 8px 0;
+  }
+
+  .org-level-departments {
+      max-width: 100%;
+      justify-content: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .org-structure-section {
+      padding: 60px 0 32px;
+  }
+
+  .org-content-wrapper {
+      gap: 20px;
+  }
+
+  .org-section-title {
+      font-size: 16px;
+  }
+
+  .org-chart-container {
+      padding: 16px 0;
+  }
+
+  .org-chart {
+      gap: 16px;
+  }
+
+  .org-box {
+      min-width: 150px;
+      padding: 10px 12px;
+  }
+
+  .org-box h5 {
+      font-size: 13px;
+  }
+
+  .org-box-small {
+      min-width: 100px;
+      padding: 10px 12px;
+      margin: 0 2px 6px 0;
+  }
+
+  .org-box-small h6 {
+      font-size: 13px;
+  }
+}
+
+.org-level-departments {
+  position: relative;
+  padding-top: 50px;
+}
+
+.org-level-departments::before {
+  content: '';
+  position: absolute;
+  width: 1px;
+  height: 50px;
+  background: var(--primary-color);
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+}
+
+.org-level-departments::after {
+  content: '';
+  position: absolute;
+  width: 856px;
+  height: 1px;
+  background: var(--primary-color);
+  top: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+}
+
+/* Reports Section */
+.reports-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.report-card {
+  background: var(--primary-light);
+  border-radius: 8px;
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.report-icon {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  color: var(--primary-color);
+}
+
+.report-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.report-title {
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--text-dark);
+  line-height: 1.2;
+  margin-bottom: 4px;
+}
+
+.report-description {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 28px;
+  color: var(--text-dark);
+  margin: 0;
+}
+
+.report-download {
+  flex-shrink: 0;
+}
+
+.btn-download {
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 16px 24px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn-download:hover {
+  background: #008a47;
+  color: white;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+  .about-section {
+      padding: 40px 0;
+  }
+
+  .section-title {
+      font-size: 24px;
+  }
+
+  .subsection-title {
+      font-size: 18px;
+  }
+
+  .section-text {
+      font-size: 14px;
+      line-height: 24px;
+      text-align: left;
+  }
+
+  .vision-mission-card {
+      padding: 20px;
+      margin-bottom: 20px;
+  }
+
+  .vision-mission-card h4 {
+      font-size: 18px;
+  }
+
+  .vision-mission-card p {
+      font-size: 14px;
+      line-height: 24px;
+  }
+
+  .mandate-title {
+      font-size: 24px;
+  }
+
+  .mandate-card {
+      padding: 20px;
+      margin-bottom: 20px;
+  }
+
+  .mandate-card-title {
+      font-size: 18px;
+  }
+
+  .mandate-card-text {
+      font-size: 14px;
+      line-height: 24px;
+  }
+
+  .president-card {
+      margin-top: 30px;
+  }
+
+  .director-image,
+  .leadership-image {
+      height: 250px;
+  }
+
+  .director-name,
+  .leadership-name {
+      font-size: 13px;
+  }
+
+  .director-position,
+  .leadership-position {
+      font-size: 11px;
+  }
+
+  .org-chart {
+      min-width: 100%;
+      gap: 25px;
+  }
+
+  .org-level {
+      flex-direction: column;
+      gap: 15px;
+  }
+
+  .org-level-departments {
+      flex-direction: column;
+      align-items: stretch;
+  }
+
+  .org-box {
+      min-width: 100%;
+      width: 100%;
+  }
+
+  .org-box-small {
+      width: 100%;
+      margin: 0 0 10px 0;
+  }
+
+  .org-level::before {
+      display: none;
+  }
+
+  .org-level-departments::before,
+  .org-level-departments::after {
+      display: none;
+  }
+
+  .org-level-departments {
+      padding-top: 0;
+  }
+
+  .report-card {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 20px;
+  }
+
+  .report-icon {
+      width: 40px;
+      height: 40px;
+      font-size: 28px;
+  }
+
+  .report-title {
+      font-size: 18px;
+  }
+
+  .report-description {
+      font-size: 14px;
+      line-height: 24px;
+  }
+
+  .report-download {
+      width: 100%;
+  }
+
+  .btn-download {
+      width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+      padding: 0 15px;
+  }
+
+  .section-title {
+      font-size: 22px;
+  }
+
+  .subsection-title {
+      font-size: 16px;
+  }
+
+  .mandate-card {
+      padding: 16px;
+  }
+
+  .mandate-icon {
+      width: 40px;
+      height: 40px;
+      font-size: 28px;
+  }
+
+  .director-image,
+  .leadership-image {
+      height: 220px;
+  }
+
+  .org-chart {
+      gap: 20px;
+  }
+
+  .org-box {
+      padding: 12px 16px;
+  }
+
+  .report-card {
+      padding: 16px;
+  }
+}
+
+/* Tablet Styles */
+@media (min-width: 769px) and (max-width: 992px) {
+  .org-chart {
+      min-width: 100%;
+  }
+
+  .org-level-departments {
+      max-width: 100%;
+  }
+
+  .org-box-small {
+      flex: 1 1 calc(50% - 12px);
+      min-width: calc(50% - 12px);
+  }
+}
+
+/* President Welcome Section */
+.president-welcome-section {
+  /*padding: 200px 0 64px;*/
+  background: var(--white);
+}
+
+.president-content-wrapper {
+  max-width: 100%;
+}
+
+/* President Message Content */
+.president-message-content {
+  padding-top: 0;
+}
+
+.president-message-title {
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--text-dark);
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+
+.president-message-text {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 28px;
+  color: var(--text-dark);
+}
+
+.president-message-text p {
+  margin-bottom: 0;
+  text-align: justify;
+}
+
+.president-message-text p:not(:last-child) {
+  margin-bottom: 1em;
+}
+
+/* President Card Wrapper */
+.president-card-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.president-image-container {
+  flex: 1 1 auto;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.president-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.president-info-card {
+  background: var(--primary-color);
+  border-top: 8px solid var(--secondary-red);
+  padding: 16px;
+  color: var(--white);
+}
+
+.president-name {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.25;
+  margin-bottom: 8px;
+  color: var(--white);
+}
+
+.president-title-small {
+  font-size: 16px;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.president-title {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1;
+  margin: 0;
+  color: var(--white);
+}
+
+/* Additional Text */
+.president-additional-text {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 28px;
+  color: var(--text-dark);
+}
+
+.president-additional-text p {
+  margin-bottom: 0;
+  text-align: justify;
+}
+
+.president-additional-text p:not(:last-child) {
+  margin-bottom: 1em;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 992px) {
+  .president-welcome-section {
+      padding: 120px 0 48px;
+  }
+}
+
+@media (max-width: 768px) {
+  .president-welcome-section {
+      padding: 80px 0 40px;
+  }
+
+  .president-message-title {
+      font-size: 18px;
+  }
+
+  .president-message-text {
+      font-size: 14px;
+      line-height: 24px;
+  }
+
+  .president-message-text p {
+      text-align: left;
+  }
+
+  .president-name {
+      font-size: 14px;
+  }
+
+  .president-title-small {
+      font-size: 14px;
+  }
+
+  .president-title {
+      font-size: 12px;
+  }
+
+  .president-additional-text {
+      font-size: 14px;
+      line-height: 24px;
+  }
+
+  .president-additional-text p {
+      text-align: left;
+  }
+}
+
+@media (max-width: 576px) {
+  .president-welcome-section {
+      padding: 60px 0 32px;
+  }
+
+  .president-message-title {
+      font-size: 16px;
+      margin-bottom: 12px;
+  }
+
+  .president-message-text {
+      font-size: 13px;
+      line-height: 22px;
+  }
+
+  .president-info-card {
+      padding: 12px;
+  }
+
+  .president-name {
+      font-size: 13px;
+      margin-bottom: 6px;
+  }
+
+  .president-title-small {
+      font-size: 13px;
+  }
+
+  .president-title {
+      font-size: 11px;
+  }
+
+  .president-additional-text {
+      font-size: 13px;
+      line-height: 22px;
+  }
+}
+
+/* Container Responsive Padding */
+@media (max-width: 576px) {
+  .container {
+      padding-left: 15px;
+      padding-right: 15px;
+  }
+}
+
+/* Board of Directors Section */
+.board-directors-section {
+  background: var(--white);
+  padding-top: 0;
+}
+
+.board-content-wrapper {
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding-top: 0;
+}
+
+/* Section Header */
+.board-section-header {
+  margin-bottom: 0;
+}
+
+.board-section-title {
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--text-dark);
+  line-height: 1.2;
+  margin: 0;
+}
+
+/* Directors Grid */
+.directors-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+.directors-row {
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-start;
+  gap: 5px;
+  width: 100%;
+}
+
+/* Director Card */
+.director-card {
+  display: flex;
+  flex-direction: column;
+  width: 296px;
+  flex-shrink: 0;
+  background: var(--white);
+  overflow: hidden;
+}
+
+.director-image-container {
+  width: 100%;
+  height: 280px;
+  overflow: hidden;
+  position: relative;
+}
+
+.director-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  display: block;
+}
+
+.director-info {
+  padding: 12px 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-height: 59px;
+}
+
+.director-name-wrapper {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.director-name {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.2;
+  margin: 0;
+  color: var(--text-dark);
+}
+
+.director-credentials {
+  font-size: 11px;
+  font-weight: 300;
+  line-height: 1.2;
+  color: var(--text-dark);
+}
+
+.director-position {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.2;
+  color: var(--text-dark);
+  margin: 0;
+}
+
+/* Director Divider */
+.director-divider {
+  width: 1px;
+  align-self: stretch;
+  background: var(--border-color);
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+/* Container adjustments */
+.board-directors-section .container {
+  max-width: 1248px;
+}
+
+@media (min-width: 1400px) {
+  .board-directors-section .container {
+      padding-left: 96px;
+      padding-right: 96px;
+  }
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 992px) {
+  .board-directors-section {
+      padding: 120px 0 48px;
+  }
+
+  .directors-row {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 24px;
+  }
+
+  .director-divider {
+      display: none;
+  }
+
+  .director-card {
+      width: calc(50% - 12px);
+      max-width: 296px;
+  }
+
+  .directors-row:last-child .director-card {
+      width: 100%;
+      max-width: 296px;
+  }
+}
+
+@media (max-width: 768px) {
+  .board-directors-section {
+      padding: 80px 0 40px;
+  }
+
+  .board-content-wrapper {
+      gap: 20px;
+  }
+
+  .directors-grid {
+      gap: 24px;
+  }
+
+  .board-section-title {
+      font-size: 18px;
+  }
+
+  .director-card {
+      width: 100%;
+      max-width: 296px;
+      margin: 0 0 24px;
+  }
+
+  .director-image-container {
+      height: 250px;
+  }
+
+  .director-name {
+      font-size: 13px;
+  }
+
+  .director-credentials {
+      font-size: 10px;
+  }
+
+  .director-position {
+      font-size: 11px;
+  }
+}
+
+@media (max-width: 576px) {
+  .board-directors-section {
+      padding: 60px 0 32px;
+  }
+
+  .board-content-wrapper {
+      gap: 16px;
+  }
+
+  .directors-grid {
+      gap: 20px;
+  }
+
+  .board-section-title {
+      font-size: 16px;
+  }
+
+  .director-card {
+      margin-bottom: 20px;
+  }
+
+  .director-image-container {
+      height: 220px;
+  }
+
+  .director-info {
+      padding: 10px 8px;
+  }
+
+  .director-name {
+      font-size: 12px;
+  }
+
+  .director-credentials {
+      font-size: 9px;
+  }
+
+  .director-position {
+      font-size: 10px;
+  }
+}
+
+/* Board of Directors Section */
+.board-directors-section {
+/*padding: 200px 0 64px;*/
+  background: var(--white);
+}
+
+.board-content-wrapper {
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Section Header */
+.board-section-header {
+  margin-bottom: 0;
+}
+
+.board-section-title {
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--text-dark);
+  line-height: 1.2;
+  margin: 0;
+}
+
+/* Directors Grid */
+.directors-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+.directors-row {
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-start;
+  gap: 0;
+  width: 100%;
+}
+
+/* Director Card */
+.director-card {
+  display: flex;
+  flex-direction: column;
+  width: 296px;
+  flex-shrink: 0;
+  background: var(--white);
+  overflow: hidden;
+}
+
+.director-image-container {
+  width: 100%;
+  height: 280px;
+  overflow: hidden;
+  position: relative;
+}
+
+.director-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  display: block;
+}
+
+.director-info {
+  padding: 12px 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-height: 59px;
+}
+
+.director-name-wrapper {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.director-name {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.2;
+  margin: 0;
+  color: var(--text-dark);
+}
+
+.director-credentials {
+  font-size: 11px;
+  font-weight: 300;
+  line-height: 1.2;
+  color: var(--text-dark);
+}
+
+.director-position {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.2;
+  color: var(--text-dark);
+  margin: 0;
+}
+
+/* Director Divider */
+.director-divider {
+  width: 1px;
+  align-self: stretch;
+  background: var(--border-color);
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+/* Container adjustments */
+.board-directors-section .container {
+  max-width: 1248px;
+}
+
+@media (min-width: 1400px) {
+  .board-directors-section .container {
+      padding-left: 96px;
+      padding-right: 96px;
+  }
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 992px) {
+  .board-directors-section {
+      padding: 120px 0 48px;
+  }
+
+  .directors-row {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 24px;
+  }
+
+  .director-divider {
+      display: none;
+  }
+
+  .director-card {
+      width: calc(50% - 12px);
+      max-width: 296px;
+  }
+
+  .directors-row:last-child .director-card {
+      width: 100%;
+      max-width: 296px;
+  }
+}
+
+@media (max-width: 768px) {
+  .board-directors-section {
+      padding: 80px 0 40px;
+  }
+
+  .board-content-wrapper {
+      gap: 20px;
+  }
+
+  .directors-grid {
+      gap: 24px;
+  }
+
+  .board-section-title {
+      font-size: 18px;
+  }
+
+  .director-card {
+      width: 100%;
+      max-width: 296px;
+      margin: 0 0 24px;
+  }
+
+  .director-image-container {
+      height: 250px;
+  }
+
+  .director-name {
+      font-size: 13px;
+  }
+
+  .director-credentials {
+      font-size: 10px;
+  }
+
+  .director-position {
+      font-size: 11px;
+  }
+}
+
+@media (max-width: 576px) {
+  .board-directors-section {
+      padding: 60px 0 32px;
+  }
+
+  .board-content-wrapper {
+      gap: 16px;
+  }
+
+  .directors-grid {
+      gap: 20px;
+  }
+
+  .board-section-title {
+      font-size: 16px;
+  }
+
+  .director-card {
+      margin-bottom: 20px;
+  }
+
+  .director-image-container {
+      height: 220px;
+  }
+
+  .director-info {
+      padding: 10px 8px;
+  }
+
+  .director-name {
+      font-size: 12px;
+  }
+
+  .director-credentials {
+      font-size: 9px;
+  }
+
+  .director-position {
+      font-size: 10px;
+  }
+}
+
+/* Past Presidents Section */
+.past-presidents-section {
+  background: #004625;
+  padding: 80px 0 100px;
+  position: relative;
+  overflow: hidden;
+}
+
+.past-presidents-title {
+  font-size: 28px;
+  font-weight: 600;
+  color: #fff;
+  line-height: 1.2;
+  margin-bottom: 45px;
+  padding-left: 96px;
+}
+
+.past-presidents-carousel-wrapper {
+  position: relative;
+  margin-bottom: 60px;
+  padding: 0 96px;
+}
+
+.past-presidents-carousel {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.presidents-list {
+  display: flex;
+  gap: 112px;
+  transition: transform 0.3s ease;
+  width: fit-content;
+}
+
+.president-card-item {
+  background: var(--primary-dark-alt);
+  border-radius: 16px;
+  display: flex;
+  overflow: hidden;
+  flex-shrink: 0;
+  width: 843px;
+}
+
+.president-card-image {
+  width: 348px;
+  height: 383px;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.president-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.president-card-content {
+  width: 495px;
+  height: 383px;
+  background: rgba(0, 167, 88, 0.75);
+  padding: 16px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.president-card-header {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.president-year {
+  font-size: 96px;
+  font-weight: 500;
+  line-height: 1;
+  color: #fff;
+  margin: 0;
+  letter-spacing: -3.84px;
+}
+
+.president-card-name {
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--text-dark);
+  margin: 0;
+}
+
+.president-tenure-info {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.tenure-badge {
+  background: #fff;
+  color: #000;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.2;
+  padding: 2px 8px;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
+.tenure-period {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.2;
+  color: #fff;
+  white-space: nowrap;
+}
+
+.president-card-description {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 24px;
+  color:#fff;
+  margin: 0;
+}
+
+/* Carousel Navigation */
+.carousel-nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 64px;
+  height: 64px;
+  border: 1px solid var(--white);
+  border-radius: 96px;
+  background: transparent;
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: opacity 0.3s ease;
+  font-size: 24px;
+}
+
+.carousel-nav-left {
+  left: 74px;
+  opacity: 0.5;
+}
+
+.carousel-nav-right {
+  right: 74px;
+}
+
+.carousel-nav-btn:hover {
+  opacity: 1;
+}
+
+.carousel-nav-btn i {
+  font-size: 24px;
+}
+
+/* Gradient Overlay */
+.carousel-gradient-overlay {
+  position: absolute;
+  top: -11px;
+  right: 0;
+  bottom: 0;
+  width: 430px;
+  background: linear-gradient(to left, rgba(0, 70, 37, 0.75), rgba(0, 70, 37, 0));
+  backdrop-filter: blur(4px);
+  pointer-events: none;
+  z-index: 5;
+}
+
+/* Timeline */
+.presidents-timeline {
+  display: flex;
+  align-items: flex-end;
+  gap: 0;
+  padding-left: 49px;
+  overflow-x: auto;
+  padding-bottom: 0;
+}
+
+.timeline-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.timeline-year {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.2;
+  color: #fff;
+  opacity: 0.25;
+  transition: opacity 0.3s ease;
+}
+
+.timeline-item.active .timeline-year {
+  opacity: 1;
+}
+
+.timeline-dot {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background:#fff;
+  opacity: 0.25;
+  transition: all 0.3s ease;
+}
+
+.timeline-item.active .timeline-dot {
+  width: 6px;
+  height: 6px;
+  opacity: 1;
+}
+
+.timeline-line {
+  width: 64px;
+  height: 1px;
+  background: #fff;
+  opacity: 0.25;
+  margin-bottom: 12px;
+  flex-shrink: 0;
+}
+
+/* Container adjustments for Past Presidents */
+.past-presidents-section .container {
+  max-width: 100%;
+  padding: 0;
+}
+
+/* Mobile Responsive Styles for Past Presidents */
+@media (max-width: 1200px) {
+  .past-presidents-title {
+      padding-left: 48px;
+  }
+
+  .past-presidents-carousel-wrapper {
+      padding: 0 48px;
+  }
+
+  .carousel-nav-left {
+      left: 20px;
+  }
+
+  .carousel-nav-right {
+      right: 20px;
+  }
+
+  .presidents-timeline {
+      padding-left: 24px;
+  }
+}
+
+@media (max-width: 992px) {
+  .past-presidents-section {
+      padding: 60px 0 80px;
+  }
+
+  .past-presidents-title {
+      padding-left: 24px;
+      font-size: 24px;
+      margin-bottom: 30px;
+  }
+
+  .past-presidents-carousel-wrapper {
+      padding: 0 24px;
+  }
+
+  .president-card-item {
+      width: 100%;
+      max-width: 600px;
+      flex-direction: column;
+  }
+
+  .president-card-image {
+      width: 100%;
+      height: 300px;
+  }
+
+  .president-card-content {
+      width: 100%;
+      height: 300px;
+  }
+
+  .president-year {
+      font-size: 72px;
+  }
+
+  .president-card-name {
+      font-size: 24px;
+  }
+
+  .carousel-nav-left {
+      left: 10px;
+      width: 48px;
+      height: 48px;
+  }
+
+  .carousel-nav-right {
+      right: 10px;
+      width: 48px;
+      height: 48px;
+  }
+
+  .carousel-gradient-overlay {
+      width: 200px;
+  }
+
+  .presidents-timeline {
+      padding-left: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .past-presidents-section {
+      padding: 40px 0 60px;
+  }
+
+  .past-presidents-title {
+      padding-left: 20px;
+      font-size: 22px;
+      margin-bottom: 24px;
+  }
+
+  .past-presidents-carousel-wrapper {
+      padding: 0 60px;
+  }
+
+  .president-card-item {
+      max-width: 100%;
+  }
+
+  .president-card-image {
+      height: 250px;
+  }
+
+  .president-year {
+      font-size: 60px;
+      letter-spacing: -2px;
+  }
+
+  .president-card-name {
+      font-size: 20px;
+  }
+
+  .president-card-description {
+      font-size: 14px;
+      line-height: 22px;
+  }
+
+  .carousel-nav-btn {
+      width: 40px;
+      height: 40px;
+      font-size: 18px;
+  }
+
+  .carousel-nav-left {
+      left: 5px;
+  }
+
+  .carousel-nav-right {
+      right: 5px;
+  }
+
+  .carousel-gradient-overlay {
+      width: 100px;
+  }
+
+  .presidents-timeline {
+      padding-left: 15px;
+      gap: 0;
+  }
+
+  .timeline-year {
+      font-size: 12px;
+  }
+
+  .timeline-line {
+      width: 40px;
+  }
+}
+
+@media (max-width: 576px) {
+  .past-presidents-section {
+      padding: 32px 0 50px;
+  }
+
+  .past-presidents-title {
+      padding-left: 15px;
+      font-size: 20px;
+      margin-bottom: 20px;
+  }
+
+  .past-presidents-carousel-wrapper {
+      padding: 0 50px;
+  }
+
+  .president-card-image {
+      height: 200px;
+  }
+
+  .president-card-content {
+      height: 200px;
+      padding: 12px 16px;
+      gap: 12px;
+  }
+
+  .president-year {
+      font-size: 48px;
+      letter-spacing: -1.5px;
+  }
+
+  .president-card-name {
+      font-size: 18px;
+  }
+
+  .tenure-badge,
+  .tenure-period {
+      font-size: 12px;
+  }
+
+  .president-card-description {
+      font-size: 13px;
+      line-height: 20px;
+  }
+
+  .carousel-nav-btn {
+      width: 36px;
+      height: 36px;
+      font-size: 16px;
+  }
+
+  .timeline-item {
+      gap: 6px;
+  }
+
+  .timeline-year {
+      font-size: 11px;
+  }
+
+  .timeline-line {
+      width: 30px;
+  }
+}
+
+/* ANNUAL REPORT*/
+  .report-card {
+      background-color: #e9f9f3;
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      transition: transform 0.2s ease;
+    }
+
+    .report-card:hover {
+      transform: translateY(-3px);
+    }
+
+    .report-info {
+      display: flex;
+      align-items: flex-start;
+      gap: 15px;
+      flex: 1;
+    }
+
+    .report-icon {
+      font-size: 28px;
+      color: #0f996b;
+    }
+
+    .report-text h5 {
+      margin: 0;
+      font-weight: 600;
+      color: #000;
+    }
+
+    .report-text p {
+      margin: 2px 0 0;
+      font-size: 14px;
+      color: #555;
+    }
+
+    .download-btn {
+      background-color: #0f996b;
+      color: #fff;
+      font-weight: 500;
+      border: none;
+      padding: 8px 20px;
+      border-radius: 6px;
+      transition: background-color 0.3s;
+    }
+
+    .download-btn:hover {
+      background-color: #0c7b55;
+    }
+
+    @media (max-width: 768px) {
+      .report-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+      }
+
+      .download-btn {
+        align-self: flex-end;
+      }
+    }

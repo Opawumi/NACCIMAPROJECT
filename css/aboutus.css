@@ -4002,7 +4002,7 @@ article > p > .kwara-gov-link > strong {
     }
 
     .download-btn {
-      background-color: #0f996b;
+      background-color: var(--primary-color);
       color: #fff;
       font-weight: 500;
       border: none;
@@ -4012,7 +4012,7 @@ article > p > .kwara-gov-link > strong {
     }
 
     .download-btn:hover {
-      background-color: #0c7b55;
+      background-color: var(--primary-color);
     }
 
     @media (max-width: 768px) {

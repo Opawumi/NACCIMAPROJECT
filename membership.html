@@ -1,0 +1,1506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/membership.css">
+    <title>Membership Page</title>
+</head>
+<body>
+
+    <section class="d-block membership-banner position-relative">
+        <div class="container-custom">
+            <h3 class="membership-heading py-4 text-light">
+                Membership
+            </h3>
+        </div>
+    </section>
+
+    <section class="pt-3">
+        <div class="d-block d-md-none accordion accordion-flush" id="accordionFlushExample">
+            <div class="accordion-item">
+              <div class="accordion-header border border-1 border-start-0 border-top border-end-0 border-bottom">
+                <div class="d-flex align-items-center justify-content-start accordion-button1 collapsed" id="accordionWrapper" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                    <button class="accordion-button pe-2 collapsed accordionItem" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                    </button>
+                    <div class="d-flex align-items-center justify-content-start accordion-button1 collapsed accordionItem accordionItemContent" id="accordion-button1 accordionItem" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne" style="background-image:none;">
+                      Section Menu
+                    </div>
+                </div>
+              </div>
+              <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body pt">
+                  <div class="pt-0 position-stick sticky-to about-side-link">
+                    <div class="about-link-pages-wrapper py-3">
+                        <a href="#aboutUsLeadershipContent" onclick="document.body.scrollIntoView(tru); return false;" class="leadership about-page-links aboutPageLinks about-active-page-link px-auto container-custom ps-4">
+                            Overview
+                        </a>
+                    </div>
+                    <div class="about-link-pages-wrapper py-3">
+                        <a href="#aboutUsHistoryContent" onclick="document.body.scrollIntoView(tru); return false;" class="history about-page-links aboutPageLinks px-auto container-custom ps-4">
+                            Benefits
+                        </a>
+                    </div>
+                    <div class="about-link-pages-wrapper py-3">
+                        <a href="#aboutUsVisionAndMission" onclick="document.body.scrollIntoView(tru); return false;" class="visionAndMission text-nowrap about-page-links aboutPageLinks px-auto container-custom ps-4">
+                            Categories
+                        </a>
+                    </div>
+                    <div class="about-link-pages-wrapper py-3">
+                        <a href="#aboutUsLocation" onclick="document.body.scrollIntoView(tru); return false;" class="location about-page-links aboutPageLinks px-auto container-custom ps-4">
+                            Chambers
+                        </a>
+                    </div>
+                    <div class="about-link-pages-wrapper py-3">
+                        <a href="#aboutUsCoreValues" onclick="document.body.scrollIntoView(tru); return false;" class="coreValues text-nowrap about-page-links aboutPageLinks px-auto container-custom ps-4">
+                            Bilateral Members
+                        </a>
+                    </div>
+                    <div class="about-link-pages-wrapper py-3">
+                        <a href="#aboutUsRanking" onclick="document.body.scrollIntoView(tru); return false;" class="ranking about-page-links aboutPageLinks px-auto container-custom ps-4">
+                           How to Join
+                        </a>
+                    </div>
+                </div>
+                </div>
+              </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container-custom py-5 my-4">
+        <div class="row w-100 justify-content-between position-relative">            
+            <div class="d-none d-md-block pe-3 pt-4 position-sticky sticky-top about-side-links">
+                <div class="about-link-pages-wrapper py-3">
+                    <a href="#aboutUsLeadershipContent" onclick="document.body.scrollIntoView(true); return false;" class="leadership about-page-links aboutPageLinks about-active-page-link px-auto">
+                        Overview
+                    </a>
+                </div>
+                <div class="about-link-pages-wrapper py-3">
+                    <a href="#aboutUsHistoryContent" onclick="document.body.scrollIntoView(true); return false;" class="history about-page-links aboutPageLinks px-auto">
+                        Benefits 
+                    </a>
+                </div>
+                <div class="about-link-pages-wrapper py-3">
+                    <a href="#aboutUsVisionAndMission" onclick="document.body.scrollIntoView(true); return false;" class="visionAndMission text-nowrap about-page-links aboutPageLinks px-auto">
+                        Categories
+                    </a>
+                </div>
+                <div class="about-link-pages-wrapper py-3">
+                    <a href="#aboutUsLocation" onclick="document.body.scrollIntoView(true); return false;" class="location about-page-links aboutPageLinks px-auto">
+                        Chambers
+                    </a>
+                </div>
+                <div class="about-link-pages-wrapper py-3">
+                    <a href="#aboutUsCoreValues" onclick="document.body.scrollIntoView(true); return false;" class="coreValues text-nowrap about-page-links aboutPageLinks px-auto">
+                        Bilateral Members
+                    </a>
+                </div>
+                <div class="about-link-pages-wrapper py-3">
+                    <a href="#aboutUsRanking" onclick="document.body.scrollIntoView(true); return false;" class="ranking about-page-links aboutPageLinks px-auto">
+                        How to Join
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-9 aboutUsContent">
+
+                <!--Overview content-->
+                <div class="d-none aboutUsItem aboutUsContentActive aboutUsLeadershipContent" id="aboutUsLeadershipContent">
+                    <div class="w-100 pb-5">                    
+                        <!-- Hero Section -->
+                      <section class="hero">
+                        <div class="hero-content d-flex align-items-stretch">
+                            <div class="row">
+                            <div class="hero-image col-md-6 col-12 d-none d-md-flex">
+                            <img
+                                src="images/membership_overview.png"
+                                alt="Business leaders meeting"
+                                class="img-fluid object-fit-contain"
+                            />
+                            </div>
+
+                            <div class=" col-md-6 col-12 d-block d-md-none">
+                                <h1 class="membership_overview_header pb-4">Origin and History</h1>
+                            <img
+                                src="images/membership_overview_mobile.png"
+                                alt="Business leaders meeting"
+                                class="img-fluid object-fit-contain"
+                            />
+                            </div>
+
+                            <div class="hero-text col-md-6 col-12">
+                            <h5 class="d-none d-md-flex">
+                                NACCIMA unites businesses across Nigeria, providing opportunity,
+                                advocacy, and resources to help you grow and thrive in an
+                                ever-changing economy.
+                            </h5>
+                            <h5 class="d-block d-md-none pt-5 pt-md-0">
+                                NACCIMA unites businesses across Nigeria, providing opportunity,
+                                advocacy, and resources to help you grow and thrive in an
+                                ever-changing economy.
+                            </h5>
+                            <div class="hero-buttons d-md-flex ">
+                                <a href="#" class="d-block d-md-inline mt-3 mt-md-0 btn btn-primary text-center">Join Now</a>
+                                <a href="#" class="d-block d-md-inline mt-3 mt-md-0 btn btn-secondary"
+                                >Explore Membership Benefits</a
+                                >
+                            </div>
+                            </div>
+                            </div>
+                        </div>
+                        </section>
+
+                        <!-- Membership Section -->
+                        <section class="membership">
+                            <div class="container">
+                                    <h2 class="section-title fw-bold">Who Can Become a Member?</h2>
+                                    <section>  
+                                        <div class="row g-4">
+                                            <div class="col-lg-4 col-md-6">
+                                                <div class="membership-card">
+                                                    <div class="card-icon">
+                                                        <img src="images/who_can_be_a_member_icon.svg" alt="">
+                                                    </div>
+                                                    <p>Businesses of all sizes (micro, small, medium, large).</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 col-md-6">
+                                                <div class="membership-card">
+                                                    <div class="card-icon">
+                                                        <img src="images/who_can_be_a_member_icon.svg" alt="">
+                                                    </div>
+                                                    <p>Chambers of commerce, trade groups, and industry associations.</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 col-md-6">
+                                                <div class="membership-card">
+                                                    <div class="card-icon">
+                                                        <img src="images/who_can_be_a_member_icon.svg" alt="">
+                                                    </div>
+                                                    <p>Entrepreneurs and start-ups seeking market access and networking.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </section>
+
+                                    <h2 class="section-title fw-bold">Why Join NACCIMA?</h2>
+                                    <!-- Benefits Section -->
+                                    <section>
+                                        <div class="row g-4">
+                                            <div class="col-lg-3 col-md-6">
+                                                <div class="benefit-card blue">
+                                                    <div class="benefit-number blue">1</div>
+                                                    <h3>Influence Policy</h3>
+                                                    <p>Be part of shaping Nigeria's business environment.</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3 col-md-6">
+                                                <div class="benefit-card purple">
+                                                    <div class="benefit-number purple">2</div>
+                                                    <h3>Expand Your Network</h3>
+                                                    <p>Connect with decision-makers locally and globally.</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3 col-md-6">
+                                                <div class="benefit-card green">
+                                                    <div class="benefit-number green">3</div>
+                                                    <h3>Gain Market Access</h3>
+                                                    <p>Unlock trade, investment, and export opportunities.</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3 col-md-6">
+                                                <div class="benefit-card red">
+                                                    <div class="benefit-number red">4</div>
+                                                    <h3>Enhance Your Skills</h3>
+                                                    <p>Access exclusive training and resources.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </section>
+
+                                    <!-- Testimonials Section -->
+                                    <section>
+                                        
+                                            <h2 class="section-title fw-bold">Member Spotlight</h2>
+                                            <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+                                                <div class="testimonials-wrapper">
+                                                    <div class="carousel-inner">
+                                                        <div class="carousel-item active">
+
+                                                            <div class="row g-4 testimonial-row">
+                                                                <div class="col-lg-4 col-md-6 testimonial-col">
+                                                                    <div class="testimonial-card">
+                                                                        <img src="images/spotlight_icon.svg" alt="">
+                                                                        <p class="testimonial-text">Joining NACCIMA opened doors I didn't even know existed—from export opportunities to policy advocacy. This chamber is a game-changer for Nigerian entrepreneurs.</p>
+                                                                        <div class="author-section collapse">
+                                                                            <div class="d-flex align-items-center gap-3">
+                                                                            <div class="author-avatar"><img src="images/testimonial_author1.png" alt=""></div>
+                                                                            <div class="author-info">
+                                                                                <h5>Alina Lawal</h5>
+                                                                                <p>CEO-Sahel Agro-Tech Ltd, Kano</p>
+                                                                            </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-lg-4 col-md-6 testimonial-col">
+                                                                    <div class="testimonial-card">
+                                                                        <img src="images/spotlight_icon.svg" alt="">
+                                                                        <p class="testimonial-text">We've grown faster and smarter since aligning with NACCIMA. The forums alone have helped us secure 3 major contracts this year.</p>
+                                                                        <div class="author-section collapse">
+                                                                            <div class="d-flex align-items-center gap-3">
+                                                                            <div class="author-avatar"><img src="images/testimonial_author1.png" alt=""></div>
+                                                                            <div class="author-info">
+                                                                                <h5>Business Owner</h5>
+                                                                                <p>Manufacturing Sector</p>
+                                                                            </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-lg-4 col-md-6 testimonial-col">
+                                                                    <div class="testimonial-card">
+                                                                        <img src="images/spotlight_icon.svg" alt="">
+                                                                        <p class="testimonial-text">Being part of a network where business, government, and international bodies connect has multiplied our impact and credibility.</p>
+                                                                        <div class="author-section collapse">
+                                                                            <div class="d-flex align-items-center gap-3">
+                                                                            <div class="author-avatar"><img src="images/testimonial_author1.png" alt=""></div>
+                                                                            <div class="author-info">
+                                                                                <h5>Trade Association</h5>
+                                                                                <p>Lagos Chamber</p>
+                                                                            </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="carousel-item">
+                                                            <div class="row g-4 testimonial-row">
+                                                                <div class="col-lg-4 col-md-6 testimonial-col">
+                                                                    <div class="testimonial-card">
+                                                                        <img src="images/spotlight_icon.svg" alt="">
+                                                                        <p class="testimonial-text">NACCIMA has been instrumental in connecting us with international partners and opening new markets for our products.</p>
+                                                                        <div class="author-section collapse">
+                                                                            <div class="d-flex align-items-center gap-3">
+                                                                            <div class="author-avatar"><img src="images/testimonial_author1.png" alt=""></div>
+                                                                            <div class="author-info">
+                                                                                <h5>John Okafor</h5>
+                                                                                <p>Export Business Owner, Abuja</p>
+                                                                            </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-lg-4 col-md-6 testimonial-col">
+                                                                    <div class="testimonial-card">
+                                                                        <img src="images/spotlight_icon.svg" alt="">
+                                                                        <p class="testimonial-text">The training programs and networking events have transformed how we do business. Highly recommended for any serious entrepreneur.</p>
+                                                                        <div class="author-section collapse">
+                                                                            <div class="d-flex align-items-center gap-3">
+                                                                            <div class="author-avatar"><img src="images/testimonial_author1.png" alt=""></div>
+                                                                            <div class="author-info">
+                                                                                <h5>Fatima Ahmed</h5>
+                                                                                <p>Tech Startup Founder, Lagos</p>
+                                                                            </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-lg-4 col-md-6 testimonial-col">
+                                                                    <div class="testimonial-card">
+                                                                        <img src="images/spotlight_icon.svg" alt="">
+                                                                        <p class="testimonial-text">The advocacy work NACCIMA does at the policy level has directly benefited our operations and reduced regulatory hurdles.</p>
+                                                                        <div class="author-section collapse">
+                                                                            <div class="d-flex align-items-center gap-3">
+                                                                            <div class="author-avatar"><img src="images/testimonial_author1.png" alt=""></div>
+                                                                            <div class="author-info">
+                                                                                <h5>Chidi Mbah</h5>
+                                                                                <p>Logistics Company Director</p>
+                                                                            </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="carousel-item">
+                                                            <div class="row g-4 testimonial-row">
+                                                                <div class="col-lg-4 col-md-6 testimonial-col">
+                                                                    <div class="testimonial-card">
+                                                                        <img src="images/spotlight_icon.svg" alt="">
+                                                                        <p class="testimonial-text">Access to trade missions and business delegations has expanded our reach beyond Nigeria into other African markets.</p>
+                                                                        <div class="author-section collapse">
+                                                                            <div class="d-flex align-items-center gap-3">
+                                                                            <div class="author-avatar"><img src="images/testimonial_author1.png" alt=""></div>
+                                                                            <div class="author-info">
+                                                                                <h5>Ngozi Okonkwo</h5>
+                                                                                <p>Textile Manufacturer, Kano</p>
+                                                                            </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-lg-4 col-md-6 testimonial-col">
+                                                                    <div class="testimonial-card">
+                                                                        <img src="images/spotlight_icon.svg" alt="">
+                                                                        <p class="testimonial-text">As a small business, having NACCIMA amplify our voice in policy discussions has been invaluable for our growth.</p>
+                                                                        <div class="author-section collapse">
+                                                                            <div class="d-flex align-items-center gap-3">
+                                                                            <div class="author-avatar"><img src="images/testimonial_author1.png" alt=""></div>
+                                                                            <div class="author-info">
+                                                                                <h5>Bola Adeyemi</h5>
+                                                                                <p>Fashion Retail Owner, Ibadan</p>
+                                                                            </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-lg-4 col-md-6 testimonial-col">
+                                                                    <div class="testimonial-card">
+                                                                        <img src="images/spotlight_icon.svg" alt="">
+                                                                        <p class="testimonial-text">The networking opportunities alone are worth the membership. I've formed partnerships that have doubled our revenue.</p>
+                                                                        <div class="author-section collapse">
+                                                                            <div class="d-flex align-items-center gap-3">
+                                                                            <div class="author-avatar"><img src="images/testimonial_author1.png" alt=""></div>
+                                                                            <div class="author-info">
+                                                                                <h5>Ibrahim Bello</h5>
+                                                                                <p>Agricultural Exporter, Kaduna</p>
+                                                                            </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                
+                                                <!-- Custom Indicators -->
+                                                <ul class="custom-indicators">
+                                                    <li data-bs-target="#testimonialCarousel" data-bs-slide-to="0" class="active">
+                                                        <button type="button">Slide 1</button>
+                                                    </li>
+                                                    <li data-bs-target="#testimonialCarousel" data-bs-slide-to="1">
+                                                        <button type="button">Slide 2</button>
+                                                    </li>
+                                                    <li data-bs-target="#testimonialCarousel" data-bs-slide-to="2">
+                                                        <button type="button">Slide 3</button>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                    
+                                    </section>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+
+                <!--Membership Benefits-->
+                <div class="d-none aboutUsItem aboutUsHistoryContent" id="aboutUsHistoryContent">
+                    <div class="w-100 pb-5 membershipbenefit-heading">
+                        <h3 class="pb-3">
+                            Membership Benefits
+                        </h3>
+                        <h6 class="fw-bold">Unlock Opportunities, Grow Your Network, Influence Policy</h6>
+                        <p>Becoming a NACCIMA member gives your business a competitive edge, access to exclusive resources, and a stronger voice in shaping Nigeria's business landscape.</p>
+
+                        <div class="container py-5">
+                                <h4 class="fw-bold mb-4">Benefits</h4>
+                                <div class="benefit-grid">
+                                    <!-- Box 1 -->
+                                    <div class="benefit-box box1" style="background-color:#E9F4FF;">
+                                        <div class="benefit-number" style="background-color:#007BFF;">1</div>
+                                        <h5 class="fw-bold">Capacity Building</h5>
+                                        <ul class="mt-2">
+                                            <li class="blue-list">Bespoke seminars, workshops, and training tailored to your needs.</li>
+                                            <li class="blue-list">In-depth analysis of federal legislative developments and their impact on business.</li>
+                                        </ul>
+                                    </div>
+
+                                    <!-- Box 2 -->
+                                    <div class="benefit-box box2" style="background-color:#F8E9FF;">
+                                        <div class="benefit-number" style="background-color:#990096;">2</div>
+                                        <h5 class="fw-bold">Expand Your Network</h5>
+                                        <ul class="mt-2">
+                                            <li class="purple-list">Exclusive access to local and international B2B matchmaking opportunities.</li>
+                                            <li  class="purple-list">Real-time data on economic and social issues affecting business and the economy.</li>
+                                            <li class="purple-list">Easy access to suppliers and buyers through the Market Access platform.</li>
+                                        </ul>
+                                    </div>
+
+                                    <!-- Box 3 -->
+                                    <div class="benefit-box box3" style="background-color:#E9FFF3;">
+                                        <div class="benefit-number" style="background-color:#00A758;">3</div>
+                                        <h5 class="fw-bold">Advocacy & Representation</h5>
+                                        <ul class="mt-2">
+                                            <li class="green-list">Platform to dialogue with government on business-related policies.</li>
+                                            <li class="green-list">Nomination to serve on governmental boards, commissions, and committees.</li>
+                                            <li class="green-list">Representation on tariff negotiations and lobbying to achieve your objectives.</li>
+                                        </ul>
+                                    </div>
+
+                                    <!-- Box 4 -->
+                                    <div class="benefit-box box4" style="background-color:#FFE9E9;">
+                                        <div class="benefit-number" style="background-color:#DC3545;">4</div>
+                                        <h5 class="fw-bold">Networking & Global Opportunities</h5>
+                                        <ul class="mt-2">
+                                            <li class=red-list>Access to exclusive international B2B meetings.</li>
+                                            <li class=red-list>Opportunities to participate in trade missions to key markets worldwide.</li>
+                                            <li class=red-list>Invitations to local and international exhibitions and trade fairs.</li>
+                                        </ul>
+                                    </div>
+
+                                    <!-- Box 5 -->
+                                    <div class="benefit-box box5"       style="background-color:#FFF9E9;">
+                                        <div class="benefit-number" style="background-color:#A29400;">5</div>
+                                        <h5 class="fw-bold">Member Privileges</h5>
+                                        <ul class="mt-2">
+                                            <li class="yellow-list">Assistance for exporters and buyers through visa procurement.</li>
+                                            <li class="yellow-list">Discounted rates for Certificates of Origin (COI) for exports.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Membership Categories-->
+                <div class="d-none aboutUsItem aboutUsVisionAndMission" id="aboutUsVisionAndMission">
+                    <div class="w-100 pb-5">
+                        <div class="container ">
+                            <!-- Corporate Membership -->
+                            <div class="row align-items-center mb-3  p-2 rounded-4" >
+                                <div class="col-lg-8 mb-3 mb-lg-0 corporate-membership">
+                                    <h5 class="fw-bold">Corporate   Membership</h5>
+                                    <p>
+                                        Corporate Membership is open to businesses of all sizes, ranging from small enterprises to large corporations.
+                                        As a Corporate Member, you will gain access to several benefits and opportunities, including participation in
+                                        industry-specific forums, networking events, trade missions, and policy advocacy initiatives. You will also have
+                                        the chance to contribute to shaping local and national policies that directly impact your industry.
+                                    </p>
+                                    <button class="btn btn-success px-4 mt-2">Apply Now</button>
+                                </div>
+                                <div class="col-lg-4 text-center">
+                                <img src="images/corporate.png" alt="Corporate Membership" class="img-fluid rounded-4" />
+                                </div>
+                            </div>
+
+                            <!-- Bi-lateral Membership -->
+                            <div class="row align-items-start mb-3 p-2 rounded-4">
+                                <div class="col-lg-8 order-lg-2 mb-3 mb-lg-0 corporate-membership">
+                                    <h5 class="fw-bold">Bi-lateral Membership</h5>
+                                    <p>
+                                    Bi-lateral Membership is designed for chambers of commerce, industry, mines, and agriculture from other
+                                    countries that wish to establish a collaborative relationship. As a Bi-lateral Member, you'll enjoy opportunities
+                                    for trade missions, networking, and exchange programs with like-minded organizations across Nigeria and beyond.
+                                </p>
+                                <button class="btn btn-success px-4 mt-2">Apply Now</button>
+                            </div>
+                            <div class="col-lg-4 order-lg-1 text-center">
+                            <img src="images/bilateralmembership.png" alt="Bi-lateral Membership" class="img-fluid rounded-4">
+                            </div>
+                            </div>
+
+                            <!-- Chambers Membership -->
+                            <div class="row align-items-center mb-3 p-2 rounded-4">
+                                <div class="col-lg-8 mb-3 mb-lg-0 corporate-membership">
+                                <h5 class="fw-bold">Chambers Membership</h5>
+                                <p>
+                                    Chamber Membership is dedicated to businesses, professional associations, and trade groups seeking to strengthen
+                                    their presence and influence within the private sector. This membership provides access to exclusive events,
+                                    capacity-building sessions, and advocacy platforms to help you establish strategic partnerships and maximize
+                                    new business opportunities.
+                                </p>
+                                <button class="btn btn-success px-4 mt-2">Apply Now</button>
+                                </div>
+                                <div class="col-lg-4 text-center">
+                                <img src="images/chambersmembership.png" alt="Chambers Membership" class="img-fluid rounded-4" />
+                                </div>
+                            </div>
+                            </div>
+
+                    </div>
+                </div>
+
+                <!--Member Chambers-->
+                <div class="d-none aboutUsItem aboutUsLocation" id="aboutUsLocation">
+                    <div class="w-100 pb-5">
+                        <div class="container py-5">
+                        <!-- Section 1 -->
+                        <h5 class="fw-bold mb-4">CONSCCIMA - NORTH</h5>
+                        <div class="row g-4 mb-5">
+                            <!-- Card 1 - Abuja Chamber -->
+                            <div class="col-md-6 col-lg-4">
+                                <div class="chamber-card">
+                                    <div class="chamber-logo">
+                                        <img src="images/North1.svg" alt="Abuja Chamber" class="img-fluid">
+                                    </div>
+                                    <div class="state-label">Abuja FCT</div>
+
+                                    <h6 class="chamber-name">Abuja Chamber Of Commerce & Industry</h6>
+                                    <div class="contact-info">
+                                        <div class="contact-item">
+                                            <div class="contact-icon">
+                                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                                    <circle cx="12" cy="10" r="3"></circle>
+                                                </svg>
+                                            </div>
+                                            <span>Abuja International Trade Fair Complex, KM 8, Airport Road, P.M.B. 83, Garki, Abuja</span>
+                                        </div>
+                                        <div class="contact-item">
+                                            <div class="contact-icon">
+                                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                                                </svg>
+                                            </div>
+                                            <span>+234 9 234 5678</span>
+                                        </div>
+                                        <div class="contact-item">
+                                            <div class="contact-icon">
+                                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                                    <polyline points="22,6 12,13 2,6"></polyline>
+                                                </svg>
+                                            </div>
+                                            <span>president@accinigeria.com</span>
+                                        </div>
+                                    </div>
+                                    <button class="open-website-btn">
+                                        <span>Open Website</span>
+                                    <img src="images/open-website icon (1).svg" alt="">
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Card 2 - Adamawa Chamber -->
+                            <div class="col-md-6 col-lg-4">
+                                <div class="chamber-card">
+                                    
+                                    <div class="chamber-logo">
+                                        <img src="images/North2.svg" alt="Adamawa Chamber" class="img-fluid">
+                                    </div>
+                                    <div class="state-label">Adamawa State</div>
+                                    <h6 class="chamber-name">Adamawa Chamber Of Commerce & Industry</h6>
+                                    <div class="contact-info">
+                                        <div class="contact-item">
+                                            <div class="contact-icon">
+                                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                                    <circle cx="12" cy="10" r="3"></circle>
+                                                </svg>
+                                            </div>
+                                            <span>ADCCIMA HOUSE, Yola Town, Off Mubi Road, Wuro Jabbe, Jimeta Yola, Adamawa State</span>
+                                        </div>
+                                        <div class="contact-item">
+                                            <div class="contact-icon">
+                                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                                                </svg>
+                                            </div>
+                                            <span>+234 9 234 5678</span>
+                                        </div>
+                                        <div class="contact-item">
+                                            <div class="contact-icon">
+                                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                                    <polyline points="22,6 12,13 2,6"></polyline>
+                                                </svg>
+                                            </div>
+                                            <span>adamawachamber@yahoo.com</span>
+                                        </div>
+                                    </div>
+                                    <button class="open-website-btn">
+                                        <span>Open Website</span>
+                                        <img src="images/open-website icon (1).svg" alt="">
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Card 3 - Benue Chamber -->
+                            <div class="col-md-6 col-lg-4">
+                                <div class="chamber-card">
+                                    
+                                    <div class="chamber-logo">
+                                        <img src="images/North3.svg" alt="Benue Chamber" class="img-fluid">
+                                    </div>
+                                    <div class="state-label">Benue State</div>
+                                    <h6 class="chamber-name">Benue Chamber Of Commerce & Industry</h6>
+                                    <div class="contact-info">
+                                        <div class="contact-item">
+                                            <div class="contact-icon">
+                                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                                    <circle cx="12" cy="10" r="3"></circle>
+                                                </svg>
+                                            </div>
+                                            <span>Suite 17, 3rd Square, High Level, P.M.B. 102444, Makurdi, Benue State</span>
+                                        </div>
+                                        <div class="contact-item">
+                                            <div class="contact-icon">
+                                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                                                </svg>
+                                            </div>
+                                            <span>+234 9 234 5678</span>
+                                        </div>
+                                        <div class="contact-item">
+                                            <div class="contact-icon">
+                                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                                    <polyline points="22,6 12,13 2,6"></polyline>
+                                                </svg>
+                                            </div>
+                                            <span>benuechamber@gmail.com</span>
+                                        </div>
+                                    </div>
+                                    <button class="open-website-btn">
+                                        <span>Open Website</span>
+                                        <img src="images/open-website icon (1).svg" alt="">
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Card 4 - Kwara Chamber -->
+                            <div class="col-md-6 col-lg-4">
+                                <div class="chamber-card">
+                                    
+                                    <div class="chamber-logo">
+                                        <img src="images/North4.svg" alt="Kwara Chamber" class="img-fluid">
+                                    </div>
+                                    <div class="state-label">Kwara State</div>
+                                    <h6 class="chamber-name">Kwara Chamber Of Commerce & Industry</h6>
+                                    <div class="contact-info">
+                                        <div class="contact-item">
+                                            <div class="contact-icon">
+                                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                                    <circle cx="12" cy="10" r="3"></circle>
+                                                </svg>
+                                            </div>
+                                            <span>Alun Junction, Ilorin-Ajaseipo Road, Ilorin, Kwara, P.O. Box 1034, Ilorin, Kwara State</span>
+                                        </div>
+                                        <div class="contact-item">
+                                            <div class="contact-icon">
+                                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                                                </svg>
+                                            </div>
+                                            <span>+234 9 234 5678</span>
+                                        </div>
+                                        <div class="contact-item">
+                                            <div class="contact-icon">
+                                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                                    <polyline points="22,6 12,13 2,6"></polyline>
+                                                </svg>
+                                            </div>
+                                            <span>kwarachamber@gmail.com</span>
+                                        </div>
+                                    </div>
+                                    <button class="open-website-btn">
+                                        <span>Open Website</span>
+                                        <img src="images/open-website icon (1).svg" alt="">
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Card 5 - Plateau Chamber -->
+                            <div class="col-md-6 col-lg-4">
+                                <div class="chamber-card">
+                                    
+                                    <div class="chamber-logo">
+                                        <img src="images/North5.svg" alt="Plateau Chamber" class="img-fluid">
+                                    </div>
+                                    <div class="state-label">Plateau State</div>
+                                    <h6 class="chamber-name">Plateau Chamber Of Commerce & Industry</h6>
+                                    <div class="contact-info">
+                                        <div class="contact-item">
+                                            <div class="contact-icon">
+                                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                                    <circle cx="12" cy="10" r="3"></circle>
+                                                </svg>
+                                            </div>
+                                            <span>No. 10 & 12, Dong Road (Bwaran Tasa), Jos, Plateau State, P.O. Box 2080, Jos, Plateau State</span>
+                                        </div>
+                                        <div class="contact-item">
+                                            <div class="contact-icon">
+                                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                                                </svg>
+                                            </div>
+                                            <span>+234 9 234 5678</span>
+                                        </div>
+                                        <div class="contact-item">
+                                            <div class="contact-icon">
+                                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                                    <polyline points="22,6 12,13 2,6"></polyline>
+                                                </svg>
+                                            </div>
+                                            <span>plateauchamber@yahoo.com</span>
+                                        </div>
+                                    </div>
+                                    <button class="open-website-btn">
+                                        <span>Open Website</span>
+                                        <img src="images/open-website icon (1).svg" alt="">
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Card 6 - Kano Chamber -->
+                            <div class="col-md-6 col-lg-4">
+                                <div class="chamber-card">
+                                    
+                                    <div class="chamber-logo">
+                                        <img src="images/North6.svg" alt="Kano Chamber" class="img-fluid">
+                                    </div>
+                                    <div class="state-label">Kano State</div>
+                                    <h6 class="chamber-name">Kano Chamber Of Commerce & Industry</h6>
+                                    <div class="contact-info">
+                                        <div class="contact-item">
+                                            <div class="contact-icon">
+                                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                                    <circle cx="12" cy="10" r="3"></circle>
+                                                </svg>
+                                            </div>
+                                            <span>Trade Fair Complex, Zoo Road, P.O. Box 10, Kano City, Kano State</span>
+                                        </div>
+                                        <div class="contact-item">
+                                            <div class="contact-icon">
+                                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                                                </svg>
+                                            </div>
+                                            <span>+234 9 234 5678</span>
+                                        </div>
+                                        <div class="contact-item">
+                                            <div class="contact-icon">
+                                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                                    <polyline points="22,6 12,13 2,6"></polyline>
+                                                </svg>
+                                            </div>
+                                            <span>kanochamber@gmail.com</span>
+                                        </div>
+                                    </div>
+                                    <button class="open-website-btn">
+                                        <span>Open Website</span>
+                                        <img src="images/open-website icon (1).svg" alt="">
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Section 2 -->
+                        <h5 class="fw-bold mb-4">ODUA'CCIMA - SOUTH WEST</h5>
+                        <div class="row g-4">
+                            <!-- Card 1 - Lagos Chamber -->
+                            <div class="col-md-6 col-lg-4">
+                                <div class="chamber-card">
+                                    <div class="chamber-logo">
+                                        <img src="images/North1.svg" alt="Lagos Chamber" class="img-fluid">
+                                    </div>
+                                    <div class="state-label">Lagos State</div>
+                                    <h6 class="chamber-name">Lagos Chamber Of Commerce & Industry</h6>
+                                    <div class="contact-info">
+                                        <div class="contact-item">
+                                            <div class="contact-icon">
+                                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                                    <circle cx="12" cy="10" r="3"></circle>
+                                                </svg>
+                                            </div>
+                                            <span>1 Idowu Taylor Street, Victoria Island, Lagos State</span>
+                                        </div>
+                                        <div class="contact-item">
+                                            <div class="contact-icon">
+                                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                                                </svg>
+                                            </div>
+                                            <span>+234 1 234 5678</span>
+                                        </div>
+                                        <div class="contact-item">
+                                            <div class="contact-icon">
+                                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                                    <polyline points="22,6 12,13 2,6"></polyline>
+                                                </svg>
+                                            </div>
+                                            <span>info@lagoschamber.com</span>
+                                        </div>
+                                    </div>
+                                    <button class="open-website-btn">
+                                        <span>Open Website</span>
+                                        <img src="images/open-website icon (1).svg" alt="">
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Card 2 - Ogun Chamber -->
+                            <div class="col-md-6 col-lg-4">
+                                <div class="chamber-card">
+                                    
+                                    <div class="chamber-logo">
+                                        <img src="images/North2.svg" alt="Ogun Chamber" class="img-fluid">
+                                    </div>
+                                    <div class="state-label">Ogun State</div>
+                                    <h6 class="chamber-name">Ogun Chamber Of Commerce & Industry</h6>
+                                    <div class="contact-info">
+                                        <div class="contact-item">
+                                            <div class="contact-icon">
+                                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                                    <circle cx="12" cy="10" r="3"></circle>
+                                                </svg>
+                                            </div>
+                                            <span>Ogun State Chamber of Commerce, Abeokuta, Ogun State</span>
+                                        </div>
+                                        <div class="contact-item">
+                                            <div class="contact-icon">
+                                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                                                </svg>
+                                            </div>
+                                            <span>+234 9 234 5678</span>
+                                        </div>
+                                        <div class="contact-item">
+                                            <div class="contact-icon">
+                                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                                    <polyline points="22,6 12,13 2,6"></polyline>
+                                                </svg>
+                                            </div>
+                                            <span>ogunchamber@gmail.com</span>
+                                        </div>
+                                    </div>
+                                    <button class="open-website-btn">
+                                        <span>Open Website</span>
+                                        <img src="images/open-website icon (1).svg" alt="">
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Card 3 - Osun Chamber -->
+                            <div class="col-md-6 col-lg-4">
+                                <div class="chamber-card">
+                                    
+                                    <div class="chamber-logo">
+                                        <img src="images/North3.svg" alt="Osun Chamber" class="img-fluid">
+                                    </div>
+                                    <div class="state-label">Osun State</div>
+                                    <h6 class="chamber-name">Osun Chamber Of Commerce & Industry</h6>
+                                    <div class="contact-info">
+                                        <div class="contact-item">
+                                            <div class="contact-icon">
+                                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                                    <circle cx="12" cy="10" r="3"></circle>
+                                                </svg>
+                                            </div>
+                                            <span>Osun State Chamber of Commerce, Osogbo, Osun State</span>
+                                        </div>
+                                        <div class="contact-item">
+                                            <div class="contact-icon">
+                                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                                                </svg>
+                                            </div>
+                                            <span>+234 9 234 5678</span>
+                                        </div>
+                                        <div class="contact-item">
+                                            <div class="contact-icon">
+                                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                                    <polyline points="22,6 12,13 2,6"></polyline>
+                                                </svg>
+                                            </div>
+                                            <span>osunchamber@gmail.com</span>
+                                        </div>
+                                    </div>
+                                    <button class="open-website-btn">
+                                        <span>Open Website</span>
+                                        <img src="images/open-website icon (1).svg" alt="">
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Card 4 - Oyo Chamber -->
+                            <div class="col-md-6 col-lg-4">
+                                <div class="chamber-card">
+                                    
+                                    <div class="chamber-logo">
+                                        <img src="images/North4.svg" alt="Oyo Chamber" class="img-fluid">
+                                    </div>
+                                    <div class="state-label">Oyo State</div>
+                                    <h6 class="chamber-name">Oyo Chamber Of Commerce & Industry</h6>
+                                    <div class="contact-info">
+                                        <div class="contact-item">
+                                            <div class="contact-icon">
+                                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                                    <circle cx="12" cy="10" r="3"></circle>
+                                                </svg>
+                                            </div>
+                                            <span>Oyo State Chamber of Commerce, Ibadan, Oyo State</span>
+                                        </div>
+                                        <div class="contact-item">
+                                            <div class="contact-icon">
+                                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                                                </svg>
+                                            </div>
+                                            <span>+234 9 234 5678</span>
+                                        </div>
+                                        <div class="contact-item">
+                                            <div class="contact-icon">
+                                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                                    <polyline points="22,6 12,13 2,6"></polyline>
+                                                </svg>
+                                            </div>
+                                            <span>oyochamber@gmail.com</span>
+                                        </div>
+                                    </div>
+                                    <button class="open-website-btn">
+                                        <span>Open Website</span>
+                                        <img src="images/open-website icon (1).svg" alt="">
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Card 5 - Ondo Chamber -->
+                            <div class="col-md-6 col-lg-4">
+                                <div class="chamber-card">
+                                    
+                                    <div class="chamber-logo">
+                                        <img src="images/North5.svg" alt="Ondo Chamber" class="img-fluid">
+                                    </div>
+                                    <div class="state-label">Ondo State</div>
+                                    <h6 class="chamber-name">Ondo Chamber Of Commerce & Industry</h6>
+                                    <div class="contact-info">
+                                        <div class="contact-item">
+                                            <div class="contact-icon">
+                                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                                    <circle cx="12" cy="10" r="3"></circle>
+                                                </svg>
+                                            </div>
+                                            <span>Ondo State Chamber of Commerce, Akure, Ondo State</span>
+                                        </div>
+                                        <div class="contact-item">
+                                            <div class="contact-icon">
+                                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                                                </svg>
+                                            </div>
+                                            <span>+234 9 234 5678</span>
+                                        </div>
+                                        <div class="contact-item">
+                                            <div class="contact-icon">
+                                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                                    <polyline points="22,6 12,13 2,6"></polyline>
+                                                </svg>
+                                            </div>
+                                            <span>ondochamber@gmail.com</span>
+                                        </div>
+                                    </div>
+                                    <button class="open-website-btn">
+                                        <span>Open Website</span>
+                                        <img src="images/open-website icon (1).svg" alt="">
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Card 6 - Ekiti Chamber -->
+                            <div class="col-md-6 col-lg-4">
+                                <div class="chamber-card">
+                                    
+                                    <div class="chamber-logo">
+                                        <img src="images/North6.svg" alt="Ekiti Chamber" class="img-fluid">
+                                    </div>
+                                    <div class="state-label">Ekiti State</div>
+                                    <h6 class="chamber-name">Ekiti Chamber Of Commerce & Industry</h6>
+                                    <div class="contact-info">
+                                        <div class="contact-item">
+                                            <div class="contact-icon">
+                                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                                    <circle cx="12" cy="10" r="3"></circle>
+                                                </svg>
+                                            </div>
+                                            <span>Ekiti State Chamber of Commerce, Ado-Ekiti, Ekiti State</span>
+                                        </div>
+                                        <div class="contact-item">
+                                            <div class="contact-icon">
+                                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                                                </svg>
+                                            </div>
+                                            <span>+234 9 234 5678</span>
+                                        </div>
+                                        <div class="contact-item">
+                                            <div class="contact-icon">
+                                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                                    <polyline points="22,6 12,13 2,6"></polyline>
+                                                </svg>
+                                            </div>
+                                            <span>ekitichamber@gmail.com</span>
+                                        </div>
+                                    </div>
+                                    <button class="open-website-btn">
+                                        <span>Open Website</span>
+                                        <img src="images/open-website icon (1).svg" alt="">
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Bilateral Members-->
+                <div class="d-none aboutUsItem aboutUsCoreValues" id="aboutUsCoreValues">
+                    <div class="w-100 pb-5">
+                        <div class="container py-5">
+                            <!-- Section 1 -->
+                            <h5 class="fw-bold mb-4">Bilateral Members</h5>
+                            <div class="row g-4 mb-5">
+                                <!-- Card 1 - Abuja Chamber -->
+                                <div class="col-md-6 col-lg-4">
+                                    <div class="chamber-card">
+                                        <div class="chamber-logo">
+                                            <img src="images/bilteral_icon6.svg" alt="Abuja Chamber" class="img-fluid">
+                                        </div>
+                                        <h6 class="chamber-name">Nigerian-Arabian Gulf Chamber of Commerce & Industry</h6>
+                                        <div class="contact-info">
+                                            <div class="contact-item">
+                                                <div class="contact-icon">
+                                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                                        <circle cx="12" cy="10" r="3"></circle>
+                                                    </svg>
+                                                </div>
+                                                <span>No. 148, Cassandra Street, Maitama District Abuja, Nigeria P. M.B 6069, Garki Abuja.</span>
+                                            </div>
+                                            <div class="contact-item">
+                                                <div class="contact-icon">
+                                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                                        <polyline points="22,6 12,13 2,6"></polyline>
+                                                    </svg>
+                                                </div>
+                                                <span>info@nigeriaarabgulf.com</span>
+                                            </div>
+                                        </div>
+                                        <button class="open-website-btn">
+                                            <span>Open Website</span>
+                                        <img src="images/open-website icon (1).svg" alt="">
+                                        </button>
+                                    </div>
+                                </div>
+    
+                                <!-- Card 2 - Adamawa Chamber -->
+                                <div class="col-md-6 col-lg-4">
+                                    <div class="chamber-card">
+                                        
+                                        <div class="chamber-logo">
+                                            <img src="images/bilateral_icon5.svg" alt="Adamawa Chamber" class="img-fluid">
+                                        </div>
+                                        <h6 class="chamber-name">Nigerian-American Chamber of Commerce & Industry</h6>
+                                        <div class="contact-info">
+                                            <div class="contact-item">
+                                                <div class="contact-icon">
+                                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                                        <circle cx="12" cy="10" r="3"></circle>
+                                                    </svg>
+                                                </div>
+                                                <span>CAPWIRE HOUSE, 19, Sinari Daranijo Street. Off Ajose Adeogun Street Victoria Island, Lagos.</span>
+                                            </div>
+                                            <div class="contact-item">
+                                                <div class="contact-icon">
+                                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                                        <polyline points="22,6 12,13 2,6"></polyline>
+                                                    </svg>
+                                                </div>
+                                                <span>info@nigerianamerican.org</span>
+                                            </div>
+                                            <div class="contact-item">
+                                                <div class="contact-icon">
+                                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                                        <polyline points="22,6 12,13 2,6"></polyline>
+                                                    </svg>
+                                                </div>
+                                                <span>adebola.williams@nigerian <br> american chamber.org</span>
+                                            </div>
+                                        </div>
+                                        <button class="open-website-btn">
+                                            <span>Open Website</span>
+                                            <img src="images/open-website icon (1).svg" alt="">
+                                        </button>
+                                    </div>
+                                </div>
+    
+                                <!-- Card 3 - Benue Chamber -->
+                                <div class="col-md-6 col-lg-4">
+                                    <div class="chamber-card">
+                                        
+                                        <div class="chamber-logo">
+                                            <img src="images/bilateral_icon4.svg" alt="Benue Chamber" class="img-fluid">
+                                        </div>
+                                        <h6 class="chamber-name">Nigerian-Bangladesh Chamber of Commerce</h6>
+                                        <div class="contact-info">
+                                            <div class="contact-item">
+                                                <div class="contact-icon">
+                                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                                        <circle cx="12" cy="10" r="3"></circle>
+                                                    </svg>
+                                                </div>
+                                                <span>RS 102B, Dubai-Abuja Int'l Market, Kaura District, FCT Abuja.</span>
+                                            </div>
+                                            <div class="contact-item">
+                                                <div class="contact-icon">
+                                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                                        <polyline points="22,6 12,13 2,6"></polyline>
+                                                    </svg>
+                                                </div>
+                                                <span>info@nbdchambers.org.ng</span>
+                                            </div>
+                                            <div class="contact-item">
+                                                <div class="contact-icon">
+                                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                                        <polyline points="22,6 12,13 2,6"></polyline>
+                                                    </svg>
+                                                </div>
+                                                <span>hamidukan@yahoo.co.uk</span>
+                                            </div>
+                                        </div>
+                                        <button class="open-website-btn">
+                                            <span>Open Website</span>
+                                            <img src="images/open-website icon (1).svg" alt="">
+                                        </button>
+                                    </div>
+                                </div>
+    
+                                <!-- Card 4 - Kwara Chamber -->
+                                <div class="col-md-6 col-lg-4">
+                                    <div class="chamber-card">
+                                        
+                                        <div class="chamber-logo">
+                                            <img src="images/bilateral_icon3.svg" alt="Kwara Chamber" class="img-fluid">
+                                        </div>
+                                        <h6 class="chamber-name">Nigeria-Egypt Business Council</h6>
+                                        <div class="contact-info">
+                                            <div class="contact-item">
+                                                <div class="contact-icon">
+                                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                                        <circle cx="12" cy="10" r="3"></circle>
+                                                    </svg>
+                                                </div>
+                                                <span>2,Muh'd Yusuf Lere Drive,Doctor's Quarters,Kaduna,Nigeria.</span>
+                                            </div>
+                                            <div class="contact-item">
+                                                <div class="contact-icon">
+                                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                                        <circle cx="12" cy="10" r="3"></circle>
+                                                    </svg>
+                                                </div>
+                                                <span>Egypt, Commerical Representative Office, 34, kofo Abayomi street, Victoria Island, Lagos.</span>
+                                            </div>
+                                            <div class="contact-item">
+                                                <div class="contact-icon">
+                                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                                        <polyline points="22,6 12,13 2,6"></polyline>
+                                                    </svg>
+                                                </div>
+                                                <span>Email-lereholdings@gmail.com</span>
+                                            </div>
+                                        </div>
+                                        <button class="open-website-btn">
+                                            <span>Open Website</span>
+                                            <img src="images/open-website icon (1).svg" alt="">
+                                        </button>
+                                    </div>
+                                </div>
+    
+                                <!-- Card 5 - Plateau Chamber -->
+                                <div class="col-md-6 col-lg-4">
+                                    <div class="chamber-card">
+                                        
+                                        <div class="chamber-logo">
+                                            <img src="images/bilateral_icon2.svg" alt="Plateau Chamber" class="img-fluid">
+                                        </div>
+                                        <h6 class="chamber-name">Nigerian-German Chamber of Commerce</h6>
+                                        <div class="contact-info">
+                                            <div class="contact-item">
+                                                <div class="contact-icon">
+                                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                                        <circle cx="12" cy="10" r="3"></circle>
+                                                    </svg>
+                                                </div>
+                                                <span>No. 7A, Miverton Road, Ikoyi Lagos.</span>
+                                            </div>
+                                            <div class="contact-item">
+                                                <div class="contact-icon">
+                                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                                        <polyline points="22,6 12,13 2,6"></polyline>
+                                                    </svg>
+                                                </div>
+                                                <span>admin@ngcc-ng.com</span>
+                                            </div>
+                                                 <div class="contact-item">
+                                                <div class="contact-icon">
+                                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                                        <polyline points="22,6 12,13 2,6"></polyline>
+                                                    </svg>
+                                                </div>
+                                                <span>ozua@ngcc-ng.com</span>
+                                            </div>
+                                                 <div class="contact-item">
+                                                <div class="contact-icon">
+                                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                                        <polyline points="22,6 12,13 2,6"></polyline>
+                                                    </svg>
+                                                </div>
+                                                <span>info@ngcc-ng.com</span>
+                                            </div>
+                                        </div>
+                                        <button class="open-website-btn">
+                                            <span>Open Website</span>
+                                            <img src="images/open-website icon (1).svg" alt="">
+                                        </button>
+                                    </div>
+                                </div>
+    
+                                <!-- Card 6 - Kano Chamber -->
+                                <div class="col-md-6 col-lg-4">
+                                    <div class="chamber-card">
+                                        
+                                        <div class="chamber-logo">
+                                            <img src="images/bilateral_icon1.svg" alt="Kano Chamber" class="img-fluid">
+                                        </div>
+                                        <h6 class="chamber-name">Nigeria-Italy Chamber of Commerce & Industry</h6>
+                                        <div class="contact-info">
+                                            <div class="contact-item">
+                                                <div class="contact-icon">
+                                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                                        <circle cx="12" cy="10" r="3"></circle>
+                                                    </svg>
+                                                </div>
+                                                <span>10, Suez Crescent, Abacha Estate, Wuse Zone 4, FCT Abuja.</span>
+                                            </div>
+                                            <div class="contact-item">
+                                                <div class="contact-icon">
+                                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                                        <polyline points="22,6 12,13 2,6"></polyline>
+                                                    </svg>
+                                                </div>
+                                                <span>info@italynigeriachamber.com,</span>
+                                            </div>
+                                            <div class="contact-item">
+                                                <div class="contact-icon">
+                                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                                        <polyline points="22,6 12,13 2,6"></polyline>
+                                                    </svg>
+                                                </div>
+                                                <span>silvano.bellinato@italynigeria <br> chamber.com</span>
+                                            </div>
+                                        </div>
+                                        <button class="open-website-btn">
+                                            <span>Open Website</span>
+                                            <img src="images/open-website icon (1).svg" alt="">
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                    </div>
+                </div>
+
+                <!--How to Join-->
+                <div class="d-none aboutUsItem aboutUsRanking" id="aboutUsRanking">
+                    <div class="w-100 pb-5">
+                        <div class="container">
+                            <div class="how-to-join-section">
+                                <h2>How to Join</h2>
+                                <p class="section-description">
+                                    Joining NACCIMA means becoming part of a national network of business leaders, entrepreneurs, and innovators working together to shape Nigeria's economic future. Follow these simple steps to become a member today.
+                                </p>
+                                
+                                <div class="steps-grid">
+                                    <!-- Step 1 -->
+                                    <div class="step-card">
+                                        <div class="step-badge">Step 1</div>
+                                        <h3 class="step-title">Complete the Application Form</h3>
+                                        <p class="step-description">
+                                            Fill out our membership form online or download a copy. This captures basic details about your business and ensures we place you in the right category.
+                                        </p>
+                                    </div>
+                                    
+                                    <!-- Step 2 -->
+                                    <div class="step-card">
+                                        <div class="step-badge">Step 2</div>
+                                        <h3 class="step-title">Submit Your Documents</h3>
+                                        <p class="step-description">
+                                            Provide supporting documents such as CAC Registration and Tax ID. These help verify your business and confirm eligibility.
+                                        </p>
+                                    </div>
+                                    
+                                    <!-- Step 3 -->
+                                    <div class="step-card">
+                                        <div class="step-badge">Step 3</div>
+                                        <h3 class="step-title">Pay Membership Dues</h3>
+                                        <p class="step-description">
+                                            Membership fees depend on your category. Once reviewed, you'll receive payment instructions with secure options for settlement.
+                                        </p>
+                                    </div>
+                                    
+                                    <!-- Step 4 -->
+                                    <div class="step-card">
+                                        <div class="step-badge">Step 4</div>
+                                        <h3 class="step-title">Confirmation & Welcome</h3>
+                                        <p class="step-description">
+                                            After approval, you'll receive your Membership Certificate and login details for the Members' Portal. From here, you can access events, opportunities, and benefits.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                     
+            </div>
+        </div>      
+    </section>
+
+    <!--Join today cards-->
+    <div class="container-custom">
+        <div class="d-none membershipCardActive membershipCard row g-4 mb-5" id="membershipOverviewCards">
+            <!-- Card 1: Join NACCIMA Today -->
+            <div class="col-md-4">
+                <div class="card h-100 bg-mint border-0">
+                    <div class="card-body p-4">
+                        <div class="icon-box text-mint">
+                            <img src="images/naccima_logo.svg" alt="">
+                        </div>
+                        <h5 class="card-title fw-bold mb-3">Join NACCIMA Today</h5>
+                        <p class="card-text text-secondary mb-4">
+                            Join Nigeria's powerful network of businesses, shape policies, and grow your influence nationwide.
+                        </p>
+                        <button class="btn btn-mint px-4">Become a Member</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2: Register Your Business -->
+            <div class="col-md-4">
+                <div class="card h-100 bg-light-blue border-0">
+                    <div class="card-body p-4">
+                        <div class="icon-box text-blue">
+                            <img src="images/business_logo.svg" alt="">
+                        </div>
+                        <h5 class="card-title fw-bold mb-3">Register Your Business</h5>
+                        <p class="card-text text-secondary mb-4">
+                            Get listed in our national business directory and access exclusive trade and investment tools.
+                        </p>
+                        <button class="btn px-4" style="background: #0267BF; color:#fff; ">Register Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3: Don't Miss Our Events -->
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-body p-4">
+                        <div class="icon-box bg-light">
+                            <img src="images/event_logo.svg" alt="">
+                        </div>
+                        <h5 class="card-title fw-bold mb-3">Don't Miss Our Events</h5>
+                        <p class="card-text text-secondary mb-4">
+                            Connect with policymakers, industry leaders, and investors through NACCIMA events, expos, and forums.
+                        </p>
+                        <button class="btn btn-dark px-4">View Events</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--What Naccima does-->
+    <section class="section-wrapper">
+        <div class="container-custom">
+            <div class="d-none  membershipCard row g-4 align-items-stretch" id="membershipBenefitCards">
+                <!-- Image Column -->
+                <div class="col-lg-6">
+                    <div class="image-container">
+                        <img src="images/whatnaccimadoes.png" alt="Business Meeting">
+                    </div>
+                </div>
+
+                <!-- Content Column -->
+                <div class="col-lg-6">
+                    <div class="content-card">
+                        <h2 class="section-heading">What NACCIMA Does</h2>
+                        <ul class="content-list">
+                            <li>Speaks on behalf of Nigeria's business community to influence policy and drive action.</li>
+                            <li>Offers valuable services and tools that boost business success.</li>
+                            <li>Creates a business-friendly environment for innovator and prosperity.</li>
+                            <li>Acts as an advisor, planner, and connector to grow the local economy.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+   <!-- <script>
+        var player;
+        function onYouTubeIframeAPIReady() {
+            player = new YT.Player('player', {
+            events: {
+              'onStateChange': onPlayerStateChange
+            }
+          });
+        }
+        function onPlayerStateChange(event) {
+          if (event.data === 1) { 
+            player.mute(); 
+            player.setPlaybackQuality('small');
+          }
+        }
+    </script>-->
+    <script src="js/membership.js"></script>
+    <!-- <script src="js/scrollFunc.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+</body>
+</html>

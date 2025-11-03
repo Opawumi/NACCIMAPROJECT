@@ -14,7 +14,7 @@
 /* Global Styles */
 body {
     /* font-family: var(--font-main); */
-    font-family:  Arial, Helvetica, sans-serif;
+    font-family: 'Inter', sans-serif !important;
     line-height: 1.6;
     color: var(--text-color);
     overflow-x: hidden;
@@ -144,6 +144,7 @@ a {
     color: #fff !important;
     font-weight: 500;
     color: var(--White, #FFF);
+    font-family: 'Inter', sans-serif !important;
 
 /* Desktop/Label 1-medium 14px */
     font-family: Inter;
@@ -204,11 +205,13 @@ a {
 #mainNav.scrolled.navbar-dark-theme .nav-link,
 #mainNav.scrolled.navbar-light-theme .nav-link {
     color: #333333 !important;
+    font-family: 'Inter', sans-serif !important;
 }
 
 #mainNav.scrolled .nav-link:hover,
 #mainNav.scrolled .nav-link.active {
     color: #333333 !important;
+    font-family: 'Inter', sans-serif !important;
 }
 
 #mainNav.scrolled .navbar-toggler,
@@ -701,6 +704,7 @@ a {
 
 .navbar-light-blue-theme .nav-link {
     color: #333 !important;
+    font-family: inter ;
 }
 
 .navbar-light-blue-theme .navbar-toggler {
@@ -917,6 +921,7 @@ a {
         text-align: left;
         font-size: 16px;
         line-height: 1.6;
+        font-family: "inter", sans-serif !important;
     }
     
     .who-body .btn {
@@ -1373,7 +1378,7 @@ a {
     bottom: -50px; /* small overlap under image */
     background: #0ea34a;
     color: #fff;
-    padding: 5px 72.5px; /* compact padding */
+    padding: 5px 78.8px; /* compact padding */
     border-radius:0px 0px 4px 4px;
     white-space: nowrap; /* keep name on one line */
     min-width: 220px; /* ensure badge is wide enough to hold full name */
@@ -1404,7 +1409,7 @@ a {
     color: #444;
     line-height: 1.6;
     font-size: 17px;
-    font-family: normal;
+    font-family: "inter", sans-serif !important;
 }
 .who-body .btn {
     border-radius: 4px !important;
@@ -1586,7 +1591,7 @@ a {
     right: 80px;
     width: 327.644px;
     height: 355px;
-    background: url('https://www.figma.com/api/mcp/asset/96df9f3b-b183-4e65-aa48-1e3efa7d2912') no-repeat;
+    background: url('../assets/new\ naccima\ logo\ updated\ alone\ 2.svg') no-repeat;
     background-size: contain;
     opacity: 0.15;
     mix-blend-mode: soft-light;
@@ -1643,8 +1648,8 @@ a {
 }
 
 .footer-desktop .footer-column a {
-    font-size: 11.5px;
-    font-weight: 400;
+    font-size: 12.5px;
+    font-weight: 500;
     color: #ffffff;
     text-decoration: none;
     transition: opacity 0.3s ease;

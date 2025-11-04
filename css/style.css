@@ -2466,8 +2466,15 @@ a {
     border-radius: 12px;
     padding: 1rem;
     box-shadow: 0 6px 18px rgba(6, 120, 70, 0.04);
-    height: 100%;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+/* Desktop only - use full height */
+@media (min-width: 768px) {
+    .upcoming-events .event-card {
+        height: 100%;
+    }
 }
 
 .upcoming-events .event-card:hover {
@@ -2670,11 +2677,16 @@ event-media img {
         height: 140px;
         width: 100%;
         object-fit: cover;
+        display: block;
     }
     
     .upcoming-events .event-card { 
         padding: 0.75rem;
         margin: 0;
+        height: auto !important;
+        min-height: auto !important;
+        display: flex;
+        flex-direction: column;
     }
     
     /* Upcoming Events Slider Styles - PEEK EFFECT */
@@ -2682,6 +2694,7 @@ event-media img {
         margin: 0;
         padding: 0;
         width: 100%;
+        overflow: hidden;
     }
     
     .upcoming-events-slider .slick-list {
@@ -2693,28 +2706,34 @@ event-media img {
     
     .upcoming-events-slider .slick-list .slick-track {
         overflow: visible !important;
+        display: flex !important;
     }
     
     .upcoming-events-slider .slick-track {
         display: flex !important;
-        align-items: stretch;
+        align-items: flex-start;
         margin-left: 0 !important;
         margin-right: 0 !important;
     }
     
     .upcoming-events-slider .slick-slide {
         padding: 0 8px 0 0 !important;
-        height: auto;
+        height: auto !important;
+        display: flex !important;
     }
     
     .upcoming-events-slider .slick-slide > div {
-        height: 100%;
+        width: 100%;
+        height: auto !important;
+        display: flex;
     }
     
     .upcoming-events-slider .slick-slide .event-card {
-        height: 100%;
+        height: auto !important;
+        min-height: auto !important;
         display: flex;
         flex-direction: column;
+        width: 100%;
     }
     
     /* HIDE DOTS COMPLETELY */

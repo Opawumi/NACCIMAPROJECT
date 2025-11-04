@@ -230,6 +230,8 @@ class TestimonialSlider {
         this.dotsContainer = this.root.querySelector('.testimonial-dots');
         this.currentIndex = 0; // index of leftmost visible card for sliding
         this.visibleCount = 4;
+        this.autoSlideInterval = null;
+        this.autoSlideDelay = 4000; // 4 seconds per slide
 
         this.init();
     }
@@ -242,24 +244,187 @@ class TestimonialSlider {
             dot.type = 'button';
             dot.setAttribute('aria-label', `Show testimonial ${idx + 1}`);
             if (idx === 0) dot.classList.add('active');
-            dot.addEventListener('click', () => this.goTo(idx));
+            dot.addEventListener('click', () => {
+                this.pauseAutoSlide();
+                this.goTo(idx);
+                this.resumeAutoSlide();
+            });
             this.dotsContainer.appendChild(dot);
         });
 
-        // Click to toggle expansion
+        // Click to toggle expansion (pause auto-slide when user interacts)
         this.cards.forEach(card => {
-            card.addEventListener('click', (e) => this.toggleExpand(card, e));
+            card.addEventListener('click', (e) => {
+                this.pauseAutoSlide();
+                this.toggleExpand(card, e);
+                this.resumeAutoSlide();
+            });
             card.addEventListener('keydown', (e) => {
                 if (e.key === 'Enter' || e.key === ' ') {
                     e.preventDefault();
+                    this.pauseAutoSlide();
                     this.toggleExpand(card, e);
+                    this.resumeAutoSlide();
                 }
             });
         });
 
         // Initial layout
         this.updateLayout();
-        window.addEventListener('resize', () => this.updateLayout());
+        
+        // Handle resize
+        let resizeTimeout;
+        window.addEventListener('resize', () => {
+            clearTimeout(resizeTimeout);
+            resizeTimeout = setTimeout(() => {
+                this.updateLayout();
+            }, 150);
+        });
+        
+        // Start auto-slide - simplified approach
+        const startAutoSlideOnce = () => {
+            if (!this.autoSlideInterval && this.cards && this.cards.length > 0) {
+                this.startAutoSlide();
+            }
+        };
+        
+        // Always try to start after initialization completes
+        setTimeout(() => {
+            startAutoSlideOnce();
+        }, 500);
+        
+        // Also try on window load
+        if (window.addEventListener) {
+            window.addEventListener('load', () => {
+                setTimeout(startAutoSlideOnce, 1000);
+            });
+        }
+        
+        // Pause on hover (desktop only - doesn't affect mobile)
+        this.root.addEventListener('mouseenter', () => this.pauseAutoSlide());
+        this.root.addEventListener('mouseleave', () => this.resumeAutoSlide());
+        
+        // Pause on touch (mobile) - resume after touch ends
+        // Delay attaching touch listeners to ensure auto-slide starts first
+        let touchTimeout;
+        let touchStartTime = 0;
+        let isTouching = false;
+        let touchMoved = false;
+        let touchListenersAttached = false;
+        
+        // Attach touch listeners after auto-slide has had time to start
+        setTimeout(() => {
+            if (!touchListenersAttached) {
+                touchListenersAttached = true;
+                
+                this.root.addEventListener('touchstart', (e) => {
+                    touchStartTime = Date.now();
+                    isTouching = true;
+                    touchMoved = false;
+                    this.pauseAutoSlide();
+                    clearTimeout(touchTimeout);
+                });
+                
+                this.root.addEventListener('touchmove', () => {
+                    touchMoved = true;
+                });
+                
+                this.root.addEventListener('touchend', () => {
+                    isTouching = false;
+                    clearTimeout(touchTimeout);
+                    const touchDuration = Date.now() - touchStartTime;
+                    // Resume after delay - shorter for quick taps, longer for swipes
+                    const resumeDelay = touchMoved && touchDuration > 300 ? 3000 : 1500;
+                    touchTimeout = setTimeout(() => {
+                        if (!isTouching) {
+                            this.resumeAutoSlide();
+                        }
+                    }, resumeDelay);
+                });
+            }
+        }, 1500); // Wait 1.5 seconds before attaching touch listeners
+    }
+
+    startAutoSlide() {
+        // Clear any existing interval first
+        this.pauseAutoSlide();
+        
+        // Only start if we have cards
+        if (!this.cards || this.cards.length === 0) {
+            return;
+        }
+        
+        // Start the auto-slide interval
+        this.autoSlideInterval = setInterval(() => {
+            if (this.cards && this.cards.length > 0) {
+                this.nextSlide();
+            } else {
+                // If cards are missing, stop the interval
+                this.pauseAutoSlide();
+            }
+        }, this.autoSlideDelay);
+    }
+
+    pauseAutoSlide() {
+        if (this.autoSlideInterval) {
+            clearInterval(this.autoSlideInterval);
+            this.autoSlideInterval = null;
+        }
+    }
+
+    resumeAutoSlide() {
+        if (!this.autoSlideInterval) {
+            this.startAutoSlide();
+        }
+    }
+
+    nextSlide() {
+        if (!this.cards || this.cards.length === 0) {
+            return;
+        }
+        
+        // Calculate max index based on visible count
+        // For mobile (visibleCount = 1), we can show all cards one by one
+        // So maxIndex = cards.length - 1 (0-indexed)
+        const maxIndex = Math.max(0, this.cards.length - this.visibleCount);
+        
+        // Move to next card, looping back to 0 if at the end
+        // For mobile with visibleCount = 1, maxIndex = cards.length - 1, so we can go through all cards
+        if (this.currentIndex >= maxIndex) {
+            this.currentIndex = 0;
+        } else {
+            this.currentIndex = this.currentIndex + 1;
+        }
+        
+        // Collapse all cards first
+        this.cards.forEach(c => c.classList.remove('expanded'));
+        
+        // Update track position immediately (move to the new card position)
+        // Use a simpler approach - just move to the card position first
+        this.updateTrackPosition();
+        
+        // Then expand the card after a brief delay
+        setTimeout(() => {
+            if (this.cards[this.currentIndex]) {
+                this.cards[this.currentIndex].classList.add('expanded');
+                // Update position again after expansion to center it
+                this.updateTrackPosition();
+            }
+            this.updateDotsActive();
+        }, 150);
+    }
+
+    expandCurrentCard() {
+        // Collapse all cards first
+        this.cards.forEach(c => c.classList.remove('expanded'));
+        
+        // Expand the first visible card (current card)
+        if (this.cards[this.currentIndex]) {
+            this.cards[this.currentIndex].classList.add('expanded');
+        }
+        
+        // Update track position to center the expanded card
+        this.updateTrackPosition();
     }
 
     updateLayout() {
@@ -270,14 +435,24 @@ class TestimonialSlider {
         else this.visibleCount = 1;
 
         // ensure currentIndex within bounds
-        this.currentIndex = Math.max(0, Math.min(this.currentIndex, Math.max(0, this.cards.length - this.visibleCount)));
+        const maxIndex = Math.max(0, this.cards.length - this.visibleCount);
+        this.currentIndex = Math.max(0, Math.min(this.currentIndex, maxIndex));
         this.updateTrackPosition();
         this.updateDotsActive();
+        this.expandCurrentCard();
+        
+        // Ensure auto-slide is running (in case it was stopped)
+        // Only restart if it's not already running
+        if (!this.autoSlideInterval) {
+            setTimeout(() => {
+                this.startAutoSlide();
+            }, 200);
+        }
     }
 
     updateTrackPosition() {
         const card = this.cards[0];
-        if (!card) return;
+        if (!card || !this.track) return;
 
         // If there is an expanded card, try to center it in the container when possible
         const expandedIndex = this.cards.findIndex(c => c.classList.contains('expanded'));
@@ -285,9 +460,13 @@ class TestimonialSlider {
 
         if (expandedIndex >= 0) {
             const expandedCard = this.cards[expandedIndex];
-            const cardWidth = expandedCard.getBoundingClientRect().width;
-            // card.offsetLeft is relative to the track (ignores transforms)
-            const cardCenterInTrack = expandedCard.offsetLeft + (cardWidth / 2);
+            const cardRect = expandedCard.getBoundingClientRect();
+            const cardWidth = cardRect.width;
+            
+            // Get card position relative to track
+            const trackRect = this.track.getBoundingClientRect();
+            const cardLeftRelativeToTrack = cardRect.left - trackRect.left;
+            const cardCenterInTrack = cardLeftRelativeToTrack + (cardWidth / 2);
             const containerCenter = containerRect.width / 2;
 
             // Desired translate so that card center aligns with container center
@@ -304,17 +483,23 @@ class TestimonialSlider {
         }
 
         // Fallback: simple index-based translation (leftmost card)
-        const cardWidth = card.getBoundingClientRect().width + parseFloat(getComputedStyle(this.track).gap || 16);
+        // On mobile (visibleCount = 1), we need to move by one card width at a time
+        // Get the actual card width including gap
+        const cardRect = card.getBoundingClientRect();
+        const gap = parseFloat(getComputedStyle(this.track).gap || 16);
+        const cardWidth = cardRect.width + gap;
+        
+        // Calculate offset to show the card at currentIndex
         const offset = this.currentIndex * cardWidth * -1;
+        
+        // Apply the transform
         this.track.style.transform = `translateX(${offset}px)`;
     }
 
     updateDotsActive() {
         const dots = Array.from(this.dotsContainer.children);
-        // If a card is expanded, highlight its dot; otherwise highlight currentIndex
-        const expandedIndex = this.cards.findIndex(c => c.classList.contains('expanded'));
-        const activeIndex = expandedIndex >= 0 ? expandedIndex : this.currentIndex;
-        dots.forEach((d, i) => d.classList.toggle('active', i === activeIndex));
+        // Highlight currentIndex
+        dots.forEach((d, i) => d.classList.toggle('active', i === this.currentIndex));
     }
 
     goTo(index) {
@@ -322,8 +507,7 @@ class TestimonialSlider {
         this.currentIndex = Math.max(0, Math.min(index, Math.max(0, this.cards.length - this.visibleCount)));
         this.updateTrackPosition();
         this.updateDotsActive();
-        // collapse any expanded card when navigating
-        this.cards.forEach(c => c.classList.remove('expanded'));
+        this.expandCurrentCard();
     }
 
     toggleExpand(card, e) {
@@ -514,42 +698,61 @@ document.addEventListener('DOMContentLoaded', () => {
                 ]
             });
             
-            // Initialize Upcoming Events slider for mobile
+            // Initialize Upcoming Events slider for mobile - FIXED VERSION
             const $eventsSlider = $('.upcoming-events-slider');
-            if ($eventsSlider.length) {
-                const initEventsSlider = function() {
+            
+            function initEventsSlider() {
+                if ($eventsSlider.length) {
                     if ($(window).width() < 768) {
-                        if (!$eventsSlider.hasClass('slick-initialized')) {
-                            $eventsSlider.slick({
-                                dots: true,
-                                arrows: false,
-                                infinite: true,
-                                speed: 300,
-                                slidesToShow: 1,
-                                slidesToScroll: 1,
-                                centerMode: false,
-                                variableWidth: false,
-                                centerPadding: '0',
-                                adaptiveHeight: true
-                            });
+                        // Destroy first if exists
+                        if ($eventsSlider.hasClass('slick-initialized')) {
+                            $eventsSlider.slick('unslick');
                         }
+                        
+                        // Initialize with NO DOTS and peek effect
+                        $eventsSlider.slick({
+                            dots: false,
+                            arrows: false,
+                            infinite: true,
+                            speed: 300,
+                            slidesToShow: 1.1,
+                            slidesToScroll: 1,
+                            centerMode: false,
+                            variableWidth: false,
+                            centerPadding: '0',
+                            adaptiveHeight: true
+                        });
+                        
+                        // Force remove dots - multiple times to be sure
+                        function killDots() {
+                            $('.upcoming-events-slider .slick-dots').remove();
+                            $('.upcoming-events-slider').find('.slick-dots').remove();
+                        }
+                        killDots();
+                        setTimeout(killDots, 10);
+                        setTimeout(killDots, 50);
+                        setTimeout(killDots, 100);
+                        setTimeout(killDots, 200);
+                        setTimeout(killDots, 500);
+                        setInterval(killDots, 500);
                     } else {
+                        // Destroy on desktop
                         if ($eventsSlider.hasClass('slick-initialized')) {
                             $eventsSlider.slick('unslick');
                         }
                     }
-                };
-                
-                // Initial check
-                initEventsSlider();
-                
-                // Reinitialize on window resize with debounce
-                let eventsResizeTimer;
-                $(window).on('resize', function() {
-                    clearTimeout(eventsResizeTimer);
-                    eventsResizeTimer = setTimeout(initEventsSlider, 250);
-                });
+                }
             }
+            
+            // Initialize
+            initEventsSlider();
+            
+            // Reinitialize on resize
+            let eventsResizeTimer;
+            $(window).on('resize', function() {
+                clearTimeout(eventsResizeTimer);
+                eventsResizeTimer = setTimeout(initEventsSlider, 250);
+            });
             
             const $slider = $('.features-slider');
             

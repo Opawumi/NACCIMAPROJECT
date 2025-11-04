@@ -515,28 +515,41 @@ document.addEventListener('DOMContentLoaded', () => {
             });
             
             // Initialize Upcoming Events slider for mobile
-            $('.upcoming-events-slider').slick({
-                dots: false,
-                arrows: false,
-                infinite: true,
-                speed: 300,
-                slidesToShow: 1.15,
-                slidesToScroll: 1,
-                centerMode: true,
-                variableWidth: false,
-                centerPadding: '16px',
-                responsive: [
-                    {
-                        breakpoint: 768,
-                        settings: {
-                            slidesToShow: 1.15,
-                            variableWidth: false,
-                            centerMode: true,
-                            centerPadding: '16px'
+            const $eventsSlider = $('.upcoming-events-slider');
+            if ($eventsSlider.length) {
+                const initEventsSlider = function() {
+                    if ($(window).width() < 768) {
+                        if (!$eventsSlider.hasClass('slick-initialized')) {
+                            $eventsSlider.slick({
+                                dots: true,
+                                arrows: false,
+                                infinite: true,
+                                speed: 300,
+                                slidesToShow: 1,
+                                slidesToScroll: 1,
+                                centerMode: false,
+                                variableWidth: false,
+                                centerPadding: '0',
+                                adaptiveHeight: true
+                            });
+                        }
+                    } else {
+                        if ($eventsSlider.hasClass('slick-initialized')) {
+                            $eventsSlider.slick('unslick');
                         }
                     }
-                ]
-            });
+                };
+                
+                // Initial check
+                initEventsSlider();
+                
+                // Reinitialize on window resize with debounce
+                let eventsResizeTimer;
+                $(window).on('resize', function() {
+                    clearTimeout(eventsResizeTimer);
+                    eventsResizeTimer = setTimeout(initEventsSlider, 250);
+                });
+            }
             
             const $slider = $('.features-slider');
             

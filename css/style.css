@@ -2417,6 +2417,9 @@ a {
     box-shadow: 0 6px 18px rgba(6, 120, 70, 0.04);
     height: 100%;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    display: flex;
+    flex-direction: column;
 }
 
 .upcoming-events .event-card:hover {
@@ -2586,6 +2589,15 @@ event-media img {
 
 .evei{
     width: 100%;
+    height: auto;
+    display: block;
+}
+
+@media (max-width: 767.98px) {
+    .evei {
+        height: 140px;
+        object-fit: cover;
+    }
 }
 @media (min-width: 992px) {
     .event-media img { 
@@ -2614,29 +2626,51 @@ event-media img {
 .bg-light-4 { background: #faf0fb; }
 .bg-purple { background: #f2d9ff; color:#6a2b9d; }
 
-@media (max-width: 575.98px) {
-    .event-media img { height: 140px; }
+@media (max-width: 767.98px) {
+    .event-media img { 
+        height: 140px; 
+        width: 100%;
+        object-fit: cover;
+    }
+    
     .upcoming-events .event-card { 
         padding: 0.75rem;
-        margin: 0 4px; /* Add some margin between slides */
+        margin: 0;
+        height: auto !important;
+        min-height: auto;
     }
     
     /* Upcoming Events Slider Styles */
     .upcoming-events-slider {
-        margin: 0 -8px; /* Counteract the padding on slides */
+        margin: 0;
+        padding: 0;
+        width: 100%;
     }
     
     .upcoming-events-slider .slick-list {
-        overflow: visible; /* Allow cards to be fully visible */
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .upcoming-events-slider .slick-track {
+        display: flex;
+        align-items: stretch;
     }
     
     .upcoming-events-slider .slick-slide {
-        padding: 0 4px; /* Space between slides */
-        transition: transform 0.3s ease;
+        padding: 0 8px;
+        height: auto;
     }
     
-    .upcoming-events-slider .slick-slide.slick-center {
-        transform: scale(1.02); /* Slightly scale up the center slide */
+    .upcoming-events-slider .slick-slide > div {
+        height: 100%;
+    }
+    
+    .upcoming-events-slider .slick-slide .event-card {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
     }
     
     /* Ensure the event date is properly positioned on mobile */
@@ -2677,6 +2711,24 @@ event-media img {
     .upcoming-events .reg-button {
         font-size: 11px;
         padding: 4px 8px;
+    }
+    
+    /* Slider dots styling */
+    .upcoming-events-slider .slick-dots {
+        bottom: -40px;
+        position: relative;
+        margin-top: 20px;
+    }
+    
+    .upcoming-events-slider .slick-dots li button:before {
+        font-size: 10px;
+        color: #00A758;
+        opacity: 0.3;
+    }
+    
+    .upcoming-events-slider .slick-dots li.slick-active button:before {
+        opacity: 1;
+        color: #00A758;
     }
 }
 

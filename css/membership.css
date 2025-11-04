@@ -162,6 +162,26 @@ body {
   line-height: 24px;
 }
 
+.blue-list::marker {
+  color: #007BFF;
+}
+
+.purple-list::marker {
+  color: #990096;
+}
+
+.green-list::marker {
+  color: #00A758;
+}
+
+.red-list::marker {
+  color: #DC3545;
+}
+
+.yellow-list::marker {
+  color: #A29400;
+}
+
 .membershipbenefit-heading p {
   color: var(--Black, #121212);
   font-family: "Inter", sans-serif;
@@ -706,7 +726,7 @@ article > p > .kwara-gov-link > strong {
 }
 
 .benefit-card h3 {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 600;
   line-break: 24px;
   margin-bottom: 12px;

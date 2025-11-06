@@ -272,6 +272,13 @@ class TestimonialSlider {
         // Initial layout
         this.updateLayout();
         
+        // Ensure first card is expanded on initialization
+        if (this.cards.length > 0) {
+            this.cards[0].classList.add('expanded');
+            this.currentIndex = 0;
+            this.updateDotsActive();
+        }
+        
         // Handle resize
         let resizeTimeout;
         window.addEventListener('resize', () => {
@@ -383,48 +390,51 @@ class TestimonialSlider {
             return;
         }
         
-        // Calculate max index based on visible count
-        // For mobile (visibleCount = 1), we can show all cards one by one
-        // So maxIndex = cards.length - 1 (0-indexed)
-        const maxIndex = Math.max(0, this.cards.length - this.visibleCount);
+        // Find the currently expanded card index
+        const expandedIndex = this.cards.findIndex(c => c.classList.contains('expanded'));
+        let nextIndex;
         
-        // Move to next card, looping back to 0 if at the end
-        // For mobile with visibleCount = 1, maxIndex = cards.length - 1, so we can go through all cards
-        if (this.currentIndex >= maxIndex) {
-            this.currentIndex = 0;
+        // If a card is expanded, move to the next card
+        if (expandedIndex >= 0) {
+            nextIndex = (expandedIndex + 1) % this.cards.length;
         } else {
-            this.currentIndex = this.currentIndex + 1;
+            // If no card is expanded, use currentIndex logic
+            const maxIndex = Math.max(0, this.cards.length - this.visibleCount);
+            if (this.currentIndex >= maxIndex) {
+                nextIndex = 0;
+            } else {
+                nextIndex = this.currentIndex + 1;
+            }
         }
         
         // Collapse all cards first
         this.cards.forEach(c => c.classList.remove('expanded'));
         
-        // Update track position immediately (move to the new card position)
-        // Use a simpler approach - just move to the card position first
-        this.updateTrackPosition();
+        // Update currentIndex to the next card
+        this.currentIndex = nextIndex;
         
-        // Then expand the card after a brief delay
-        setTimeout(() => {
-            if (this.cards[this.currentIndex]) {
-                this.cards[this.currentIndex].classList.add('expanded');
-                // Update position again after expansion to center it
-                this.updateTrackPosition();
-            }
-            this.updateDotsActive();
-        }, 150);
+        // Expand the next card
+        if (this.cards[nextIndex]) {
+            this.cards[nextIndex].classList.add('expanded');
+        }
+        
+        // Update track position to center the expanded card
+        this.updateTrackPosition();
+        this.updateDotsActive();
     }
 
     expandCurrentCard() {
         // Collapse all cards first
         this.cards.forEach(c => c.classList.remove('expanded'));
         
-        // Expand the first visible card (current card)
+        // Expand the card at currentIndex
         if (this.cards[this.currentIndex]) {
             this.cards[this.currentIndex].classList.add('expanded');
         }
         
         // Update track position to center the expanded card
         this.updateTrackPosition();
+        this.updateDotsActive();
     }
 
     updateLayout() {
@@ -498,16 +508,27 @@ class TestimonialSlider {
 
     updateDotsActive() {
         const dots = Array.from(this.dotsContainer.children);
-        // Highlight currentIndex
-        dots.forEach((d, i) => d.classList.toggle('active', i === this.currentIndex));
+        // Find which card is currently expanded
+        const expandedIndex = this.cards.findIndex(c => c.classList.contains('expanded'));
+        // If no card is expanded, use currentIndex; otherwise use the expanded card's index
+        const activeIndex = expandedIndex >= 0 ? expandedIndex : this.currentIndex;
+        dots.forEach((d, i) => d.classList.toggle('active', i === activeIndex));
     }
 
     goTo(index) {
+        // Collapse all cards first
+        this.cards.forEach(c => c.classList.remove('expanded'));
+        
         // clamp to valid range so clicked dot navigates to show that card at start if possible
         this.currentIndex = Math.max(0, Math.min(index, Math.max(0, this.cards.length - this.visibleCount)));
+        
+        // Expand the card at the clicked index
+        if (this.cards[index]) {
+            this.cards[index].classList.add('expanded');
+        }
+        
         this.updateTrackPosition();
         this.updateDotsActive();
-        this.expandCurrentCard();
     }
 
     toggleExpand(card, e) {
@@ -711,14 +732,14 @@ document.addEventListener('DOMContentLoaded', () => {
                         
                         // Initialize with NO DOTS and peek effect
                         $eventsSlider.slick({
-                            dots: false,
-                            arrows: false,
-                            infinite: true,
-                            speed: 300,
+                dots: false,
+                arrows: false,
+                infinite: true,
+                speed: 300,
                             slidesToShow: 1.1,
-                            slidesToScroll: 1,
+                slidesToScroll: 1,
                             centerMode: false,
-                            variableWidth: false,
+                variableWidth: false,
                             centerPadding: '0',
                             adaptiveHeight: true
                         });

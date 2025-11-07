@@ -3153,6 +3153,19 @@ article > p > .kwara-gov-link > strong {
   flex-shrink: 0;
 }
 
+/* Leadership Card Link */
+.leadership-card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.leadership-card-link:hover .leadership-card {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
 /* Container adjustments */
 .board-directors-section .container {
   max-width: 1248px;

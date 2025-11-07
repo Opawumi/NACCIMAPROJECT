@@ -2590,12 +2590,12 @@ a {
         }
     }
 
-    .upcoming-events .event-card {
+.upcoming-events .event-card {
         background: #E6F6EE;
         border-radius: 16px;
         display: flex;
         flex-direction: column;
-        height: 100%;
+    height: 100%;
         overflow: hidden;
         position: relative;
     }
@@ -2772,39 +2772,39 @@ a {
         box-shadow: 0 6px 18px rgba(6, 120, 70, 0.04);
         transition: transform 0.3s ease, box-shadow 0.3s ease;
         position: relative;
-    }
+}
 
-    .event-media { 
-        position: relative;
-        margin-bottom: 1rem;
-        border-radius: 8px;
-        overflow: hidden;
-    }
+.event-media { 
+    position: relative;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    overflow: hidden;
+}
 
     .event-media img { 
-        width: 100%; 
-        height: 160px; 
-        object-fit: cover; 
-        display: block;
-        transition: transform 0.3s ease;
-    }
+    width: 100%; 
+    height: 160px; 
+    object-fit: cover; 
+    display: block;
+    transition: transform 0.3s ease;
+}
 
-    .event-card:hover .event-media img {
-        transform: scale(1.03);
-    }
+.event-card:hover .event-media img {
+    transform: scale(1.03);
+}
 
-    .event-date {
-        position: absolute;
-        top: 100px;
-        left: 32px;
-        padding: 10px 4px;
-        border-radius: 8px;
-        font-weight: 700;
-        height: 73px;
-        background: rgba(255, 255, 255, 0.9);
-        text-align: center;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-        min-width: 50px;
+.event-date {
+    position: absolute;
+    top: 100px;
+    left: 32px;
+    padding: 10px 4px;
+    border-radius: 8px;
+    font-weight: 700;
+    height: 73px;
+    background: rgba(255, 255, 255, 0.9);
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    min-width: 50px;
     }
 }
 
@@ -3127,30 +3127,30 @@ a {
 
 /* Testimonials slider - Desktop View Matching Figma */
 @media (min-width: 768px) {
-    .testimonials-slider {
-        position: relative;
-        overflow: hidden;
+.testimonials-slider {
+    position: relative;
+    overflow: hidden;
         padding: 0;
-    }
+}
 
-    .testimonials-track {
-        display: flex;
+.testimonials-track {
+    display: flex;
         gap: 16px;
-        transition: transform 0.45s cubic-bezier(.22,.9,.36,1);
-        will-change: transform;
+    transition: transform 0.45s cubic-bezier(.22,.9,.36,1);
+    will-change: transform;
         align-items: stretch;
-    }
+}
 
-    .testimonials-track .testimonial {
-        flex: 0 0 22%;
+.testimonials-track .testimonial {
+    flex: 0 0 22%;
         min-width: 0;
         box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
         border: 1px solid #E0E0E0;
-        cursor: pointer;
+    cursor: pointer;
         transition: transform 0.45s cubic-bezier(.22,.9,.36,1), flex-basis 0.45s cubic-bezier(.22,.9,.36,1), box-shadow 0.45s cubic-bezier(.22,.9,.36,1);
-        position: relative;
-        overflow: hidden;
-        background: #fff;
+    position: relative;
+    overflow: hidden;
+    background: #fff;
         border-radius: 8px;
         display: flex;
         flex-direction: column;
@@ -3158,12 +3158,12 @@ a {
         min-height: 280px;
         justify-content: flex-start;
         padding: 20px 18px 18px 18px;
-    }
+}
 
-    .testimonials-track .testimonial .quote-mark {
+.testimonials-track .testimonial .quote-mark {
         font-size: 48px;
-        color: #00A758;
-        line-height: 1;
+    color: #00A758;
+    line-height: 1;
         font-weight: 700;
         position: absolute;
         top: 12px;
@@ -3174,10 +3174,10 @@ a {
         height: 40px;
         margin: 0;
         padding: 0;
-    }
+}
 
-    .testimonials-track .testimonial .meta {
-        color: #6b7280;
+.testimonials-track .testimonial .meta {
+    color: #6b7280;
         font-family: 'Inter', sans-serif;
         font-size: 12px;
         line-height: 1.4;
@@ -3193,26 +3193,26 @@ a {
     
     .testimonials-track .testimonial .testimonial-footer .meta {
         flex: 1;
-    }
+}
 
-    .collapse-content {
+.collapse-content {
         max-height: 2rem;
-        overflow: hidden;
+    overflow: hidden;
         transition: max-height 0.45s cubic-bezier(.22,.9,.36,1), opacity 0.45s cubic-bezier(.22,.9,.36,1);
-    }
+}
 
-    .testimonial.expanded {
-        flex-basis: 40%;
+.testimonial.expanded {
+    flex-basis: 40%;
         transform: translateY(0);
-        z-index: 5;
+    z-index: 5;
         height: auto;
         min-height: 280px;
         justify-content: space-between;
         padding-bottom: 18px;
-    }
+}
 
-    .testimonial.expanded .collapse-content {
-        max-height: 400px;
+.testimonial.expanded .collapse-content {
+    max-height: 400px;
         opacity: 1;
         margin-bottom: 0;
         padding-bottom: 0;
@@ -3221,12 +3221,12 @@ a {
 
     .testimonial:not(.expanded) .collapse-content {
         opacity: 0.7;
-    }
+}
 
-    .testimonial:focus {
-        outline: 2px solid rgba(0,167,88,0.15);
-        outline-offset: 4px;
-    }
+.testimonial:focus {
+    outline: 2px solid rgba(0,167,88,0.15);
+    outline-offset: 4px;
+}
 
     .testimonial-dots { 
         display: flex; 
@@ -3269,44 +3269,44 @@ a {
 /* Mobile styles remain unchanged */
 @media (max-width: 767.98px) {
     .testimonials-track .testimonial { 
-        flex: 0 0 80%; 
-        min-width: 260px; 
+        flex: 0 0 100%; 
+        min-width: 100%; 
         height: auto;
         min-height: auto;
     }
     
     .testimonial.expanded { 
-        flex-basis: 90%; 
+        flex-basis: 100%; 
     }
 }
 
 /* Testimonials - Desktop View Text Styling */
 @media (min-width: 768px) {
-    /* Avatar inside testimonial */
-    .testimonial-avatar {
+/* Avatar inside testimonial */
+.testimonial-avatar {
         width: 40px;
         height: 40px;
-        object-fit: cover;
+    object-fit: cover;
         border-radius: 50%;
         flex-shrink: 0;
     }
 
-    /* Hide the footer (avatar + meta) until card expands */
-    .testimonial-footer {
-        max-height: 0;
-        opacity: 0;
-        overflow: hidden;
-        transform: translateY(-6px);
-        transition: max-height 0.35s ease, opacity 0.35s ease, transform 0.35s ease;
+/* Hide the footer (avatar + meta) until card expands */
+.testimonial-footer {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transform: translateY(-6px);
+    transition: max-height 0.35s ease, opacity 0.35s ease, transform 0.35s ease;
         margin-top: 0;
         padding-top: 0;
         margin-bottom: 0;
-    }
+}
 
-    .testimonial.expanded .testimonial-footer {
+.testimonial.expanded .testimonial-footer {
         max-height: 120px;
-        opacity: 1;
-        transform: translateY(0);
+    opacity: 1;
+    transform: translateY(0);
         margin-top: 0 !important;
         margin-bottom: 0 !important;
         padding-top: 0 !important;
@@ -3317,11 +3317,11 @@ a {
     /* Remove any default paragraph margins that might create space */
     .testimonial.expanded .collapse-content + .testimonial-footer {
         margin-top: 0 !important;
-    }
+}
 
-    /* Preview paragraph is shown when card is collapsed; hide it when expanded */
-    .testimonial .preview {
-        display: block;
+/* Preview paragraph is shown when card is collapsed; hide it when expanded */
+.testimonial .preview {
+    display: block;
         margin-bottom: 0;
         margin-top: 28px;
         color: #121212;
@@ -3331,13 +3331,13 @@ a {
         padding-left: 0;
         padding-right: 0;
         padding-bottom: 0;
-    }
+}
 
-    .testimonial.expanded .preview {
-        display: none;
-    }
+.testimonial.expanded .preview {
+    display: none;
+}
 
-    /* When expanded, reveal the full collapse-content; otherwise keep it clipped */
+/* When expanded, reveal the full collapse-content; otherwise keep it clipped */
     .testimonial .collapse-content { 
         display: block; 
         font-family: 'Inter', sans-serif;
@@ -3987,6 +3987,118 @@ font-size: 14.5px; }
       margin-top: 15px;
     }
   }
+
+@media (max-width: 767.98px) {
+    .testimonials-slider {
+        padding: 0 16px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .testimonials-track {
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 12px;
+        align-items: stretch;
+        transition: transform 0.45s cubic-bezier(.22,.9,.36,1);
+        will-change: transform;
+    }
+
+    /* Figma exact sizing: width: 345px, height: 284px */
+    .testimonials-track .testimonial {
+        flex: 0 0 345px;
+        min-width: 270px;
+        max-width: 270px;
+        height: 340px;
+        min-height: 340px;
+        background: #ffffff;
+        border: 1px solid #D0D0D0;
+        border-radius: 12px;
+        box-shadow: none;
+        padding: 16px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 12px;
+        overflow: hidden;
+    }
+
+    .testimonials-track .testimonial .quote-mark {
+        position: relative;
+        font-size: 28px;
+        color: #00A758;
+        margin: 0;
+        line-height: 1;
+    }
+
+    .testimonial .preview {
+        margin: 0;
+        font-size: 14px;
+        line-height: 1.45;
+        color: #121212;
+    }
+
+    .testimonial.expanded .preview {
+        display: none;
+    }
+
+    .testimonial .collapse-content {
+        margin: 0;
+        font-size: 14px;
+        line-height: 1.5;
+        color: #121212;
+    }
+
+    .testimonial.expanded .collapse-content {
+        margin: 0 !important;
+    }
+
+    .testimonial.expanded {
+        height: 284px;
+        min-height: 284px;
+        padding-bottom: 12px;
+    }
+
+    .testimonial.expanded .testimonial-footer {
+        margin-top: 12px !important;
+    }
+
+    .testimonial-avatar {
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        object-fit: cover;
+        flex-shrink: 0;
+    }
+
+    .testimonial-footer .meta {
+        font-size: 12px;
+        line-height: 1.4;
+        color: #6B7280;
+    }
+
+    /* Dots: small circles by default; elongated active */
+    .testimonial-dots {
+        margin-top: 16px;
+        gap: 10px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .testimonial-dots .dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: #E0E0E0;
+    }
+
+    .testimonial-dots .dot.active {
+        width: 28px;
+        height: 8px;
+        border-radius: 4px;
+        background: #00A758;
+    }
+}
 
 
 

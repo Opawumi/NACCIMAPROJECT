@@ -83,14 +83,14 @@ body {
 }
 
 .btn-primary:hover {
-  background: #f0f0f0;
+  background: #8c8686;
   transform: translateY(-2px);
 }
 
 .btn-secondary {
   background: transparent;
   color: #000000;
-  border: 2px solid black;
+  border: 1px solid black;
   font-size: 14px;
   font-weight: 500;
   justify-content: center;
@@ -100,7 +100,7 @@ body {
 }
 
 .btn-secondary:hover {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(26, 16, 16, 0.1);
   transform: translateY(-2px);
 }
 
@@ -119,11 +119,37 @@ body {
   bottom: 0rem !important;
   height: 67vh !important;
   z-index: 3;
-  width: 18% !important;
-  padding-right: 0.5rem !important;
+  width: 14% !important;
+  padding-right: 0.25rem !important;
+  padding-top: 0 !important;
   /* position: fixed !important; */
   /* position: sticky !important; */
   /* margin-top: 5rem !important; */
+}
+
+/* Tablet adjustments for sidebar and content */
+@media (min-width: 768px) and (max-width: 1199px) {
+  .about-side-links {
+    width: 16% !important;
+    padding-right: 0.5rem !important;
+  }
+
+  .aboutUsContent {
+    flex: 0 0 84% !important;
+    max-width: 84% !important;
+  }
+}
+
+/* Mobile adjustments - hide sidebar, full width content */
+@media (max-width: 767.98px) {
+  .about-side-links {
+    display: none !important;
+  }
+
+  .aboutUsContent {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+  }
 }
 
 .about-link-pages-wrapper {
@@ -201,6 +227,24 @@ body {
 .benefit-box:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
+}
+
+.benefit-box h5{
+  color: var(--Black, #121212);
+font-family: Inter;
+font-size: 18px;
+font-style: normal;
+font-weight: 600;
+line-height: 120%;
+}
+
+.benefit-box li{
+  color: var(--Black, #121212);
+font-family: Inter;
+font-size: 16px;
+font-style: normal;
+font-weight: 300;
+line-height: 28px;
 }
 
 .benefit-number {
@@ -313,6 +357,12 @@ body {
   border: none;
   border-radius: 30px;
   transition: 0.3s;
+  display: flex;
+padding: var(--Spacing-xs, 16px);
+justify-content: center;
+align-items: center;
+border-radius: var(--Corner-Radius-s, 8px);
+background: var(--Colors-Pimary-pimary-500, #00A758);
 }
 
 .btn-success:hover {
@@ -1008,9 +1058,7 @@ article > p > .kwara-gov-link > strong {
     padding: 24px;
   }
 
-  #membershipOverviewCards .icon-box {
-    margin: 0 auto 20px;
-  }
+  
 
   #membershipOverviewCards .card-title {
     margin-bottom: 16px;
@@ -1057,7 +1105,7 @@ article > p > .kwara-gov-link > strong {
   background-color: var(--primary-color);
   color: white;
   padding: 8px 16px;
-  border-radius: 30px;
+
   font-size: 12px;
   font-weight: 600;
   text-transform: uppercase;
@@ -1068,6 +1116,13 @@ article > p > .kwara-gov-link > strong {
   margin-right: 0;
   transition: 0.3s;
   box-shadow: 0 2px 4px rgba(0, 167, 88, 0.2);
+  display: flex;
+padding: var(--Spacing-4xs, 4px) var(--Spacing-3xs, 8px);
+justify-content: center;
+align-items: center;
+gap: 10px;
+border-radius: var(--Corner-Radius-xs, 4px);
+background: var(--Colors-Pimary-pimary-500, #00A758);
 }
 
 .state-label:hover {
@@ -1282,12 +1337,10 @@ article > p > .kwara-gov-link > strong {
   transition: all 0.3s ease;
   position: relative;
   border: 1px solid #f3f4f6;
+border-radius: var(--Corner-Radius-m, 16px);
+border: var(--Stroke-m, 1px) solid var(--Colors-Neutral-neutral-300, #B2B2B2);
 }
 
-.step-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
-}
 
 .step-badge {
   display: inline-block;
@@ -1300,6 +1353,12 @@ article > p > .kwara-gov-link > strong {
   text-transform: uppercase;
   letter-spacing: 0.5px;
   margin-bottom: 20px;
+padding: var(--Spacing-2xs, 12px) var(--Spacing-xs, 16px);
+flex-direction: column;
+justify-content: center;
+align-items: center;
+  border-radius: var(--Corner-Radius-xs, 4px);
+background: var(--Colors-Pimary-pimary-500, #00A758);
 }
 
 .step-title {
@@ -1525,29 +1584,29 @@ article > p > .kwara-gov-link > strong {
     }
 
     /* Dots styling */
-    .testimonial-dots {
-        display: flex;
-        gap: 8px;
+    .testimonial-dots { 
+        display: flex; 
+        gap: 8px; 
         justify-content: center;
         align-items: center;
         margin-top: 30px;
     }
-
-    .testimonial-dots .dot {
-        width: 8px;
-        height: 8px;
-        background: #E0E0E0;
-        border-radius: 50%;
-        display: inline-block;
-        cursor: pointer;
-        transition: all 0.3s ease;
-        border: 0;
+    
+    .testimonial-dots .dot { 
+        width: 8px; 
+        height: 8px; 
+        background: #E0E0E0; 
+        border-radius: 50%; 
+        display: inline-block; 
+        cursor: pointer; 
+        transition: all 0.3s ease; 
+        border: 0; 
         padding: 0;
         flex-shrink: 0;
     }
-
-    .testimonial-dots .dot.active {
-        background: #00A758;
+    
+    .testimonial-dots .dot.active { 
+        background: #00A758; 
         width: 32px;
         height: 8px;
         border-radius: 4px;

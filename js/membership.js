@@ -247,14 +247,9 @@ class TestimonialSlider {
         const isMobile = window.innerWidth < 768;
 
         if (isMobile) {
-            // Mobile: Standard carousel behavior - center the current card
-            const cardWidth = 280; // Fixed card width from CSS
-            const gap = 16; // Gap between cards from CSS
-            const cardWithGap = cardWidth + gap;
-            const containerCenter = containerRect.width / 2;
-            const targetCardCenter = cardWidth / 2;
-            const translate = containerCenter - targetCardCenter - (this.currentIndex * cardWithGap);
-            this.track.style.transform = `translateX(${translate}px)`;
+            // Mobile: Standard carousel behavior - show one card at a time
+            const translate = -this.currentIndex * 100;
+            this.track.style.transform = `translateX(${translate}vw)`;
             return;
         }
 

@@ -2142,6 +2142,36 @@ a {
 .service-card.trade { background: #f4f4f6; }
 .service-card.investment { background: #fff1f1; }
 
+.service-card.policy.sector-mining {
+    background: rgba(56, 66, 74, 0.1);
+    border-radius: 8px;
+}
+
+.service-card.policy.sector-infra {
+    background: rgba(218, 0, 1, 0.1);
+    border-radius: 8px;
+}
+
+.sector-icon-dark {
+    background: #38424A !important;
+    border-radius: 8px;
+    width: 48px;
+    height: 48px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sector-icon-red {
+    background: #DA0001 !important;
+    border-radius: 8px;
+    width: 48px;
+    height: 48px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .service-media img {
     width: 350px;
     height: 320px;
@@ -2952,6 +2982,11 @@ a {
 .bg-purple { background: #f2d9ff; color:#6a2b9d; }
 
 @media (max-width: 767.98px) {
+    .spotlight-card.bg-light-1 { background: #eaf7ef !important; }
+    .spotlight-card.bg-light-2 { background: #fff4ea !important; }
+    .spotlight-card.bg-light-3 { background: #eef6fb !important; }
+    .spotlight-card.bg-light-4 { background: #faf0fb !important; }
+
     .event-media img { 
         height: 140px;
         width: 100%;
@@ -3434,29 +3469,105 @@ font-weight: 600;
 }
 
 /* Policy areas cards */
-.policy-areas h5 { font-weight: 700; margin-bottom: 1rem; }
-.policy-card { border-radius: 8px; min-height: 110px; }
-.policy-card .policy-icon { font-size: 20px; margin-bottom: 8px; }
-.policy-card h6 { font-size: 14px; font-weight: 700; }
-.policy-card p { margin-bottom: 0; 
-font-size: 14.5px; }
+.policy-areas {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
 
-.bg-blue { background: #eaf3fb; }
-.bg-purple { background: #f6eefb; }
-.bg-green { background: #eaf7ef; }
-.bg-pink { background: #fdecec; }
-.bg-yellow { background: #fbf7e9; }
+.policy-areas-header h5 {
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: #121212;
+    margin: 0;
+}
 
-/* Impact list */
-.impact { margin-top: 2rem; }
-.impact-list { list-style: none; padding-left: 0; }
-.impact-list li { 
-    font-size: 14.5px;
-    padding-left: 1.6rem; 
-    position: relative; 
-    margin-bottom: 0.8rem;
-     color:#2e3b3b; }
-.impact-list li::before { content: ''; position: absolute; left: 0; top: 0.6rem; width: 8px; height: 8px; background: #00A758; border-radius: 50%; }
+.policy-grid {
+    display: grid;
+    gap: 24px;
+    width: 100%;
+}
+
+.policy-grid--wide {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.policy-grid--narrow {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.policy-card {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 20px;
+    border-radius: 12px;
+    min-height: 196px;
+}
+
+.policy-icon {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+}
+
+.policy-copy h6 {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #121212;
+    margin-bottom: 8px;
+}
+
+.policy-copy p {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    color: #374151;
+    margin: 0;
+}
+
+.policy-card--trade { background: #E7F3FD; }
+.policy-card--tax { background: #F4E9FB; }
+.policy-card--infrastructure { background: #E5F4EC; }
+.policy-card--sme { background: #FCE9EA; }
+.policy-card--digital { background: #F9F5E3; }
+
+@media (max-width: 991.98px) {
+    .policy-grid--wide {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+    }
+
+    .policy-grid--narrow {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .policy-grid--wide,
+    .policy-grid--narrow {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .policy-card {
+        padding: 18px;
+        min-height: auto;
+    }
+
+    .policy-copy h6 {
+        font-size: 15px;
+    }
+
+    .policy-copy p {
+        font-size: 13px;
+        line-height: 20px;
+    }
+}
 
 @media (max-width: 767px) {
   .advocacy-image-wrap { height: 220px; }
@@ -4088,8 +4199,11 @@ font-size: 14.5px; }
     .testimonial-dots .dot {
         width: 8px;
         height: 8px;
-        border-radius: 50%;
-        background: #E0E0E0;
+        border-radius: 4px;
+        background: #FFFFFF;
+        border: 1px solid #D6D6D6;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+        transition: all 0.25s ease;
     }
 
     .testimonial-dots .dot.active {
@@ -4097,6 +4211,8 @@ font-size: 14.5px; }
         height: 8px;
         border-radius: 4px;
         background: #00A758;
+        border-color: #00A758;
+        box-shadow: 0 2px 6px rgba(0, 167, 88, 0.35);
     }
 }
 

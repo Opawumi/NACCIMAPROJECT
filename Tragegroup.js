@@ -129,16 +129,7 @@ document.addEventListener('DOMContentLoaded', function() {
             e.preventDefault();
             const detailType = this.getAttribute('data-tg-detail');
             if (detailType === 'afcfta') {
-                // Hide all content containers
-                const allContentContainers = document.querySelectorAll('.content-container');
-                allContentContainers.forEach(container => {
-                    container.style.setProperty('display', 'none', 'important');
-                });
-                // Show AfCFTA detail content
-                const afcftaDetailContent = document.querySelector('#afcfta-detail-content');
-                if (afcftaDetailContent) {
-                    afcftaDetailContent.style.setProperty('display', 'block', 'important');
-                }
+                showContentSection('afcfta-detail');
             }
         });
     });
@@ -176,6 +167,25 @@ function showContentSection(section) {
         container.style.height = '';
         container.style.overflow = '';
     });
+
+    // Toggle sidebar visibility for detail views
+    const sidebar = document.querySelector('.sidebar');
+    const contentMain = document.querySelector('.content-main');
+    if (sidebar && contentMain) {
+        if (section === 'afcfta-detail') {
+            sidebar.style.setProperty('display', 'none', 'important');
+            contentMain.classList.remove('col-lg-9');
+            if (!contentMain.classList.contains('col-lg-12')) {
+                contentMain.classList.add('col-lg-12');
+            }
+        } else {
+            sidebar.style.removeProperty('display');
+            if (!contentMain.classList.contains('col-lg-9')) {
+                contentMain.classList.add('col-lg-9');
+            }
+            contentMain.classList.remove('col-lg-12');
+        }
+    }
     
     // Show the appropriate content based on section
     switch(section) {
@@ -224,6 +234,13 @@ function showContentSection(section) {
             console.log('How to Join content found:', howToJoinContent);
             if (howToJoinContent) {
                 howToJoinContent.style.setProperty('display', 'block', 'important');
+            }
+            break;
+        case 'afcfta-detail':
+            const afcftaDetailContent = document.querySelector('#afcfta-detail-content');
+            console.log('AfCFTA detail content found:', afcftaDetailContent);
+            if (afcftaDetailContent) {
+                afcftaDetailContent.style.setProperty('display', 'block', 'important');
             }
             break;
         default:

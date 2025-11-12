@@ -888,12 +888,21 @@ p {
     margin-bottom: 0;
 }
 
+.events-row > [class*="col-"] {
+    display: flex;
+}
+
+.events-row > [class*="col-"] .event-card {
+    width: 100%;
+}
+
 .event-card {
     background: #E6F6EE;
     border-radius: 16px;
     overflow: hidden;
     display: flex;
     flex-direction: column;
+    height: 100%;
 }
 
 .event-image-container {

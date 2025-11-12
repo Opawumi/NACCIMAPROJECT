@@ -113,7 +113,7 @@
 
                 <!--Overview content-->
                 <div class="d-none aboutUsItem aboutUsContentActive aboutUsLeadershipContent" id="aboutUsLeadershipContent">
-                    <div class="w-100 pb-5">                    
+                    <div class="w-100">                    
                         <!-- Hero Section -->
                       <section class="hero">
                         <div class="hero-content d-flex align-items-stretch">
@@ -226,13 +226,10 @@
                                     </section>
 
                                      <!-- Testimonials -->
-    <section class="testimonials py-5">
+    <section class="testimonials pt-5">
         <h2 class="section-title fw-bold">Member Spotlight</h2>
-        <div class="container d-none d-md-block">
-            <!-- <div class="d-flex justify-content-between align-items-center mb-3">
-                <h3 class="section-title">What members say</h3>
-            </div> -->
 
+        <div class="container d-none d-md-block d-lg-block">
             <!-- Slider wrapper -->
             <div class="testimonials-slider" aria-roledescription="carousel">
                 <div class="testimonials-track">
@@ -242,7 +239,8 @@
   <path d="M16.1538 24V15.6923C16.1538 11.5692 17.0769 8.09231 18.9231 5.26154C20.8308 2.36923 23.8154 0.615384 27.8769 0V4.8C25.4769 5.04615 23.8154 5.90769 22.8923 7.38461C22.0308 8.8 21.6 10.9231 21.6 13.7538L17.9077 13.2H27.7846V24H16.1538ZM0 24V15.6923C0 11.5692 0.923077 8.09231 2.76923 5.26154C4.67692 2.36923 7.66154 0.615384 11.7231 0V4.8C9.32308 5.04615 7.66154 5.90769 6.73846 7.38461C5.87692 8.8 5.44616 10.9231 5.44616 13.7538L1.75385 13.2H11.6308V24H0Z" fill="#00A758"/>
                             </svg>
                         </div>
-                        <p class="testimonial-text">Joining NACCIMA opened doors I didn't even know existed—from export opportunities to policy advocacy. This chamber is a game-changer for Nigerian entrepreneurs.</p>
+                        <p class="testimonial-text">Joining NACCIMA opened doors I didn't even know existed—from export opportunities to 
+                            policy advocacy. This chamber is a game-changer for Nigerian entrepreneurs.</p>
                         <div class="testimonial-author">
                             <img src="images/testimonial_author1.png" alt="Aisha Lawal" class="testimonial-avatar">
                             <div class="author-info">
@@ -307,86 +305,99 @@
                 </div>
             </div>
         </div>
-
-        <div class="container d-block d-md-none">
-            <!-- <div class="d-flex justify-content-between align-items-center mb-3">
-                <h3 class="section-title">What members say</h3>
-            </div> -->
-
-            <!-- Slider wrapper -->
-            <div class="testimonials-slider" aria-roledescription="carousel">
-                <div class="testimonials-track">
-                    <article class="testimonial testimonial-wide" data-index="0" tabindex="0">
-                        <div class="testimonial-quote-icon">
+        
+         <div class="container testimonial-slider d-block d-md-none d-lg-none">
+        <div id="testimonialSlider" class="carousel slide" data-bs-ride="carousel" data-bs-touch="true">
+            <!-- Slides -->
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="testimonial-card">
+                        <div class="quote-icon-mobile">
                             <svg xmlns="http://www.w3.org/2000/svg" width="28" height="24" viewBox="0 0 28 24" fill="none">
   <path d="M16.1538 24V15.6923C16.1538 11.5692 17.0769 8.09231 18.9231 5.26154C20.8308 2.36923 23.8154 0.615384 27.8769 0V4.8C25.4769 5.04615 23.8154 5.90769 22.8923 7.38461C22.0308 8.8 21.6 10.9231 21.6 13.7538L17.9077 13.2H27.7846V24H16.1538ZM0 24V15.6923C0 11.5692 0.923077 8.09231 2.76923 5.26154C4.67692 2.36923 7.66154 0.615384 11.7231 0V4.8C9.32308 5.04615 7.66154 5.90769 6.73846 7.38461C5.87692 8.8 5.44616 10.9231 5.44616 13.7538L1.75385 13.2H11.6308V24H0Z" fill="#00A758"/>
                             </svg>
                         </div>
-                        <p class="testimonial-text">Joining NACCIMA opened doors I didn't even know existed—from export opportunities to policy advocacy. This chamber is a game-changer for Nigerian entrepreneurs.</p>
-                        <div class="testimonial-author">
-                            <img src="images/testimonial_author1.png" alt="Aisha Lawal" class="testimonial-avatar">
+                        <p class="testimonial-text">
+                            Joining NACCIMA opened doors I didn't even know existed—from export opportunities to 
+                            policy advocacy. This chamber is a game-changer for Nigerian entrepreneurs.
+                        </p>
+                        <div class="author-section">
+                            <div class="author-avatar">
+                                <img src="images/testimonial_author1.png" alt="Aisha Lawal">
+                            </div>
                             <div class="author-info">
-                                <div class="author-name">Aisha Lawal</div>
-                                <div class="author-company">CEO-Sahel Agro-Tech Ltd, Kano</div>
+                                <p class="author-name">Aisha Lawal</p>
+                                <p class="author-title">CEO-Sahel Agro-Tech Ltd, Kano</p>
                             </div>
                         </div>
-                    </article>
-
-                    <article class="testimonial testimonial-medium" data-index="1" tabindex="0">
-                        <div class="testimonial-quote-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="24" viewBox="0 0 28 24" fill="none">
-  <path d="M16.1538 24V15.6923C16.1538 11.5692 17.0769 8.09231 18.9231 5.26154C20.8308 2.36923 23.8154 0.615384 27.8769 0V4.8C25.4769 5.04615 23.8154 5.90769 22.8923 7.38461C22.0308 8.8 21.6 10.9231 21.6 13.7538L17.9077 13.2H27.7846V24H16.1538ZM0 24V15.6923C0 11.5692 0.923077 8.09231 2.76923 5.26154C4.67692 2.36923 7.66154 0.615384 11.7231 0V4.8C9.32308 5.04615 7.66154 5.90769 6.73846 7.38461C5.87692 8.8 5.44616 10.9231 5.44616 13.7538L1.75385 13.2H11.6308V24H0Z" fill="#00A758"/>
-</svg>
-                        </div>
-                        <p class="testimonial-text">We've grown faster and smarter since aligning with NACCIMA. The forums alone have helped us secure 3 major contracts this year.</p>
-                        <div class="testimonial-author">
-                            <img src="images/testimonial_author1.png" alt="Company B" class="testimonial-avatar">
-                            <div class="author-info">
-                                <div class="author-name">Company B</div>
-                                <div class="author-company">Lagos</div>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="testimonial testimonial-small" data-index="2" tabindex="0">
-                        <div class="testimonial-quote-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="24" viewBox="0 0 28 24" fill="none">
-  <path d="M16.1538 24V15.6923C16.1538 11.5692 17.0769 8.09231 18.9231 5.26154C20.8308 2.36923 23.8154 0.615384 27.8769 0V4.8C25.4769 5.04615 23.8154 5.90769 22.8923 7.38461C22.0308 8.8 21.6 10.9231 21.6 13.7538L17.9077 13.2H27.7846V24H16.1538ZM0 24V15.6923C0 11.5692 0.923077 8.09231 2.76923 5.26154C4.67692 2.36923 7.66154 0.615384 11.7231 0V4.8C9.32308 5.04615 7.66154 5.90769 6.73846 7.38461C5.87692 8.8 5.44616 10.9231 5.44616 13.7538L1.75385 13.2H11.6308V24H0Z" fill="#00A758"/>
-</svg>
-                        </div>
-                        <p class="testimonial-text">Being part of a network where business, government, and international bodies connect has multiplied our impact and credibility.</p>
-                        <div class="testimonial-author">
-                            <img src="images/testimonial_author1.png" alt="Company C" class="testimonial-avatar">
-                            <div class="author-info">
-                                <div class="author-name">Company C</div>
-                                <div class="author-company">Abuja</div>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="testimonial testimonial-small" data-index="3" tabindex="0">
-                        <div class="testimonial-quote-icon">
-                           <svg xmlns="http://www.w3.org/2000/svg" width="28" height="24" viewBox="0 0 28 24" fill="none">
-  <path d="M16.1538 24V15.6923C16.1538 11.5692 17.0769 8.09231 18.9231 5.26154C20.8308 2.36923 23.8154 0.615384 27.8769 0V4.8C25.4769 5.04615 23.8154 5.90769 22.8923 7.38461C22.0308 8.8 21.6 10.9231 21.6 13.7538L17.9077 13.2H27.7846V24H16.1538ZM0 24V15.6923C0 11.5692 0.923077 8.09231 2.76923 5.26154C4.67692 2.36923 7.66154 0.615384 11.7231 0V4.8C9.32308 5.04615 7.66154 5.90769 6.73846 7.38461C5.87692 8.8 5.44616 10.9231 5.44616 13.7538L1.75385 13.2H11.6308V24H0Z" fill="#00A758"/>
-</svg>
-                        </div>
-                        <p class="testimonial-text">I can say with confidence that no other business body advocates like NACCIMA.</p>
-                        <div class="testimonial-author">
-                            <img src="images/testimonial_author1.png" alt="Company D" class="testimonial-avatar">
-                            <div class="author-info">
-                                <div class="author-name">Company D</div>
-                                <div class="author-company">Port Harcourt</div>
-                            </div>
-                        </div>
-                    </article>
+                    </div>
                 </div>
-
-                <!-- pager dots (will be wired by JS) -->
-                <div class="d-flex justify-content-center mt-3">
-                    <div class="testimonial-dots" role="tablist" aria-label="Testimonial navigation"></div>
+                
+                <div class="carousel-item">
+                    <div class="testimonial-card">
+                        <div class="quote-icon-mobile">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="24" viewBox="0 0 28 24" fill="none">
+  <path d="M16.1538 24V15.6923C16.1538 11.5692 17.0769 8.09231 18.9231 5.26154C20.8308 2.36923 23.8154 0.615384 27.8769 0V4.8C25.4769 5.04615 23.8154 5.90769 22.8923 7.38461C22.0308 8.8 21.6 10.9231 21.6 13.7538L17.9077 13.2H27.7846V24H16.1538ZM0 24V15.6923C0 11.5692 0.923077 8.09231 2.76923 5.26154C4.67692 2.36923 7.66154 0.615384 11.7231 0V4.8C9.32308 5.04615 7.66154 5.90769 6.73846 7.38461C5.87692 8.8 5.44616 10.9231 5.44616 13.7538L1.75385 13.2H11.6308V24H0Z" fill="#00A758"/>
+                            </svg>
+                        </div>
+                        <p class="testimonial-text">
+                            We've grown faster and smarter since aligning with NACCIMA. The forums alone have helped us secure 3 major contracts this year.
+                        </p>
+                        <div class="author-section">
+                            <div class="author-avatar">
+                                <img src="images/testimonial_author1.png" alt="Michael Chen">
+                            </div>
+                            <div class="author-info">
+                                <p class="author-name">Michael Chen</p>
+                                <p class="author-title">Director, Tech Solutions</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="carousel-item">
+                    <div class="testimonial-card">
+                        <div class="quote-icon-mobile">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="24" viewBox="0 0 28 24" fill="none">
+  <path d="M16.1538 24V15.6923C16.1538 11.5692 17.0769 8.09231 18.9231 5.26154C20.8308 2.36923 23.8154 0.615384 27.8769 0V4.8C25.4769 5.04615 23.8154 5.90769 22.8923 7.38461C22.0308 8.8 21.6 10.9231 21.6 13.7538L17.9077 13.2H27.7846V24H16.1538ZM0 24V15.6923C0 11.5692 0.923077 8.09231 2.76923 5.26154C4.67692 2.36923 7.66154 0.615384 11.7231 0V4.8C9.32308 5.04615 7.66154 5.90769 6.73846 7.38461C5.87692 8.8 5.44616 10.9231 5.44616 13.7538L1.75385 13.2H11.6308V24H0Z" fill="#00A758"/>
+                            </svg>
+                        </div>
+                        <p class="testimonial-text">
+                            Outstanding service from start to finish. Their attention to detail and commitment to excellence made all the difference. I highly recommend them to anyone looking for quality work.
+                        </p>
+                        <div class="author-section">
+                            <div class="author-avatar">
+                                <img src="images/testimonial_author1.png" alt="Sarah Johnson">
+                            </div>
+                            <div class="author-info">
+                                <p class="author-name">Sarah Johnson</p>
+                                <p class="author-title">Founder, StartupCo</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
+            
+            <!-- Indicators -->
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#testimonialSlider" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#testimonialSlider" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#testimonialSlider" data-bs-slide-to="2"></button>
+                <button type="button" data-bs-target="#testimonialSlider" data-bs-slide-to="3"></button>
+            </div>
         </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const carousel = document.getElementById('testimonialSlider');
+        new bootstrap.Carousel(carousel, {
+            interval: 5000,
+            pause: 'hover',
+            touch: true,
+            wrap: true
+        });
+    </script>
     </section>
                             </div>
                         </section>
@@ -395,14 +406,14 @@
 
                 <!--Membership Benefits-->
                 <div class="d-none aboutUsItem aboutUsHistoryContent" id="aboutUsHistoryContent">
-                    <div class="w-100 pb-5 membershipbenefit-heading">
+                    <div class="w-100 membershipbenefit-heading">
                         <h3 class="pb-3">
                             Membership Benefits
                         </h3>
                         <h6 class="fw-bold">Unlock Opportunities, Grow Your Network, Influence Policy</h6>
                         <p>Becoming a NACCIMA member gives your business a competitive edge, access to exclusive resources, and a stronger voice in shaping Nigeria's business landscape.</p>
 
-                        <div class="container py-5">
+                        <div class="container pt-5">
                                 <h4 class="fw-bold mb-4">Benefits</h4>
                                 <div class="benefit-grid">
                                     <!-- Box 1 -->
@@ -464,7 +475,7 @@
 
                 <!--Membership Categories-->
                 <div class="d-none aboutUsItem aboutUsVisionAndMission" id="aboutUsVisionAndMission">
-                    <div class="w-100 pb-5">
+                    <div class="w-100">
                         <div class="container ">
                             <!-- Corporate Membership -->
                             <div class="row align-items-center mb-3  p-2 rounded-4" >
@@ -522,7 +533,7 @@
 
                 <!--Member Chambers-->
                 <div class="d-none aboutUsItem aboutUsLocation" id="aboutUsLocation">
-                    <div class="w-100 pb-5">
+                    <div class="w-100">
                         <div class="container py-5">
                         <!-- Section 1 -->
                         <h5 class="fw-bold mb-4">CONSCCIMA - NORTH</h5>
@@ -1063,7 +1074,7 @@
 
                 <!--Bilateral Members-->
                 <div class="d-none aboutUsItem aboutUsCoreValues" id="aboutUsCoreValues">
-                    <div class="w-100 pb-5">
+                    <div class="w-100">
                         <div class="container py-5">
                             <!-- Section 1 -->
                             <h5 class="fw-bold mb-4">Bilateral Members</h5>
@@ -1337,7 +1348,7 @@
 
                 <!--How to Join-->
                 <div class="d-none aboutUsItem aboutUsRanking" id="aboutUsRanking">
-                    <div class="w-100 pb-5">
+                    <div class="w-100">
                         <div class="container">
                             <div class="how-to-join-section">
                                 <h2>How to Join</h2>

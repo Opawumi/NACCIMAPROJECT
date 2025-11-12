@@ -125,97 +125,348 @@ accordionWrapper.addEventListener('click', () => {
           });
         });
 
-        // Sync custom indicators with carousel
-        document.addEventListener('DOMContentLoaded', function() {
-            const carousel = document.getElementById('testimonialCarousel');
-            const indicators = document.querySelectorAll('.custom-indicators li');
-            
-            // Bootstrap carousel instance
-            const bsCarousel = new bootstrap.Carousel(carousel, {
-                interval: 5000,
-                wrap: true
-            });
-            
-            // Update indicators when carousel slides
-            carousel.addEventListener('slide.bs.carousel', function(e) {
-                indicators.forEach((indicator, index) => {
-                    if (index === e.to) {
-                        indicator.classList.add('active');
-                    } else {
-                        indicator.classList.remove('active');
-                    }
-                });
-            });
-            
-            // Click handlers for custom indicators
-            indicators.forEach((indicator, index) => {
-                indicator.addEventListener('click', function() {
-                    bsCarousel.to(index);
-                });
-            });
+// Removed old Bootstrap carousel sync code - now handled by TestimonialSlider class
+
+// Removed old testimonial-col hover code - new structure doesn't use testimonial-col
+
+
+// Removed old mobile carousel transformation code - now handled by TestimonialSlider class
+
+/* Testimonial slider with dynamic width behavior */
+class TestimonialSlider {
+    constructor(selector = '.testimonials-slider') {
+        this.root = document.querySelector(selector);
+        if (!this.root) return;
+
+        this.track = this.root.querySelector('.testimonials-track');
+        this.cards = Array.from(this.track.querySelectorAll('.testimonial'));
+        this.dotsContainer = this.root.querySelector('.testimonial-dots');
+        this.currentIndex = 0;
+        this.isAnimating = false;
+        this.autoSlideInterval = null;
+        this.autoSlideDelay = 4000;
+
+        this.init();
+    }
+
+    init() {
+        if (!this.root || !this.track || !this.cards.length) return;
+
+        // Create dots
+        this.createDots();
+
+        // Set initial card states
+        this.updateCardStates();
+
+        // Set up event listeners
+        this.setupEventListeners();
+
+        // Start auto slide
+        this.startAutoSlide();
+
+        // Handle window resize
+        window.addEventListener('resize', () => {
+            this.updateCardStates();
+        });
+    }
+
+    createDots() {
+        if (!this.dotsContainer) return;
+
+        this.dotsContainer.innerHTML = '';
+        this.cards.forEach((_, index) => {
+            const dot = document.createElement('button');
+            dot.className = 'dot';
+            dot.setAttribute('aria-label', `Go to testimonial ${index + 1}`);
+            dot.addEventListener('click', () => this.goToSlide(index));
+            this.dotsContainer.appendChild(dot);
+        });
+    }
+
+    setupEventListeners() {
+        // Card click handlers
+        this.cards.forEach((card, index) => {
+            card.addEventListener('click', () => this.goToSlide(index));
         });
 
-        // Handle author section collapse on hover
-const testimonialCols = document.querySelectorAll('.testimonial-col');
+        // Pause on hover
+        this.root.addEventListener('mouseenter', () => this.pauseAutoSlide());
+        this.root.addEventListener('mouseleave', () => this.resumeAutoSlide());
 
-testimonialCols.forEach(col => {
-    const authorSection = col.querySelector('.author-section');
-    
-    col.addEventListener('mouseenter', function() {
-        authorSection.classList.add('show');  // Bootstrap's show class
-    });
-    
-    col.addEventListener('mouseleave', function() {
-        authorSection.classList.remove('show');  // Hides it again
-    });
+        // Keyboard navigation
+        this.root.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') {
+                e.preventDefault();
+                this.previousSlide();
+            } else if (e.key === 'ArrowRight') {
+                e.preventDefault();
+                this.nextSlide();
+            }
+        });
+    }
+
+    updateCardStates() {
+        // Remove all size classes
+        this.cards.forEach(card => {
+            card.classList.remove('testimonial-wide', 'testimonial-medium', 'testimonial-small');
+        });
+
+        const totalCards = this.cards.length;
+        const isMobile = window.innerWidth < 768;
+
+        if (isMobile) {
+            // On mobile, all cards are the same size, just position them
+            this.updateTrackPosition();
+            this.updateDots();
+            return;
+        }
+
+        // Apply dynamic sizing based on position relative to current index (desktop only)
+        this.cards.forEach((card, index) => {
+            const distance = Math.abs(index - this.currentIndex);
+
+            if (distance === 0) {
+                // Current/active card - widest
+                card.classList.add('testimonial-wide');
+            } else if (distance === 1) {
+                // Next card - medium width
+                card.classList.add('testimonial-medium');
+            } else {
+                // Other cards - small width
+                card.classList.add('testimonial-small');
+            }
+        });
+
+        // Update track position to center the wide card
+        this.updateTrackPosition();
+        this.updateDots();
+    }
+
+    updateTrackPosition() {
+        const containerRect = this.root.getBoundingClientRect();
+        const isMobile = window.innerWidth < 768;
+
+        if (isMobile) {
+            // Mobile: Standard carousel behavior - show one card at a time
+            const translate = -this.currentIndex * 100;
+            this.track.style.transform = `translateX(${translate}vw)`;
+            return;
+        }
+
+        // Desktop: Dynamic width centering behavior
+        const wideCard = this.track.querySelector('.testimonial-wide');
+        if (!wideCard) return;
+
+        const trackRect = this.track.getBoundingClientRect();
+        const cardRect = wideCard.getBoundingClientRect();
+        const cardIndex = parseInt(wideCard.dataset.index);
+
+        let translate = 0;
+
+        if (cardIndex === 0) {
+            // First card should start flush with left edge
+            translate = 0;
+        } else {
+            // Other cards are centered
+            const cardCenter = cardRect.left - trackRect.left + (cardRect.width / 2);
+            const containerCenter = containerRect.width / 2;
+            translate = containerCenter - cardCenter;
+        }
+
+        // Apply transform with smooth transition
+        this.track.style.transform = `translateX(${translate}px)`;
+    }
+
+    updateDots() {
+        if (!this.dotsContainer) return;
+
+        const dots = this.dotsContainer.querySelectorAll('.dot');
+        dots.forEach((dot, index) => {
+            dot.classList.toggle('active', index === this.currentIndex);
+        });
+    }
+
+    goToSlide(index) {
+        if (this.isAnimating || index === this.currentIndex) return;
+
+        this.isAnimating = true;
+        this.currentIndex = Math.max(0, Math.min(index, this.cards.length - 1));
+
+        this.updateCardStates();
+
+        // Reset animation flag after transition
+        setTimeout(() => {
+            this.isAnimating = false;
+        }, 600);
+    }
+
+    nextSlide() {
+        const nextIndex = (this.currentIndex + 1) % this.cards.length;
+        this.goToSlide(nextIndex);
+    }
+
+    previousSlide() {
+        const prevIndex = this.currentIndex === 0 ? this.cards.length - 1 : this.currentIndex - 1;
+        this.goToSlide(prevIndex);
+    }
+
+    startAutoSlide() {
+        this.autoSlideInterval = setInterval(() => {
+            this.nextSlide();
+        }, this.autoSlideDelay);
+    }
+
+    pauseAutoSlide() {
+        if (this.autoSlideInterval) {
+            clearInterval(this.autoSlideInterval);
+            this.autoSlideInterval = null;
+        }
+    }
+
+    resumeAutoSlide() {
+        if (!this.autoSlideInterval) {
+            this.startAutoSlide();
+        }
+    }
+}
+
+// Initialize testimonials slider when DOM is ready
+document.addEventListener('DOMContentLoaded', () => {
+    window.testimonials = new TestimonialSlider();
 });
 
 
-document.addEventListener("DOMContentLoaded", function () {
-  const carousel = document.querySelector("#testimonialCarousel");
-  if (!carousel) return;
 
-  const inner = carousel.querySelector(".carousel-inner");
-  const indicators = carousel.querySelector(".custom-indicators");
-  const items = Array.from(inner.querySelectorAll(".carousel-item"));
 
-  // Only activate this transformation on mobile
-  if (window.innerWidth <= 768) {
-    // Gather all testimonial cards
-    const allCols = [];
-    items.forEach(item => {
-      const cols = item.querySelectorAll(".testimonial-col");
-      cols.forEach(col => allCols.push(col.cloneNode(true)));
-    });
+// Check if element exists before adding event listeners
+        function safeAddEventListener(selector, event, handler) {
+            const element = document.querySelector(selector);
+            if (element) {
+                element.addEventListener(event, handler);
+                return true;
+            }
+            return false;
+        }
 
-    // Clear existing slides & indicators
-    inner.innerHTML = "";
-    indicators.innerHTML = "";
+        // Safe style setter
+        function safeSetStyle(selector, styles) {
+            const elements = document.querySelectorAll(selector);
+            elements.forEach(el => {
+                if (el && el.style) {
+                    Object.assign(el.style, styles);
+                }
+            });
+        }
 
-    // Create one carousel item per card
-    allCols.forEach((col, index) => {
-      const item = document.createElement("div");
-      item.classList.add("carousel-item");
-      if (index === 0) item.classList.add("active");
+        function initFeatureSlider() {
+            console.log('Initializing feature slider...');
+            const $slider = $('.features-slider');
+            
+            // Check if slider exists and has children
+            if (!$slider.length) {
+                console.warn('Features slider not found on this page');
+                return false;
+            }
 
-      const row = document.createElement("div");
-      row.classList.add("row", "g-4", "testimonial-row");
-      row.appendChild(col);
-      item.appendChild(row);
-      inner.appendChild(item);
+            if (!$slider.children().length) {
+                console.warn('Features slider has no children');
+                return false;
+            }
 
-      // Create a matching indicator
-      const li = document.createElement("li");
-      li.setAttribute("data-bs-target", "#testimonialCarousel");
-      li.setAttribute("data-bs-slide-to", index);
-      if (index === 0) li.classList.add("active");
-
-      const btn = document.createElement("button");
-      btn.type = "button";
-      btn.textContent = "";
-      li.appendChild(btn);
-      indicators.appendChild(li);
-    });
-  }
-});
+            console.log('Slider element and children found');
+            
+            try {
+                // Destroy any existing Slick instances
+                if ($slider.hasClass('slick-initialized')) {
+                    $slider.slick('unslick');
+                }
+                
+                // Remove any existing custom dots
+                $('.custom-dots').remove();
+                
+                try {
+                    // Initialize Slick Slider with centered dots
+                    $slider.slick({
+                        dots: true,
+                        dotsClass: 'slick-dots',
+                        appendDots: $slider,
+                        customPaging: function(slider, i) {
+                            return $('<button type="button" />')
+                                .text('')
+                                .attr('aria-label', 'Go to slide ' + (i + 1));
+                        },
+                        arrows: false,
+                        infinite: true,
+                        speed: 300,
+                        slidesToShow: 1.1,
+                        centerMode: true,
+                        centerPadding: '20px',
+                        autoplay: true,
+                        autoplaySpeed: 3000,
+                        adaptiveHeight: true,
+                        responsive: [
+                            {
+                                breakpoint: 768,
+                                settings: {
+                                    slidesToShow: 1,
+                                    centerMode: true,
+                                    centerPadding: '20px',
+                                    dots: true
+                                }
+                            }
+                        ]
+                    });
+                    
+                    console.log('Slick slider initialized successfully');
+                    return true;
+                } catch (error) {
+                    console.error('Error initializing slider:', error);
+                    return false;
+                }
+                
+                // Force dots to be visible
+                $slider.on('init', function() {
+                    const $dots = $slider.find('.slick-dots');
+                    $dots.css({
+                        'position': 'absolute',
+                        'bottom': '10px',
+                        'left': '50%',
+                        'transform': 'translateX(-50%)',
+                        'display': 'flex !important',
+                        'opacity': '1 !important',
+                        'visibility': 'visible !important'
+                    });
+                    
+                    // Add debug border
+                    $dots.css('border', '1px solid red');
+                });
+                
+                // Ensure dots are properly centered
+                $slider.find('.slick-dots').css({
+                    'position': 'absolute',
+                    'bottom': '10px',
+                    'left': '50%',
+                    'transform': 'translateX(-50%)',
+                    'margin': '0',
+                    'padding': '0',
+                    'list-style': 'none',
+                    'text-align': 'center',
+                    'width': 'auto',
+                    'z-index': '1000'
+                });
+                
+                // Force dots to be visible
+                setTimeout(() => {
+                    $slider.find('.slick-dots')
+                        .css('opacity', '1')
+                        .css('visibility', 'visible')
+                        .css('display', 'block');
+                }, 100);
+                
+                console.log('Slick slider initialized successfully');
+                
+            } catch (error) {
+                console.error('Error initializing slider:', error);
+            }
+        }
 

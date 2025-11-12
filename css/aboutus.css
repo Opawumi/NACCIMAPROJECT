@@ -114,6 +114,333 @@ body {
   line-height: 30.8px;
 }
 
+/* Tablet adjustments for sidebar and content */
+@media (min-width: 768px) and (max-width: 1199px) {
+  .about-side-links {
+    width: 16% !important;
+    padding-right: 0.5rem !important;
+  }
+
+  .aboutUsContent {
+    flex: 0 0 84% !important;
+    max-width: 84% !important;
+  }
+}
+
+/* Mobile adjustments - hide sidebar, full width content */
+@media (max-width: 767.98px) {
+  .about-side-links {
+    display: none !important;
+  }
+
+  .aboutUsContent {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+  }
+
+  /* Center align content on mobile */
+  .section-title,
+  .subsection-title,
+  .section-text,
+  .aboutUsContent p,
+  .mandate-card-title,
+  .mandate-card-text,
+  .president-message-title,
+  .president-message-text,
+  .secretariat-section-title,
+  .department-title,
+  .department-description,
+  .board-section-title,
+  .leadership-section-title,
+  .org-section-title,
+  .mandate-title,
+  .vision-mission-card h4,
+  .vision-mission-card p,
+  .about-section h3,
+  .about-section p,
+  .president-welcome-section h2,
+  .president-welcome-section p {
+    text-align: center !important;
+  }
+
+  /* Hero section mobile responsiveness */
+  .hero-content {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+    text-align: center;
+  }
+
+  .hero-image img {
+    padding-left: 0 !important;
+  }
+
+  /* Vision & Mission cards mobile */
+  .vision-mission-card {
+    margin-bottom: 20px;
+  }
+
+  /* Mandate cards mobile */
+  .mandate-card {
+    margin-bottom: 20px;
+  }
+
+  /* Leadership grids mobile */
+  .leadership-row {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+  }
+
+  .leadership-card {
+    width: calc(50% - 12px);
+    max-width: 296px;
+  }
+
+  .leadership-row:last-child .leadership-card {
+    width: 100%;
+    max-width: 296px;
+  }
+
+  /* Secretariat & Departments mobile */
+  .departments-row {
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+
+  .department-card {
+    flex: 1 1 calc(50% - 12px);
+    min-width: 280px;
+  }
+
+  /* Board of Directors mobile */
+  .directors-row {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+  }
+
+  .director-card {
+    width: calc(50% - 12px);
+    max-width: 296px;
+  }
+
+  .directors-row:last-child .director-card {
+    width: 100%;
+    max-width: 296px;
+  }
+
+  /* Organizational chart mobile */
+  .org-chart {
+    min-width: 100%;
+    gap: 25px;
+  }
+
+  .org-level {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .org-level-departments {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .org-box {
+    min-width: 100%;
+    width: 100%;
+  }
+
+  .org-box-small {
+    width: 100%;
+    margin: 0 0 10px 0;
+  }
+
+  .org-level::before {
+    display: none;
+  }
+
+  .org-level-departments::before,
+  .org-level-departments::after {
+    display: none;
+  }
+
+  .org-level-departments {
+    padding-top: 0;
+  }
+
+  /* Reports section mobile */
+  .report-card {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .report-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 28px;
+  }
+
+  .report-title {
+    font-size: 18px;
+  }
+
+  .report-description {
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  .report-download {
+    width: 100%;
+  }
+
+  .btn-download {
+    width: 100%;
+  }
+
+  /* President welcome section mobile */
+  .president-message-title {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .president-message-text {
+    font-size: 14px;
+    line-height: 24px;
+    text-align: center;
+  }
+
+  .president-message-text p {
+    text-align: center;
+  }
+
+  .president-name {
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .president-title-small {
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .president-title {
+    font-size: 12px;
+    text-align: center;
+  }
+
+  .president-additional-text {
+    font-size: 14px;
+    line-height: 24px;
+    text-align: center;
+  }
+
+  .president-additional-text p {
+    text-align: center;
+  }
+
+  /* Make president welcome columns stack on mobile */
+  .president-content-wrapper .row.g-4 .col-lg-5,
+  .president-content-wrapper .row.g-4 .col-lg-7,
+  .president-content-wrapper .row.g-4 .col-md-6 {
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  /* Center president image and info on mobile */
+  .president-card-wrapper {
+    text-align: center;
+  }
+
+  .president-image-container {
+    margin: 0 auto 20px auto;
+    max-width: 300px;
+  }
+
+  .president-info-card {
+    margin: 0 auto;
+  }
+
+  /* Overview section mobile - Origin and History */
+  .about-section .row .col-lg-6 {
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .about-section .row .col-lg-6 img {
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Center all overview content on mobile */
+  .about-section p,
+  .about-section .section-text {
+    text-align: center;
+  }
+
+  /* Past presidents mobile */
+  .past-presidents-title {
+    padding-left: 20px;
+    font-size: 22px;
+    margin-bottom: 24px;
+  }
+
+  .past-presidents-carousel-wrapper {
+    padding: 0 20px;
+  }
+
+  .presidents-list {
+    gap: 16px;
+  }
+
+  .president-card-item {
+    width: 280px;
+    min-width: 280px;
+    flex-direction: column;
+  }
+
+  .president-card-image {
+    height: 220px;
+  }
+
+  .president-card-content {
+    min-height: 220px;
+    padding: 16px;
+    gap: 12px;
+  }
+
+  .president-year {
+    font-size: 40px;
+    letter-spacing: -1.6px;
+  }
+
+  .president-card-name {
+    font-size: 20px;
+  }
+
+  .president-card-description {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .presidents-timeline {
+    padding-left: 15px;
+    gap: 0;
+  }
+
+  .timeline-year {
+    font-size: 12px;
+  }
+
+  .timeline-line {
+    width: 40px;
+  }
+}
+
 .about-side-links {
   top: 5rem !important;
   bottom: 0rem !important;
@@ -284,6 +611,28 @@ body {
   color: var(--primary-color);
   font-size: 10px;
   top: 8px;
+}
+
+/* Mobile responsive styles for content cards */
+@media (max-width: 767.98px) {
+  .content-card {
+    padding: 20px;
+  }
+
+  .section-heading {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  .image-container {
+    min-height: 200px;
+  }
+
+  .content-list li {
+    font-size: 14px;
+    padding-left: 20px;
+    margin-bottom: 12px;
+  }
 }
 
 /* Membership Categories page*/
@@ -1314,6 +1663,69 @@ article > p > .kwara-gov-link > strong {
   color: var(--text-dark);
 }
 
+/* Mobile responsive styles for vision-mission cards */
+@media (max-width: 767.98px) {
+  .vision-mission-card {
+    padding: 20px;
+    margin-bottom: 16px;
+    text-align: center;
+  }
+
+  .vision-mission-card h4 {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .vision-mission-card p {
+    font-size: 14px;
+    line-height: 24px;
+    text-align: center;
+  }
+
+  .icon-circle {
+    width: 28px;
+    height: 28px;
+    margin: 0 auto 16px auto;
+  }
+
+  /* Make vision/mission cards stack vertically on mobile */
+  .row.mb-5 .col-md-6 {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 24px;
+  }
+
+  /* Center the d-flex align-items-center content */
+  .vision-mission-card .d-flex {
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .vision-mission-card .icon-circle {
+    width: 48px;
+    height: 48px;
+    margin: 0 0 16px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: flex-start;
+  }
+
+  .vision-mission-card h4 {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 12px;
+  }
+
+  .vision-mission-card p {
+    font-size: 14px;
+    line-height: 24px;
+    text-align: center;
+  }
+}
+
 /* Mandate Section */
 .mandate-section {
   margin-top: 48px;
@@ -1416,6 +1828,57 @@ article > p > .kwara-gov-link > strong {
   line-height: 28px;
   color: var(--text-dark);
   margin: 0;
+}
+
+/* Mobile responsive styles for mandate cards */
+@media (max-width: 767.98px) {
+  .mandate-card {
+    padding: 20px;
+    gap: 12px;
+    text-align: center;
+    margin-bottom: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .mandate-card-title {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .mandate-card-text {
+    font-size: 14px;
+    line-height: 24px;
+    text-align: center;
+  }
+
+  .mandate-icon {
+    width: 48px;
+    height: 48px;
+    font-size: 28px;
+    margin: 0 0 16px 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    align-self: flex-start;
+  }
+
+  /* Make mandate cards stack vertically on mobile */
+  .row.g-4 .col-lg-6,
+  .row.g-4 .col-lg-4,
+  .row.g-4 .col-lg-8,
+  .row.g-4 .col-md-6 {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 16px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .mandate-section .container {
+    padding: 0 15px;
+  }
 }
 
 /* President Welcome */
@@ -1561,6 +2024,59 @@ article > p > .kwara-gov-link > strong {
   line-height: 1.2;
   color: var(--text-dark);
   margin: 0;
+}
+
+/* Mobile responsive styles for leadership cards */
+@media (max-width: 767.98px) {
+  .leadership-grid {
+    gap: 24px;
+  }
+
+  .leadership-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    width: 100%;
+  }
+
+  .leadership-card {
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  .leadership-image-container {
+    height: 280px;
+  }
+
+  .leadership-info {
+    padding: 16px 12px;
+    min-height: auto;
+    text-align: center;
+  }
+
+  .leadership-name {
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  .leadership-credentials {
+    font-size: 12px;
+    opacity: 0.8;
+  }
+
+  .leadership-position {
+    font-size: 14px;
+    color: var(--primary-color);
+    font-weight: 500;
+  }
+
+  .leadership-divider {
+    display: none;
+  }
 }
 
 /* Leadership Divider */
@@ -1883,6 +2399,29 @@ article > p > .kwara-gov-link > strong {
   .department-description {
       font-size: 14px;
       line-height: 22px;
+  }
+}
+
+/* Additional mobile responsive styles for department cards */
+@media (max-width: 767.98px) {
+  .department-card {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .department-icon {
+    align-self: flex-start;
+    margin-bottom: 12px;
+  }
+
+  .department-title {
+    text-align: center;
+  }
+
+  .department-description {
+    text-align: center;
   }
 }
 
@@ -2408,6 +2947,129 @@ article > p > .kwara-gov-link > strong {
   color: white;
 }
 
+/* Mobile responsive styles for report cards */
+@media (max-width: 767.98px) {
+  .report-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+    gap: 16px;
+  }
+
+  .report-icon {
+    width: 48px;
+    height: 48px;
+    align-self: flex-start;
+    margin-bottom: 8px;
+  }
+
+  .report-content {
+    text-align: center;
+  }
+
+  .report-title {
+    font-size: 18px;
+  }
+
+  .report-description {
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  .btn-download {
+    width: 100%;
+    padding: 14px 20px;
+    font-size: 14px;
+  }
+}
+
+/* Mobile responsive styles for Join NACCIMA and What NACCIMA Does sections */
+@media (max-width: 767.98px) {
+  .container-custom {
+    display: flex;
+    justify-content: center;
+  }
+
+  #membershipOverviewCards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    max-width: 360px;
+    margin: 0 auto;
+  }
+
+  #membershipOverviewCards .col-md-4 {
+    margin-bottom: 24px;
+    width: 100%;
+    max-width: 340px;
+  }
+
+  #membershipOverviewCards .card {
+    width: 100%;
+    text-align: center;
+    height: auto;
+    min-height: 280px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #membershipOverviewCards .card-body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 24px;
+  }
+
+  #membershipOverviewCards .card-title {
+    margin-bottom: 16px;
+    font-size: 18px;
+  }
+
+  #membershipOverviewCards .card-text {
+    margin-bottom: 20px;
+    font-size: 14px;
+    line-height: 1.5;
+    flex-grow: 1;
+  }
+
+  #membershipOverviewCards .btn {
+    width: 100%;
+    padding: 12px 24px;
+    font-size: 14px;
+    margin-top: auto;
+  }
+
+  /* What NACCIMA Does section */
+  #membershipBenefitCards .row {
+    text-align: center;
+  }
+
+  #membershipBenefitCards .col-lg-6 {
+    margin-bottom: 24px;
+  }
+
+  #membershipBenefitCards .image-container {
+    margin-bottom: 20px;
+  }
+
+  #membershipBenefitCards .content-card {
+    padding: 20px;
+  }
+
+  #membershipBenefitCards .section-heading {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  #membershipBenefitCards .content-list li {
+    font-size: 14px;
+    line-height: 1.5;
+    padding-left: 20px;
+  }
+}
+
 /* Mobile Responsive Styles */
 @media (max-width: 768px) {
   .about-section {
@@ -2801,11 +3463,230 @@ article > p > .kwara-gov-link > strong {
   }
 }
 
+
 /* Container Responsive Padding */
 @media (max-width: 576px) {
   .container {
       padding-left: 15px;
       padding-right: 15px;
+  }
+}
+
+/* Additional responsive breakpoints for better mobile experience */
+
+/* Tablet styles */
+@media (min-width: 769px) and (max-width: 992px) {
+  .org-chart {
+    min-width: 100%;
+  }
+
+  .org-level-departments {
+    max-width: 100%;
+  }
+
+  .org-box-small {
+    flex: 1 1 calc(50% - 12px);
+    min-width: calc(50% - 12px);
+  }
+
+  .vision-mission-card h4 {
+    font-size: 18px;
+  }
+
+  .vision-mission-card p {
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  .mandate-card-title {
+    font-size: 18px;
+  }
+
+  .mandate-card-text {
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  .leadership-section-title {
+    font-size: 18px;
+  }
+
+  .secretariat-section-title {
+    font-size: 18px;
+  }
+
+  .board-section-title {
+    font-size: 18px;
+  }
+
+  .org-section-title {
+    font-size: 18px;
+  }
+
+  .president-message-title {
+    font-size: 18px;
+  }
+
+  .past-presidents-title {
+    font-size: 24px;
+  }
+}
+
+/* Small mobile styles */
+@media (max-width: 480px) {
+  .leadership-card {
+    width: 100%;
+    margin: 0 0 24px;
+  }
+
+  .director-card {
+    width: 100%;
+    margin: 0 0 24px;
+  }
+
+  .department-card {
+    flex: 1 1 100%;
+    min-width: 100%;
+    padding: 20px;
+  }
+
+  .vision-mission-card {
+    padding: 20px;
+  }
+
+  .mandate-card {
+    padding: 20px;
+  }
+
+  .president-card-wrapper {
+    padding: 20px;
+  }
+
+  .past-presidents-title {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  .president-card-item {
+    width: 260px;
+    min-width: 260px;
+  }
+
+  .president-card-image {
+    height: 200px;
+  }
+
+  .president-card-content {
+    min-height: 200px;
+    padding: 12px 16px;
+    gap: 12px;
+  }
+
+  .president-year {
+    font-size: 36px;
+    letter-spacing: -1.44px;
+  }
+
+  .president-card-name {
+    font-size: 18px;
+  }
+
+  .tenure-badge,
+  .tenure-period {
+    font-size: 12px;
+  }
+
+  .president-card-description {
+    font-size: 13px;
+    line-height: 20px;
+  }
+
+  .presidents-timeline {
+    padding-left: 10px;
+  }
+
+  .timeline-item {
+    gap: 6px;
+  }
+
+  .timeline-year {
+    font-size: 11px;
+  }
+
+  .timeline-line {
+    width: 30px;
+  }
+
+  .section-title {
+    font-size: 22px;
+  }
+
+  .subsection-title {
+    font-size: 16px;
+  }
+
+  .mandate-card-title {
+    font-size: 16px;
+  }
+
+  .mandate-card-text {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .president-message-title {
+    font-size: 16px;
+    margin-bottom: 12px;
+  }
+
+  .president-message-text {
+    font-size: 13px;
+    line-height: 22px;
+  }
+
+  .president-additional-text {
+    font-size: 13px;
+    line-height: 22px;
+  }
+
+  .secretariat-section-title,
+  .department-title {
+    font-size: 16px;
+  }
+
+  .department-description {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .board-section-title,
+  .leadership-section-title,
+  .org-section-title {
+    font-size: 16px;
+  }
+
+  .leadership-name {
+    font-size: 12px;
+  }
+
+  .leadership-credentials {
+    font-size: 9px;
+  }
+
+  .leadership-position {
+    font-size: 10px;
+  }
+
+  .director-name {
+    font-size: 12px;
+  }
+
+  .director-credentials {
+    font-size: 9px;
+  }
+
+  .director-position {
+    font-size: 10px;
   }
 }
 
@@ -3151,6 +4032,19 @@ article > p > .kwara-gov-link > strong {
   background: var(--border-color);
   border-radius: 4px;
   flex-shrink: 0;
+}
+
+/* Leadership Card Link */
+.leadership-card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.leadership-card-link:hover .leadership-card {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 /* Container adjustments */
@@ -3821,3 +4715,41 @@ article > p > .kwara-gov-link > strong {
         align-self: flex-end;
       }
     }
+
+/* General Mobile Typography Adjustments */
+@media (max-width: 767.98px) {
+  /* Section titles */
+  .subsection-title {
+    font-size: 16px;
+  }
+
+  /* General headings */
+  h1 {
+    font-size: 24px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+
+  /* General text */
+  .section-text {
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  /* Links and buttons */
+  .about-page-links {
+    font-size: 14px;
+    padding: 10px 12px;
+  }
+
+  .about-active-page-link {
+    font-size: 14px;
+    padding: 10px 12px;
+  }
+}

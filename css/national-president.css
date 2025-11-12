@@ -1,0 +1,446 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+
+:root {
+  --primary-color: #00a758;
+  --primary-dark: #005c30;
+  --text-dark: #121212;
+  --text-light: #666666;
+  --white: #ffffff;
+  --light-bg: #f8f9fa;
+}
+
+
+/* Desktop Styles */
+.national-president-desktop {
+  min-height: 100vh;
+  background: var(--white);
+}
+
+/* Breadcrumb Section */
+.breadcrumb-section {
+  background: var(--primary-color);
+  padding: 24px 0;
+  color: var(--white);
+}
+
+.breadcrumb {
+  background: transparent;
+  margin-bottom: 0;
+  padding: 0;
+}
+
+.breadcrumb-item {
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+  content: "/";
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 400;
+}
+
+.breadcrumb-link {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  font-weight: 400;
+}
+
+.breadcrumb-link:hover {
+  color: var(--white);
+  text-decoration: underline;
+}
+
+.breadcrumb-item.active {
+  color: var(--white);
+  font-weight: 600;
+}
+
+/* Profile Content */
+.profile-content {
+  padding: 80px 0;
+}
+
+.profile-text-content {
+  padding-right: 36px;
+}
+
+.profile-name-section {
+  margin-bottom: 32px;
+}
+
+.profile-name {
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--text-dark);
+  margin-bottom: 4px;
+  letter-spacing: -1.12px;
+}
+
+.profile-credentials {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--text-dark);
+  margin-bottom: 8px;
+}
+
+.profile-position {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--primary-color);
+  margin-bottom: 0;
+}
+
+.profile-bio {
+  max-width: 612px;
+}
+
+.bio-paragraph {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 28px;
+  color: var(--text-dark);
+  text-align: justify;
+  margin-bottom: 24px;
+}
+
+.bio-paragraph:last-child {
+  margin-bottom: 0;
+}
+
+.profile-image-container {
+  text-align: right;
+}
+
+.profile-image {
+  width: 100%;
+  height: auto;
+  max-width: 636px;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
+}
+
+/* Mobile Styles */
+.national-president-mobile {
+  min-height: 100vh;
+  background: #fdfbff;
+}
+
+/* Mobile Header */
+.mobile-header {
+  background: var(--primary-color);
+  padding: 22px 24px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.back-button {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  color: var(--white);
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.back-button i {
+  font-size: 24px;
+}
+
+.back-button:hover {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Mobile Profile Content */
+.mobile-profile-content {
+  padding: 32px 24px;
+}
+
+.profile-header {
+  margin-bottom: 32px;
+}
+
+.profile-title {
+  font-size: 28px;
+  font-weight: 600;
+  color: var(--text-dark);
+  line-height: 1.1;
+}
+
+.profile-image-mobile {
+  margin-bottom: 24px;
+}
+
+.profile-image-mobile {
+  width: 100%;
+  height: 460px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.profile-image-mobile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-info-mobile {
+  margin-bottom: 24px;
+}
+
+.profile-name-mobile {
+  font-size: 24px;
+  font-weight: 500;
+  color: var(--text-dark);
+  line-height: 1.1;
+  margin-bottom: 4px;
+}
+
+.profile-credentials-mobile {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--text-dark);
+  margin-bottom: 8px;
+  letter-spacing: -0.48px;
+}
+
+.profile-position-mobile {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--text-dark);
+  margin-bottom: 0;
+  line-height: 1.5;
+}
+
+.profile-bio-mobile {
+  margin-bottom: 64px;
+}
+
+.bio-paragraph-mobile {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.5;
+  color: var(--text-dark);
+  text-align: justify;
+  margin-bottom: 24px;
+}
+
+.bio-paragraph-mobile:last-child {
+  margin-bottom: 0;
+}
+
+/* Mobile Footer */
+.footer-mobile {
+  background: var(--primary-dark);
+  color: var(--white);
+  padding: 64px 24px 32px;
+}
+
+.newsletter-section {
+  margin-bottom: 42px;
+}
+
+.newsletter-card {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.newsletter-title {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--white);
+  margin-bottom: 16px;
+}
+
+.newsletter-form {
+  display: flex;
+  gap: 0;
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--white);
+}
+
+.newsletter-input {
+  flex: 1;
+  border: none;
+  padding: 0 16px;
+  font-size: 12px;
+  color: #b2b2b2;
+  background: transparent;
+}
+
+.newsletter-input:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.newsletter-btn {
+  background: var(--primary-color);
+  color: var(--white);
+  border: none;
+  padding: 16px 24px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.footer-links {
+  display: flex;
+  gap: 48px;
+  margin-bottom: 42px;
+}
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.footer-link {
+  color: var(--white);
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.1;
+}
+
+.footer-link:hover {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.footer-bottom {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.footer-logo {
+  flex: 1;
+}
+
+.footer-logo-img {
+  width: 59px;
+  height: 64px;
+  margin-bottom: 12px;
+}
+
+.footer-company-text {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--white);
+}
+
+.footer-social {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.social-link {
+  color: var(--white);
+  text-decoration: none;
+  font-size: 24px;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.social-link:hover {
+  opacity: 1;
+}
+
+.footer-divider {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.16);
+  margin-bottom: 16px;
+}
+
+.footer-copyright {
+  text-align: center;
+}
+
+.footer-copyright p {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.6);
+  margin: 0;
+  font-family: Helvetica, sans-serif;
+  line-height: 1.25;
+}
+
+/* Responsive Design */
+@media (max-width: 991px) {
+  .profile-content {
+    padding: 40px 0;
+  }
+
+  .profile-text-content {
+    padding-right: 0;
+    margin-bottom: 40px;
+  }
+
+  .profile-name {
+    font-size: 24px;
+    letter-spacing: -0.96px;
+  }
+
+  .profile-image-container {
+    text-align: center;
+  }
+
+  .profile-image {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .breadcrumb-section {
+    padding: 16px 0;
+  }
+
+  .profile-content {
+    padding: 32px 0;
+  }
+
+  .profile-name {
+    font-size: 20px;
+    letter-spacing: -0.8px;
+  }
+
+  .bio-paragraph {
+    font-size: 15px;
+    line-height: 24px;
+  }
+}
+
+@media (max-width: 576px) {
+  .profile-name {
+    font-size: 18px;
+    letter-spacing: -0.72px;
+  }
+
+  .profile-credentials {
+    font-size: 14px;
+  }
+
+  .profile-position {
+    font-size: 14px;
+  }
+
+  .bio-paragraph {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 24px;
+  }
+}
